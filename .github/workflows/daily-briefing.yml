@@ -1,0 +1,73 @@
+name: 每日簡報
+
+on:
+  schedule:
+    # 23:10、04:10、10:10 UTC = 臺灣時間 07:10、12:10、18:10（UTC+8，沒有日光節約）
+    - cron: '10 23,4,10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-briefing
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: 抓取新聞與天氣
+        id: fetch
+        continue-on-error: true
+        run: npm run fetch
+        env:
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          CWA_API_KEY: ${{ secrets.CWA_API_KEY }}
+
+      - name: 設定 Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: 建置
+        run: npm run build
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: 把成功更新的資料寫回儲存庫
+        continue-on-error: true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/news.json public/data/weather.json
+          if git diff --cached --quiet; then
+            echo "資料沒有變更"
+            exit 0
+          fi
+          git commit -m "更新每日簡報資料"
+          git push

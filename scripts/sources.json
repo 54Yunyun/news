@@ -1,0 +1,187 @@
+{
+  "perCategory": 8,
+  "perSource": 12,
+  "batchSize": 4,
+  "groupBatchSize": 40,
+  "groupOverlap": 8,
+  "maxSources": 8,
+  "maxAgeHours": 36,
+  "maxLlmCalls": 60,
+  "sources": [
+    {
+      "id": "bbc-world",
+      "name": "BBC News",
+      "category": "international",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "id": "nhk",
+      "name": "NHK",
+      "category": "international",
+      "url": "https://news.web.nhk/n-data/conf/na/rss/cat0.xml"
+    },
+    {
+      "id": "cna-world",
+      "name": "中央社",
+      "category": "international",
+      "url": "https://feeds.feedburner.com/rsscna/intworld"
+    },
+    {
+      "id": "bbc-business",
+      "name": "BBC News",
+      "category": "finance",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "id": "cna-finance",
+      "name": "中央社",
+      "category": "finance",
+      "url": "https://feeds.feedburner.com/rsscna/finance"
+    },
+    {
+      "id": "techcrunch",
+      "name": "TechCrunch",
+      "category": "tech",
+      "url": "https://techcrunch.com/feed/"
+    },
+    {
+      "id": "cna-tech",
+      "name": "中央社",
+      "category": "tech",
+      "url": "https://feeds.feedburner.com/rsscna/technology"
+    },
+    {
+      "id": "cna-life",
+      "name": "中央社",
+      "category": "life",
+      "url": "https://feeds.feedburner.com/rsscna/lifehealth"
+    },
+    {
+      "id": "cna-politics",
+      "name": "中央社",
+      "category": "politics",
+      "url": "https://feeds.feedburner.com/rsscna/politics"
+    },
+    {
+      "id": "cna-society",
+      "name": "中央社",
+      "category": "life",
+      "url": "https://feeds.feedburner.com/rsscna/social"
+    },
+    {
+      "id": "ettoday-news",
+      "name": "ETtoday",
+      "category": "life",
+      "url": "https://feeds.feedburner.com/ettoday/news"
+    },
+    {
+      "id": "ettoday-finance",
+      "name": "ETtoday",
+      "category": "finance",
+      "url": "https://feeds.feedburner.com/ettoday/finance"
+    },
+    {
+      "id": "ettoday-global",
+      "name": "ETtoday",
+      "category": "international",
+      "url": "https://feeds.feedburner.com/ettoday/global"
+    },
+    {
+      "id": "ettoday-society",
+      "name": "ETtoday",
+      "category": "life",
+      "url": "https://feeds.feedburner.com/ettoday/society"
+    },
+    {
+      "id": "ettoday-life",
+      "name": "ETtoday",
+      "category": "life",
+      "url": "https://feeds.feedburner.com/ettoday/lifestyle"
+    },
+    {
+      "id": "ettoday-health",
+      "name": "ETtoday",
+      "category": "life",
+      "url": "https://feeds.feedburner.com/ettoday/health"
+    },
+    {
+      "id": "ettoday-tech",
+      "name": "ETtoday",
+      "category": "tech",
+      "url": "https://feeds.feedburner.com/ettoday/teck3c"
+    },
+    {
+      "id": "ltn-world",
+      "name": "自由時報",
+      "category": "international",
+      "url": "https://news.ltn.com.tw/rss/world.xml"
+    },
+    {
+      "id": "ltn-business",
+      "name": "自由時報",
+      "category": "finance",
+      "url": "https://news.ltn.com.tw/rss/business.xml"
+    },
+    {
+      "id": "ltn-life",
+      "name": "自由時報",
+      "category": "life",
+      "url": "https://news.ltn.com.tw/rss/life.xml"
+    },
+    {
+      "id": "ltn-society",
+      "name": "自由時報",
+      "category": "life",
+      "url": "https://news.ltn.com.tw/rss/society.xml"
+    },
+    {
+      "id": "ltn-politics",
+      "name": "自由時報",
+      "category": "politics",
+      "url": "https://news.ltn.com.tw/rss/politics.xml"
+    },
+    {
+      "id": "udn",
+      "name": "聯合報",
+      "category": "life",
+      "splitByRssCategory": true,
+      "url": "https://udn.com/news/rssfeed/index"
+    },
+    {
+      "id": "yahoo-politics",
+      "name": "Yahoo奇摩新聞",
+      "category": "politics",
+      "url": "https://tw.news.yahoo.com/rss/politics"
+    },
+    {
+      "id": "yahoo-society",
+      "name": "Yahoo奇摩新聞",
+      "category": "life",
+      "url": "https://tw.news.yahoo.com/rss/society"
+    },
+    {
+      "id": "yahoo-finance",
+      "name": "Yahoo奇摩新聞",
+      "category": "finance",
+      "url": "https://tw.news.yahoo.com/rss/finance"
+    },
+    {
+      "id": "yahoo-tech",
+      "name": "Yahoo奇摩新聞",
+      "category": "tech",
+      "url": "https://tw.news.yahoo.com/rss/technology"
+    },
+    {
+      "id": "yahoo-life",
+      "name": "Yahoo奇摩新聞",
+      "category": "life",
+      "url": "https://tw.news.yahoo.com/rss/life"
+    },
+    {
+      "id": "pts",
+      "name": "公視",
+      "category": "life",
+      "url": "https://news.pts.org.tw/xml/newsfeed.xml"
+    }
+  ]
+}

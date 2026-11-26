@@ -1,0 +1,35 @@
+{
+  "pauseMs": 400,
+  "reminders": {
+    "umbrella": 50,
+    "maybeRain": 30,
+    "cold": 18,
+    "hot": 32,
+    "gap": 8,
+    "tomorrowRain": 60
+  },
+  "cities": [
+    { "id": "keelung", "location": "基隆市", "district": "中正區", "datasetId": "F-D0047-049" },
+    { "id": "taipei", "location": "臺北市", "district": "信義區", "datasetId": "F-D0047-061" },
+    { "id": "new-taipei", "location": "新北市", "district": "板橋區", "datasetId": "F-D0047-069" },
+    { "id": "taoyuan", "location": "桃園市", "district": "桃園區", "datasetId": "F-D0047-005" },
+    { "id": "hsinchu-county", "location": "新竹縣", "district": "竹北市", "datasetId": "F-D0047-009" },
+    { "id": "hsinchu-city", "location": "新竹市", "district": "北區", "datasetId": "F-D0047-053" },
+    { "id": "miaoli", "location": "苗栗縣", "district": "苗栗市", "datasetId": "F-D0047-013" },
+    { "id": "taichung", "location": "臺中市", "district": "西屯區", "datasetId": "F-D0047-073" },
+    { "id": "changhua", "location": "彰化縣", "district": "彰化市", "datasetId": "F-D0047-017" },
+    { "id": "nantou", "location": "南投縣", "district": "南投市", "datasetId": "F-D0047-021" },
+    { "id": "yunlin", "location": "雲林縣", "district": "斗六市", "datasetId": "F-D0047-025" },
+    { "id": "chiayi-county", "location": "嘉義縣", "district": "太保市", "datasetId": "F-D0047-029" },
+    { "id": "chiayi-city", "location": "嘉義市", "district": "東區", "datasetId": "F-D0047-057" },
+    { "id": "tainan", "location": "臺南市", "district": "安平區", "datasetId": "F-D0047-077" },
+    { "id": "kaohsiung", "location": "高雄市", "district": "苓雅區", "datasetId": "F-D0047-065" },
+    { "id": "pingtung", "location": "屏東縣", "district": "屏東市", "datasetId": "F-D0047-033" },
+    { "id": "yilan", "location": "宜蘭縣", "district": "宜蘭市", "datasetId": "F-D0047-001" },
+    { "id": "hualien", "location": "花蓮縣", "district": "花蓮市", "datasetId": "F-D0047-041" },
+    { "id": "taitung", "location": "臺東縣", "district": "臺東市", "datasetId": "F-D0047-037" },
+    { "id": "penghu", "location": "澎湖縣", "district": "馬公市", "datasetId": "F-D0047-045" },
+    { "id": "kinmen", "location": "金門縣", "district": "金城鎮", "datasetId": "F-D0047-085" },
+    { "id": "lienchiang", "location": "連江縣", "district": "南竿鄉", "datasetId": "F-D0047-081" }
+  ]
+}
