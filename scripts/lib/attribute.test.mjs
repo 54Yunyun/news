@@ -49,3 +49,34 @@ test('標題看不出原媒體時，Yahoo 仍算一家', () => {
   assert.equal(items.length, 1)
   assert.equal(items[0].source, 'Yahoo奇摩新聞')
 })
+
+test('Yahoo 轉載壹蘋新聞網時改記壹蘋並優先保留原站連結', () => {
+  const direct = {
+    id: 'nextapple-1',
+    feedId: 'nextapple:local',
+    source: '壹蘋新聞網',
+    title: '新北護理之家疑超收病患遭搜查',
+    snippet: '',
+    url: 'https://news.nextapple.com/local/20261127/ABC123',
+    publishedAt: '2026-11-27T08:00:00+08:00',
+    category: 'life',
+  }
+  const items = prepareItems([
+    direct,
+    {
+      id: 'yahoo-3',
+      feedId: 'yahoo',
+      source: 'Yahoo奇摩新聞',
+      rssSource: '壹蘋新聞網',
+      title: '新北護理之家疑超收病患遭搜查',
+      snippet: '檢警搜查並聲押多名被告。',
+      url: 'https://tw.news.yahoo.com/nextapple-copy',
+      publishedAt: '2026-11-27T08:30:00+08:00',
+      category: 'life',
+    },
+  ])
+  assert.equal(items.length, 1)
+  assert.equal(items[0].source, '壹蘋新聞網')
+  assert.equal(items[0].url, direct.url)
+  assert.equal(items[0].publishedAt, '2026-11-27T08:30:00+08:00')
+})

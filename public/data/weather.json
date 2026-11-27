@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T11:48:11+08:00",
+  "updatedAt": "2026-11-27T10:13:03+08:00",
   "order": [
     "keelung",
     "taipei",
@@ -50,104 +50,95 @@
   },
   "cities": {
     "keelung": {
-      "updatedAt": "2026-11-26T11:47:12+08:00",
+      "updatedAt": "2026-11-27T10:12:40+08:00",
       "location": "基隆市",
       "current": {
-        "temp": 21,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 21,
-        "low": 20,
-        "rainProb": 70
+        "temp": 22,
+        "condition": "陰",
+        "conditionCode": "cloudy",
+        "high": 23,
+        "low": 19,
+        "rainProb": 20
       },
-      "reminder": "降雨機率超過五成，出門記得帶傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 23,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 21,
-          "rainProb": 40
+          "temp": 22,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 20,
-          "rainProb": 40
+          "temp": 22,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 20,
-          "rainProb": 40
+          "temp": 21,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 20,
+          "temp": 21,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 20,
+          "temp": 21,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 20,
+          "temp": 21,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 20,
+          "temp": 21,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 20,
+          "temp": 21,
           "rainProb": 20
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 21,
-          "low": 20,
-          "rainProb": 70
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "陰",
           "conditionCode": "cloudy",
           "high": 23,
@@ -162,113 +153,113 @@
           "high": 22,
           "low": 19,
           "rainProb": 10
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "多雲",
+          "conditionCode": "cloudy",
+          "high": 20,
+          "low": 18,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:17",
+        "date": "2026-11-27",
+        "sunrise": "06:18",
         "sunset": "17:03"
       }
     },
     "taipei": {
-      "updatedAt": "2026-11-26T11:47:13+08:00",
+      "updatedAt": "2026-11-27T10:12:41+08:00",
       "location": "臺北市",
       "current": {
-        "temp": 22,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 22,
+        "temp": 23,
+        "condition": "多雲",
+        "conditionCode": "cloudy",
+        "high": 25,
         "low": 19,
-        "rainProb": 70
+        "rainProb": 20
       },
-      "reminder": "降雨機率超過五成，出門記得帶傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 24,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 22,
-          "rainProb": 70
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 22,
-          "rainProb": 70
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 22,
-          "rainProb": 70
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 22,
-          "rainProb": 40
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 21,
-          "rainProb": 40
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 20,
-          "rainProb": 40
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 20,
+          "temp": 22,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 20,
+          "temp": 21,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 20,
+          "temp": 21,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 22,
-          "low": 19,
-          "rainProb": 70
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 25,
@@ -283,113 +274,113 @@
           "high": 24,
           "low": 19,
           "rainProb": 10
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 21,
+          "low": 17,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:18",
+        "date": "2026-11-27",
+        "sunrise": "06:19",
         "sunset": "17:04"
       }
     },
     "new-taipei": {
-      "updatedAt": "2026-11-26T11:47:14+08:00",
+      "updatedAt": "2026-11-27T10:12:42+08:00",
       "location": "新北市",
       "current": {
-        "temp": 21,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 21,
+        "temp": 23,
+        "condition": "陰",
+        "conditionCode": "cloudy",
+        "high": 25,
         "low": 19,
-        "rainProb": 80
+        "rainProb": 10
       },
-      "reminder": "降雨機率超過五成，出門記得帶傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 24,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 21,
-          "rainProb": 50
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 21,
-          "rainProb": 50
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 20,
-          "rainProb": 50
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 19,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 21,
-          "low": 19,
-          "rainProb": 80
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 25,
@@ -404,113 +395,113 @@
           "high": 24,
           "low": 19,
           "rainProb": 10
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 21,
+          "low": 17,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:18",
+        "date": "2026-11-27",
+        "sunrise": "06:19",
         "sunset": "17:04"
       }
     },
     "taoyuan": {
-      "updatedAt": "2026-11-26T11:47:16+08:00",
+      "updatedAt": "2026-11-27T10:12:43+08:00",
       "location": "桃園市",
       "current": {
-        "temp": 21,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 21,
-        "low": 19,
-        "rainProb": 80
+        "temp": 22,
+        "condition": "陰",
+        "conditionCode": "cloudy",
+        "high": 24,
+        "low": 18,
+        "rainProb": 10
       },
-      "reminder": "降雨機率超過五成，出門記得帶傘。",
+      "reminder": "氣溫偏低，注意保暖。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 23,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 21,
-          "rainProb": 60
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 20,
-          "rainProb": 60
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 20,
-          "rainProb": 60
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 19,
-          "rainProb": 40
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 19,
-          "rainProb": 40
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 19,
-          "rainProb": 40
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 19,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 21,
-          "low": 19,
-          "rainProb": 80
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 24,
@@ -525,113 +516,113 @@
           "high": 23,
           "low": 18,
           "rainProb": 10
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 21,
+          "low": 16,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:20",
+        "date": "2026-11-27",
+        "sunrise": "06:21",
         "sunset": "17:06"
       }
     },
     "hsinchu-county": {
-      "updatedAt": "2026-11-26T11:47:18+08:00",
+      "updatedAt": "2026-11-27T10:12:44+08:00",
       "location": "新竹縣",
       "current": {
-        "temp": 21,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 21,
+        "temp": 23,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 25,
         "low": 19,
-        "rainProb": 80
+        "rainProb": 10
       },
-      "reminder": "降雨機率超過五成，出門記得帶傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 24,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 21,
-          "rainProb": 80
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 21,
-          "rainProb": 60
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 20,
-          "rainProb": 60
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 20,
-          "rainProb": 60
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 20,
-          "rainProb": 50
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 19,
-          "rainProb": 50
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 19,
-          "rainProb": 50
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 19,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 21,
-          "low": 19,
-          "rainProb": 80
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 25,
@@ -646,113 +637,113 @@
           "high": 24,
           "low": 18,
           "rainProb": 10
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 22,
+          "low": 17,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "sunrise": "06:20",
         "sunset": "17:06"
       }
     },
     "hsinchu-city": {
-      "updatedAt": "2026-11-26T11:47:19+08:00",
+      "updatedAt": "2026-11-27T10:12:45+08:00",
       "location": "新竹市",
       "current": {
-        "temp": 21,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 21,
+        "temp": 23,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 24,
         "low": 19,
-        "rainProb": 70
+        "rainProb": 10
       },
-      "reminder": "降雨機率超過五成，出門記得帶傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 24,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 21,
-          "rainProb": 50
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 20,
-          "rainProb": 50
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 20,
-          "rainProb": 50
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 20,
-          "rainProb": 40
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 19,
-          "rainProb": 40
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 19,
-          "rainProb": 40
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 19,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 21,
-          "low": 19,
-          "rainProb": 70
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "晴",
           "conditionCode": "sunny",
           "high": 24,
@@ -764,116 +755,116 @@
           "label": "週六",
           "condition": "晴",
           "conditionCode": "sunny",
-          "high": 23,
+          "high": 24,
           "low": 18,
           "rainProb": 10
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 22,
+          "low": 17,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:20",
+        "date": "2026-11-27",
+        "sunrise": "06:21",
         "sunset": "17:07"
       }
     },
     "miaoli": {
-      "updatedAt": "2026-11-26T11:47:22+08:00",
+      "updatedAt": "2026-11-27T10:12:46+08:00",
       "location": "苗栗縣",
       "current": {
-        "temp": 21,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 21,
-        "low": 19,
-        "rainProb": 70
+        "temp": 23,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 25,
+        "low": 18,
+        "rainProb": 10
       },
-      "reminder": "降雨機率超過五成，出門記得帶傘。",
+      "reminder": "氣溫偏低，注意保暖。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 24,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 21,
-          "rainProb": 70
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 21,
-          "rainProb": 50
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 20,
-          "rainProb": 50
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 20,
-          "rainProb": 50
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
           "temp": 19,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 19,
-          "rainProb": 20
+          "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 21,
-          "low": 19,
-          "rainProb": 70
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 25,
@@ -888,113 +879,113 @@
           "high": 24,
           "low": 17,
           "rainProb": 10
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 23,
+          "low": 15,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:20",
+        "date": "2026-11-27",
+        "sunrise": "06:21",
         "sunset": "17:07"
       }
     },
     "taichung": {
-      "updatedAt": "2026-11-26T11:47:29+08:00",
+      "updatedAt": "2026-11-27T10:12:47+08:00",
       "location": "臺中市",
       "current": {
-        "temp": 22,
-        "condition": "陰",
-        "conditionCode": "cloudy",
-        "high": 23,
+        "temp": 23,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 26,
         "low": 20,
-        "rainProb": 30
+        "rainProb": 10
       },
-      "reminder": "降雨機率不低，可以帶把摺傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 23,
-          "rainProb": 30
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 22,
-          "rainProb": 30
+          "temp": 25,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 22,
-          "rainProb": 30
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "陰",
-          "conditionCode": "cloudy",
-          "high": 23,
-          "low": 20,
-          "rainProb": 30
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 26,
@@ -1009,113 +1000,113 @@
           "high": 25,
           "low": 19,
           "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 25,
+          "low": 17,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "sunrise": "06:20",
         "sunset": "17:09"
       }
     },
     "changhua": {
-      "updatedAt": "2026-11-26T11:47:33+08:00",
+      "updatedAt": "2026-11-27T10:12:48+08:00",
       "location": "彰化縣",
       "current": {
-        "temp": 23,
-        "condition": "陰",
-        "conditionCode": "cloudy",
-        "high": 23,
+        "temp": 24,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 26,
         "low": 20,
-        "rainProb": 30
+        "rainProb": 10
       },
-      "reminder": "降雨機率不低，可以帶把摺傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 23,
-          "rainProb": 30
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 22,
-          "rainProb": 30
+          "temp": 25,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 22,
-          "rainProb": 30
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 21,
-          "rainProb": 10
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 20,
-          "rainProb": 10
+          "temp": 22,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "陰",
-          "conditionCode": "cloudy",
-          "high": 23,
-          "low": 20,
-          "rainProb": 30
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 26,
@@ -1130,118 +1121,118 @@
           "high": 26,
           "low": 19,
           "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 25,
+          "low": 17,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "sunrise": "06:20",
         "sunset": "17:10"
       }
     },
     "nantou": {
-      "updatedAt": "2026-11-26T11:47:38+08:00",
+      "updatedAt": "2026-11-27T10:12:50+08:00",
       "location": "南投縣",
       "current": {
         "temp": 23,
-        "condition": "陰",
+        "condition": "多雲",
         "conditionCode": "cloudy",
-        "high": 23,
+        "high": 27,
         "low": 20,
         "rainProb": 20
       },
       "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 23,
+          "temp": 26,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 23,
+          "temp": 27,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 23,
+          "temp": 27,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "陰",
-          "conditionCode": "cloudy",
-          "high": 23,
-          "low": 20,
-          "rainProb": 20
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 27,
           "low": 20,
-          "rainProb": 10
+          "rainProb": 20
         },
         {
           "date": "2026-11-28",
@@ -1251,360 +1242,360 @@
           "high": 26,
           "low": 19,
           "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 25,
+          "low": 16,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:18",
+        "date": "2026-11-27",
+        "sunrise": "06:19",
         "sunset": "17:08"
       }
     },
     "yunlin": {
-      "updatedAt": "2026-11-26T11:47:40+08:00",
+      "updatedAt": "2026-11-27T10:12:52+08:00",
       "location": "雲林縣",
       "current": {
         "temp": 23,
         "condition": "多雲",
         "conditionCode": "cloudy",
-        "high": 23,
-        "low": 20,
+        "high": 26,
+        "low": 19,
         "rainProb": 20
       },
       "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 23,
+          "temp": 26,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 23,
+          "temp": 26,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 23,
+          "temp": 26,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 20,
-          "rainProb": 10
+          "temp": 21,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 20,
-          "rainProb": 10
+          "temp": 21,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "多雲",
-          "conditionCode": "cloudy",
-          "high": 23,
-          "low": 20,
-          "rainProb": 20
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 26,
           "low": 19,
-          "rainProb": 10
+          "rainProb": 20
         },
         {
           "date": "2026-11-28",
           "label": "週六",
           "condition": "多雲",
           "conditionCode": "cloudy",
-          "high": 25,
+          "high": 26,
           "low": 18,
+          "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "多雲",
+          "conditionCode": "cloudy",
+          "high": 24,
+          "low": 16,
           "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:19",
+        "date": "2026-11-27",
+        "sunrise": "06:20",
         "sunset": "17:10"
       }
     },
     "chiayi-county": {
-      "updatedAt": "2026-11-26T11:47:43+08:00",
+      "updatedAt": "2026-11-27T10:12:53+08:00",
       "location": "嘉義縣",
       "current": {
         "temp": 23,
-        "condition": "多雲",
-        "conditionCode": "cloudy",
-        "high": 24,
-        "low": 20,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 27,
+        "low": 19,
         "rainProb": 20
       },
-      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
+      "reminder": "日夜溫差較大，可多帶一件。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 23,
+          "temp": 26,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 24,
+          "temp": 26,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 24,
+          "temp": 27,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 24,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 22,
-          "rainProb": 10
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 21,
-          "rainProb": 10
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 21,
-          "rainProb": 10
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 20,
-          "rainProb": 10
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 20,
-          "rainProb": 10
+          "temp": 22,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "多雲",
-          "conditionCode": "cloudy",
-          "high": 24,
-          "low": 20,
-          "rainProb": 20
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "晴",
           "conditionCode": "sunny",
           "high": 27,
           "low": 19,
-          "rainProb": 10
+          "rainProb": 20
         },
         {
           "date": "2026-11-28",
           "label": "週六",
           "condition": "陰",
           "conditionCode": "cloudy",
-          "high": 25,
+          "high": 26,
           "low": 18,
+          "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 25,
+          "low": 16,
           "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:20",
+        "date": "2026-11-27",
+        "sunrise": "06:21",
         "sunset": "17:12"
       }
     },
     "chiayi-city": {
-      "updatedAt": "2026-11-26T11:47:44+08:00",
+      "updatedAt": "2026-11-27T10:12:54+08:00",
       "location": "嘉義市",
       "current": {
         "temp": 24,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 24,
-        "low": 20,
-        "rainProb": 30
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 27,
+        "low": 19,
+        "rainProb": 20
       },
-      "reminder": "降雨機率不低，可以帶把摺傘。",
+      "reminder": "日夜溫差較大，可多帶一件。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 24,
-          "rainProb": 30
+          "temp": 26,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 24,
-          "rainProb": 30
+          "temp": 27,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 24,
-          "rainProb": 30
+          "temp": 27,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 24,
-          "rainProb": 20
+          "temp": 27,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 21,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 20,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 20,
-          "rainProb": 10
+          "temp": 21,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 20,
-          "rainProb": 10
+          "temp": 21,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 24,
-          "low": 20,
-          "rainProb": 30
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 27,
           "low": 19,
-          "rainProb": 10
+          "rainProb": 20
         },
         {
           "date": "2026-11-28",
@@ -1614,123 +1605,253 @@
           "high": 26,
           "low": 19,
           "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 25,
+          "low": 16,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "sunrise": "06:20",
         "sunset": "17:11"
       }
     },
     "tainan": {
-      "updatedAt": "2026-11-26T11:47:48+08:00",
+      "updatedAt": "2026-11-27T10:12:55+08:00",
       "location": "臺南市",
       "current": {
-        "temp": 25,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 25,
-        "low": 21,
-        "rainProb": 30
+        "temp": 24,
+        "condition": "陰",
+        "conditionCode": "cloudy",
+        "high": 27,
+        "low": 20,
+        "rainProb": 20
       },
-      "reminder": "降雨機率不低，可以帶把摺傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 25,
-          "rainProb": 30
+          "temp": 26,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 25,
-          "rainProb": 30
+          "temp": 27,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 25,
-          "rainProb": 30
+          "temp": 27,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 25,
-          "rainProb": 20
+          "temp": 27,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 24,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 23,
-          "rainProb": 10
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 22,
-          "rainProb": 10
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 22,
-          "rainProb": 10
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 22,
-          "rainProb": 10
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 21,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 21,
-          "rainProb": 10
+          "temp": 22,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 25,
-          "low": 21,
-          "rainProb": 30
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 27,
           "low": 20,
-          "rainProb": 10
+          "rainProb": 20
         },
         {
           "date": "2026-11-28",
           "label": "週六",
           "condition": "陰",
+          "conditionCode": "cloudy",
+          "high": 27,
+          "low": 20,
+          "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 24,
+          "low": 17,
+          "rainProb": 0
+        }
+      ],
+      "sun": {
+        "date": "2026-11-27",
+        "sunrise": "06:20",
+        "sunset": "17:13"
+      }
+    },
+    "kaohsiung": {
+      "updatedAt": "2026-11-27T10:12:56+08:00",
+      "location": "高雄市",
+      "current": {
+        "temp": 26,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 28,
+        "low": 21,
+        "rainProb": 20
+      },
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
+      "hourly": [
+        {
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 27,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
+          "label": "12時",
+          "temp": 28,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T13:00:00+08:00",
+          "label": "13時",
+          "temp": 28,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T14:00:00+08:00",
+          "label": "14時",
+          "temp": 28,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T15:00:00+08:00",
+          "label": "15時",
+          "temp": 28,
+          "rainProb": 0
+        },
+        {
+          "time": "2026-11-27T16:00:00+08:00",
+          "label": "16時",
+          "temp": 28,
+          "rainProb": 0
+        },
+        {
+          "time": "2026-11-27T17:00:00+08:00",
+          "label": "17時",
+          "temp": 27,
+          "rainProb": 0
+        },
+        {
+          "time": "2026-11-27T18:00:00+08:00",
+          "label": "18時",
+          "temp": 26,
+          "rainProb": 0
+        },
+        {
+          "time": "2026-11-27T19:00:00+08:00",
+          "label": "19時",
+          "temp": 26,
+          "rainProb": 0
+        },
+        {
+          "time": "2026-11-27T20:00:00+08:00",
+          "label": "20時",
+          "temp": 25,
+          "rainProb": 0
+        },
+        {
+          "time": "2026-11-27T21:00:00+08:00",
+          "label": "21時",
+          "temp": 25,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T22:00:00+08:00",
+          "label": "22時",
+          "temp": 24,
+          "rainProb": 10
+        }
+      ],
+      "forecast": [
+        {
+          "date": "2026-11-27",
+          "label": "今天",
+          "condition": "多雲",
+          "conditionCode": "cloudy",
+          "high": 28,
+          "low": 21,
+          "rainProb": 20
+        },
+        {
+          "date": "2026-11-28",
+          "label": "週六",
+          "condition": "陰",
+          "conditionCode": "cloudy",
+          "high": 29,
+          "low": 22,
+          "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 26,
           "low": 20,
@@ -1738,236 +1859,106 @@
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:20",
-        "sunset": "17:13"
-      }
-    },
-    "kaohsiung": {
-      "updatedAt": "2026-11-26T11:47:50+08:00",
-      "location": "高雄市",
-      "current": {
-        "temp": 27,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 28,
-        "low": 23,
-        "rainProb": 30
-      },
-      "reminder": "降雨機率不低，可以帶把摺傘。",
-      "hourly": [
-        {
-          "time": "2026-11-26T12:00:00+08:00",
-          "label": "12時",
-          "temp": 27,
-          "rainProb": 30
-        },
-        {
-          "time": "2026-11-26T13:00:00+08:00",
-          "label": "13時",
-          "temp": 28,
-          "rainProb": 30
-        },
-        {
-          "time": "2026-11-26T14:00:00+08:00",
-          "label": "14時",
-          "temp": 28,
-          "rainProb": 30
-        },
-        {
-          "time": "2026-11-26T15:00:00+08:00",
-          "label": "15時",
-          "temp": 28,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T16:00:00+08:00",
-          "label": "16時",
-          "temp": 27,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T17:00:00+08:00",
-          "label": "17時",
-          "temp": 26,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T18:00:00+08:00",
-          "label": "18時",
-          "temp": 26,
-          "rainProb": 30
-        },
-        {
-          "time": "2026-11-26T19:00:00+08:00",
-          "label": "19時",
-          "temp": 25,
-          "rainProb": 30
-        },
-        {
-          "time": "2026-11-26T20:00:00+08:00",
-          "label": "20時",
-          "temp": 25,
-          "rainProb": 30
-        },
-        {
-          "time": "2026-11-26T21:00:00+08:00",
-          "label": "21時",
-          "temp": 24,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T22:00:00+08:00",
-          "label": "22時",
-          "temp": 24,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 23,
-          "rainProb": 10
-        }
-      ],
-      "forecast": [
-        {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 28,
-          "low": 23,
-          "rainProb": 30
-        },
-        {
-          "date": "2026-11-27",
-          "label": "週五",
-          "condition": "多雲",
-          "conditionCode": "cloudy",
-          "high": 28,
-          "low": 21,
-          "rainProb": 10
-        },
-        {
-          "date": "2026-11-28",
-          "label": "週六",
-          "condition": "陰",
-          "conditionCode": "cloudy",
-          "high": 28,
-          "low": 22,
-          "rainProb": 0
-        }
-      ],
-      "sun": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "sunrise": "06:19",
         "sunset": "17:13"
       }
     },
     "pingtung": {
-      "updatedAt": "2026-11-26T11:47:53+08:00",
+      "updatedAt": "2026-11-27T10:12:57+08:00",
       "location": "屏東縣",
       "current": {
-        "temp": 27,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 28,
-        "low": 22,
-        "rainProb": 30
+        "temp": 26,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 29,
+        "low": 21,
+        "rainProb": 20
       },
-      "reminder": "降雨機率不低，可以帶把摺傘。",
+      "reminder": "日夜溫差較大，可多帶一件。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 27,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 27,
-          "rainProb": 30
+          "temp": 28,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 28,
-          "rainProb": 30
+          "temp": 29,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 28,
-          "rainProb": 30
+          "temp": 29,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 27,
-          "rainProb": 20
+          "temp": 29,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 27,
-          "rainProb": 20
+          "temp": 28,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 26,
-          "rainProb": 20
+          "temp": 27,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 25,
-          "rainProb": 10
+          "temp": 26,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 24,
-          "rainProb": 10
+          "temp": 25,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
           "temp": 24,
-          "rainProb": 10
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 23,
-          "rainProb": 10
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
           "temp": 23,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 22,
-          "rainProb": 10
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 28,
-          "low": 22,
-          "rainProb": 30
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 29,
           "low": 21,
-          "rainProb": 10
+          "rainProb": 20
         },
         {
           "date": "2026-11-28",
@@ -1977,113 +1968,113 @@
           "high": 28,
           "low": 21,
           "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "多雲",
+          "conditionCode": "cloudy",
+          "high": 26,
+          "low": 19,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:18",
+        "date": "2026-11-27",
+        "sunrise": "06:19",
         "sunset": "17:12"
       }
     },
     "yilan": {
-      "updatedAt": "2026-11-26T11:47:55+08:00",
+      "updatedAt": "2026-11-27T10:12:58+08:00",
       "location": "宜蘭縣",
       "current": {
         "temp": 24,
         "condition": "多雲",
         "conditionCode": "cloudy",
-        "high": 24,
-        "low": 20,
+        "high": 25,
+        "low": 19,
         "rainProb": 20
       },
       "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 24,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 24,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 24,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
+          "temp": 25,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T16:00:00+08:00",
+          "label": "16時",
           "temp": 24,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
-          "label": "16時",
+          "time": "2026-11-27T17:00:00+08:00",
+          "label": "17時",
           "temp": 23,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
-          "label": "17時",
-          "temp": 22,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 21,
+          "temp": 22,
           "rainProb": 10
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
           "temp": 21,
           "rainProb": 10
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 20,
+          "temp": 21,
           "rainProb": 10
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
           "temp": 20,
           "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 20,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
           "temp": 20,
           "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "多雲",
-          "conditionCode": "cloudy",
-          "high": 24,
-          "low": 20,
-          "rainProb": 20
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "晴",
           "conditionCode": "sunny",
           "high": 25,
@@ -2098,113 +2089,113 @@
           "high": 24,
           "low": 17,
           "rainProb": 10
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "多雲",
+          "conditionCode": "cloudy",
+          "high": 20,
+          "low": 16,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "sunrise": "06:17",
         "sunset": "17:03"
       }
     },
     "hualien": {
-      "updatedAt": "2026-11-26T11:48:00+08:00",
+      "updatedAt": "2026-11-27T10:12:59+08:00",
       "location": "花蓮縣",
       "current": {
         "temp": 25,
         "condition": "多雲",
         "conditionCode": "cloudy",
         "high": 25,
-        "low": 21,
+        "low": 20,
         "rainProb": 20
       },
       "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 25,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
           "temp": 25,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
           "temp": 25,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 24,
+          "temp": 25,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
           "temp": 24,
-          "rainProb": 20
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
           "temp": 24,
-          "rainProb": 20
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
           "temp": 23,
-          "rainProb": 20
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
           "temp": 23,
-          "rainProb": 20
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
           "temp": 22,
-          "rainProb": 20
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
           "temp": 22,
-          "rainProb": 20
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
           "temp": 22,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 21,
-          "rainProb": 20
+          "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "多雲",
-          "conditionCode": "cloudy",
-          "high": 25,
-          "low": 21,
-          "rainProb": 20
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "陰",
           "conditionCode": "cloudy",
           "high": 25,
@@ -2219,113 +2210,113 @@
           "high": 24,
           "low": 19,
           "rainProb": 20
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "多雲",
+          "conditionCode": "cloudy",
+          "high": 21,
+          "low": 17,
+          "rainProb": 10
         }
       ],
       "sun": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "sunrise": "06:16",
-        "sunset": "17:06"
+        "sunset": "17:05"
       }
     },
     "taitung": {
-      "updatedAt": "2026-11-26T11:48:02+08:00",
+      "updatedAt": "2026-11-27T10:13:00+08:00",
       "location": "臺東縣",
       "current": {
         "temp": 26,
-        "condition": "多雲",
-        "conditionCode": "cloudy",
-        "high": 26,
-        "low": 22,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 27,
+        "low": 21,
         "rainProb": 20
       },
       "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 26,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 26,
+          "temp": 27,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
+          "temp": 27,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T14:00:00+08:00",
+          "label": "14時",
           "temp": 26,
           "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
-          "label": "14時",
-          "temp": 25,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 25,
-          "rainProb": 20
+          "temp": 26,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 24,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 24,
-          "rainProb": 20
+          "temp": 25,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 23,
-          "rainProb": 20
+          "temp": 24,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 22,
-          "rainProb": 20
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 22,
-          "rainProb": 20
+          "temp": 23,
+          "rainProb": 10
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "多雲",
-          "conditionCode": "cloudy",
-          "high": 26,
-          "low": 22,
-          "rainProb": 20
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "多雲",
           "conditionCode": "cloudy",
           "high": 27,
@@ -2340,118 +2331,118 @@
           "high": 25,
           "low": 19,
           "rainProb": 20
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "多雲",
+          "conditionCode": "cloudy",
+          "high": 22,
+          "low": 18,
+          "rainProb": 10
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:15",
+        "date": "2026-11-27",
+        "sunrise": "06:16",
         "sunset": "17:10"
       }
     },
     "penghu": {
-      "updatedAt": "2026-11-26T11:48:03+08:00",
+      "updatedAt": "2026-11-27T10:13:01+08:00",
       "location": "澎湖縣",
       "current": {
-        "temp": 23,
-        "condition": "短暫雨",
-        "conditionCode": "rain",
-        "high": 23,
-        "low": 22,
-        "rainProb": 40
+        "temp": 24,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 25,
+        "low": 21,
+        "rainProb": 20
       },
-      "reminder": "降雨機率不低，可以帶把摺傘。",
+      "reminder": "天氣變化不大，依氣溫增減衣物即可。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 24,
+          "rainProb": 20
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 23,
-          "rainProb": 40
+          "temp": 25,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 23,
-          "rainProb": 40
+          "temp": 24,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 23,
-          "rainProb": 40
+          "temp": 24,
+          "rainProb": 20
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 22,
-          "rainProb": 30
+          "temp": 24,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 22,
-          "rainProb": 30
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 22,
-          "rainProb": 30
+          "temp": 23,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
           "temp": 22,
-          "rainProb": 10
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
           "temp": 22,
-          "rainProb": 10
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
           "temp": 22,
-          "rainProb": 10
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
           "temp": 22,
-          "rainProb": 10
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
           "temp": 22,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 22,
-          "rainProb": 10
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "短暫雨",
-          "conditionCode": "rain",
-          "high": 23,
-          "low": 22,
-          "rainProb": 40
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "晴",
           "conditionCode": "sunny",
           "high": 25,
           "low": 21,
-          "rainProb": 10
+          "rainProb": 20
         },
         {
           "date": "2026-11-28",
@@ -2461,113 +2452,113 @@
           "high": 24,
           "low": 21,
           "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 23,
+          "low": 21,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:23",
+        "date": "2026-11-27",
+        "sunrise": "06:24",
         "sunset": "17:14"
       }
     },
     "kinmen": {
-      "updatedAt": "2026-11-26T11:48:08+08:00",
+      "updatedAt": "2026-11-27T10:13:02+08:00",
       "location": "金門縣",
       "current": {
-        "temp": 19,
-        "condition": "多雲",
-        "conditionCode": "cloudy",
-        "high": 19,
+        "temp": 20,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 22,
         "low": 17,
-        "rainProb": 30
+        "rainProb": 10
       },
-      "reminder": "降雨機率不低，可以帶把摺傘；氣溫偏低，注意保暖。",
+      "reminder": "氣溫偏低，注意保暖。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 21,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 19,
-          "rainProb": 20
+          "temp": 22,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 18,
-          "rainProb": 20
+          "temp": 21,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 18,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 18,
-          "rainProb": 30
+          "temp": 19,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 17,
-          "rainProb": 30
+          "temp": 19,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 17,
-          "rainProb": 30
+          "temp": 18,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 17,
-          "rainProb": 10
+          "temp": 18,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 17,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 17,
-          "rainProb": 10
+          "temp": 18,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "多雲",
-          "conditionCode": "cloudy",
-          "high": 19,
-          "low": 17,
-          "rainProb": 30
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "晴",
           "conditionCode": "sunny",
           "high": 22,
@@ -2582,113 +2573,113 @@
           "high": 24,
           "low": 18,
           "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 20,
+          "low": 16,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
-        "sunrise": "06:30",
+        "date": "2026-11-27",
+        "sunrise": "06:31",
         "sunset": "17:18"
       }
     },
     "lienchiang": {
-      "updatedAt": "2026-11-26T11:48:11+08:00",
+      "updatedAt": "2026-11-27T10:13:03+08:00",
       "location": "連江縣",
       "current": {
-        "temp": 17,
-        "condition": "陰",
-        "conditionCode": "cloudy",
-        "high": 17,
+        "temp": 19,
+        "condition": "晴",
+        "conditionCode": "sunny",
+        "high": 20,
         "low": 16,
-        "rainProb": 20
+        "rainProb": 10
       },
       "reminder": "氣溫偏低，注意保暖。",
       "hourly": [
         {
-          "time": "2026-11-26T12:00:00+08:00",
+          "time": "2026-11-27T11:00:00+08:00",
+          "label": "11時",
+          "temp": 19,
+          "rainProb": 10
+        },
+        {
+          "time": "2026-11-27T12:00:00+08:00",
           "label": "12時",
-          "temp": 17,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T13:00:00+08:00",
+          "time": "2026-11-27T13:00:00+08:00",
           "label": "13時",
-          "temp": 17,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T14:00:00+08:00",
+          "time": "2026-11-27T14:00:00+08:00",
           "label": "14時",
-          "temp": 17,
-          "rainProb": 20
+          "temp": 20,
+          "rainProb": 10
         },
         {
-          "time": "2026-11-26T15:00:00+08:00",
+          "time": "2026-11-27T15:00:00+08:00",
           "label": "15時",
-          "temp": 17,
-          "rainProb": 20
+          "temp": 19,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T16:00:00+08:00",
+          "time": "2026-11-27T16:00:00+08:00",
           "label": "16時",
-          "temp": 17,
-          "rainProb": 20
+          "temp": 19,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T17:00:00+08:00",
+          "time": "2026-11-27T17:00:00+08:00",
           "label": "17時",
-          "temp": 17,
-          "rainProb": 20
+          "temp": 18,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T18:00:00+08:00",
+          "time": "2026-11-27T18:00:00+08:00",
           "label": "18時",
-          "temp": 17,
-          "rainProb": 10
+          "temp": 18,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T19:00:00+08:00",
+          "time": "2026-11-27T19:00:00+08:00",
           "label": "19時",
-          "temp": 17,
-          "rainProb": 10
+          "temp": 18,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T20:00:00+08:00",
+          "time": "2026-11-27T20:00:00+08:00",
           "label": "20時",
-          "temp": 17,
-          "rainProb": 10
+          "temp": 18,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T21:00:00+08:00",
+          "time": "2026-11-27T21:00:00+08:00",
           "label": "21時",
-          "temp": 16,
-          "rainProb": 10
+          "temp": 18,
+          "rainProb": 0
         },
         {
-          "time": "2026-11-26T22:00:00+08:00",
+          "time": "2026-11-27T22:00:00+08:00",
           "label": "22時",
-          "temp": 16,
-          "rainProb": 10
-        },
-        {
-          "time": "2026-11-26T23:00:00+08:00",
-          "label": "23時",
-          "temp": 16,
-          "rainProb": 10
+          "temp": 18,
+          "rainProb": 0
         }
       ],
       "forecast": [
         {
-          "date": "2026-11-26",
-          "label": "今天",
-          "condition": "陰",
-          "conditionCode": "cloudy",
-          "high": 17,
-          "low": 16,
-          "rainProb": 20
-        },
-        {
           "date": "2026-11-27",
-          "label": "週五",
+          "label": "今天",
           "condition": "晴",
           "conditionCode": "sunny",
           "high": 20,
@@ -2703,10 +2694,19 @@
           "high": 20,
           "low": 17,
           "rainProb": 0
+        },
+        {
+          "date": "2026-11-29",
+          "label": "週日",
+          "condition": "晴",
+          "conditionCode": "sunny",
+          "high": 18,
+          "low": 16,
+          "rainProb": 0
         }
       ],
       "sun": {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "sunrise": "06:27",
         "sunset": "17:08"
       }

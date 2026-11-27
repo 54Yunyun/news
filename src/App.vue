@@ -1,13 +1,14 @@
 <script setup>
-import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+import { computed } from 'vue'
 import CategoryTabs from './components/CategoryTabs.vue'
 import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 import NewsCard from './components/NewsCard.vue'
-import TopicBlock from './components/TopicBlock.vue'
 import WeatherCard from './components/WeatherCard.vue'
 import { useBriefing } from './composables/useBriefing.js'
+import { categoryLabel } from './constants/categories.js'
 import { formatClock, formatEdition, formatMastheadDate } from './utils/format.js'
+import { briefCards } from './utils/layout.js'
 
 const {
   news,
@@ -18,6 +19,9 @@ const {
   generatedAt,
   todayBrief,
   presented,
+  visibleNews,
+  hiddenCount,
+  revealMore,
   isFresh,
   newsError,
   weatherError,
@@ -46,63 +50,17 @@ const generatedLabel = computed(() => formatClock(generatedAt.value))
 // 回傳: 如「06:00」
 const weatherUpdatedLabel = computed(() => formatClock(weather.value?.updatedAt))
 
-// 這次更新才出現的事件 id，交給話題區塊判斷「新」
-// 回傳: Set
-const freshIds = computed(() => {
-  const ids = new Set()
-  for (const item of news.value) {
-    if (isFresh(item)) ids.add(item.id)
-  }
-  return ids
-})
+// 今日重點配上分類標籤
+// 回傳: { text, category } 陣列
+const cards = computed(() => briefCards(todayBrief.value, news.value))
 
-// 同一個話題裡，畫面上這格以外的子事件
-// item: 頭條或次頭條那一則
+// 同一個話題裡，這一頁以外的子事件
+// item: 頭條或次要那一則
 // 回傳: 其餘子事件
 const topicSiblings = (item) => {
   if (!item?.topicId) return []
-  return filteredNews.value.filter((other) => other.topicId === item.topicId && other.id !== item.id)
+  return visibleNews.value.filter((other) => other.topicId === item.topicId && other.id !== item.id)
 }
-
-const weatherSlot = ref(null)
-const weatherPinned = ref(false)
-let weatherObserver
-
-// 側欄裝得下整張天氣卡時才固定，否則跟著頁面捲動
-// 回傳: 無
-const placeWeather = () => {
-  const node = weatherSlot.value
-  if (!node || window.innerWidth < 1024) {
-    weatherPinned.value = false
-    return
-  }
-  weatherPinned.value = node.offsetHeight + 40 <= window.innerHeight
-}
-
-// 內容高度或視窗變了就重新判斷要不要固定
-// 回傳: 無
-const bindWeather = () => {
-  weatherObserver?.disconnect()
-  const node = weatherSlot.value
-  if (!node) return
-  weatherObserver = new ResizeObserver(placeWeather)
-  weatherObserver.observe(node)
-  placeWeather()
-}
-
-onMounted(() => {
-  window.addEventListener('resize', placeWeather)
-  nextTick(bindWeather)
-})
-
-onUnmounted(() => {
-  weatherObserver?.disconnect()
-  window.removeEventListener('resize', placeWeather)
-})
-
-watch(loading, (value) => {
-  if (!value) nextTick(bindWeather)
-})
 
 // 新聞列表是空的時候要顯示的句子
 // 回傳: 提示文字
@@ -113,7 +71,7 @@ const emptyNewsLabel = computed(() => {
 </script>
 
 <template>
-  <div class="mx-auto min-h-screen max-w-6xl px-4 py-6 font-sans text-ink antialiased sm:px-6 sm:py-10">
+  <div class="page-shell min-h-screen px-4 py-6 font-sans text-ink antialiased sm:px-6 sm:py-10">
     <a class="skip-link" href="#news">跳至新聞列表</a>
     <Header
       :edition="editionLabel"
@@ -122,38 +80,16 @@ const emptyNewsLabel = computed(() => {
       :weather-updated-label="weatherUpdatedLabel"
     />
 
-    <section
-      v-if="!loading && todayBrief.length === 3"
-      class="mt-8"
-      aria-labelledby="brief-heading"
-    >
-      <h2 id="brief-heading" class="text-sm font-medium tracking-[0.2em] text-brand">今日重點</h2>
-      <ol class="mt-3 space-y-2">
-        <li
-          v-for="(line, index) in todayBrief"
-          :key="index"
-          class="flex gap-3 font-serif text-lg leading-8 text-ink"
-        >
-          <span class="text-brand" aria-hidden="true">{{ index + 1 }}</span>
-          <span>{{ line }}</span>
-        </li>
-      </ol>
-    </section>
-
     <p v-if="loading" class="mt-10 text-center text-muted" role="status">正在讀取簡報…</p>
 
-    <main
-      v-else
-      class="mt-8 grid grid-cols-1 items-start gap-6 lg:grid-cols-[18.5rem_minmax(0,1fr)] lg:gap-8"
-    >
-      <div v-if="weather" ref="weatherSlot" :class="weatherPinned ? 'lg:sticky lg:top-6' : ''">
-        <WeatherCard
-          :weather="weather"
-          :cities="cityOptions"
-          :city-id="cityId"
-          @update:city-id="selectCity"
-        />
-      </div>
+    <main v-else class="mt-8">
+      <WeatherCard
+        v-if="weather"
+        :weather="weather"
+        :cities="cityOptions"
+        :city-id="cityId"
+        @update:city-id="selectCity"
+      />
       <section
         v-else
         class="rounded-2xl border border-dashed border-line bg-card px-5 py-10 text-center"
@@ -169,7 +105,25 @@ const emptyNewsLabel = computed(() => {
         </button>
       </section>
 
-      <section id="news" class="min-w-0 scroll-mt-6" aria-labelledby="news-heading">
+      <section
+        v-if="cards.length === 3"
+        class="mt-8"
+        aria-labelledby="brief-heading"
+      >
+        <h2 id="brief-heading" class="text-sm font-medium tracking-[0.2em] text-brand">今日重點</h2>
+        <ul class="brief-scroll mt-3 flex gap-3 overflow-x-auto pb-1 md:grid md:grid-cols-3 md:overflow-visible">
+          <li
+            v-for="(card, index) in cards"
+            :key="index"
+            class="w-64 shrink-0 rounded-2xl border border-line bg-card px-4 py-3 md:w-auto"
+          >
+            <p v-if="card.category" class="text-xs font-medium text-brand">{{ categoryLabel(card.category) }}</p>
+            <p class="font-serif text-base leading-7 text-ink" :class="card.category ? 'mt-1' : ''">{{ card.text }}</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="news" class="mt-8 scroll-mt-6" aria-labelledby="news-heading">
         <h2 id="news-heading" class="sr-only">新聞列表</h2>
         <div v-if="newsError" class="rounded-2xl border border-dashed border-line bg-card px-5 py-10 text-center" role="alert">
           <p>{{ newsError }}</p>
@@ -213,48 +167,50 @@ const emptyNewsLabel = computed(() => {
             role="tabpanel"
             :aria-labelledby="`tab-${category}`"
           >
-            <div v-if="presented.lead" class="flex flex-col gap-4">
+            <template v-if="presented.lead">
               <NewsCard
                 :item="presented.lead"
                 :topic-items="topicSiblings(presented.lead)"
                 variant="lead"
                 :fresh="isFresh(presented.lead)"
               />
-              <div
-                v-if="presented.sides.length"
-                class="grid items-stretch gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]"
-              >
+              <div v-if="presented.sides.length" class="flex flex-col gap-3">
                 <NewsCard
                   v-for="item in presented.sides"
                   :key="item.id"
-                  class="h-full"
                   :item="item"
                   :topic-items="topicSiblings(item)"
                   variant="side"
                   :fresh="isFresh(item)"
                 />
               </div>
-            </div>
-            <template v-for="block in presented.blocks" :key="block.topicId || block.item.id">
-              <TopicBlock
-                v-if="block.type === 'topic'"
-                :topic-name="block.topicName"
-                :items="block.items"
-                :fresh-ids="freshIds"
-              />
-              <NewsCard
-                v-else
-                :item="block.item"
-                :variant="block.type === 'compact' ? 'compact' : 'full'"
-                :fresh="isFresh(block.item)"
-              />
             </template>
+            <ul
+              v-if="presented.blocks.length"
+              class="overflow-hidden rounded-2xl border border-line bg-card"
+            >
+              <li
+                v-for="block in presented.blocks"
+                :key="block.item.id"
+                class="border-b border-line last:border-b-0"
+              >
+                <NewsCard :item="block.item" variant="row" :fresh="isFresh(block.item)" />
+              </li>
+            </ul>
             <p
               v-if="filteredNews.length === 0"
               class="rounded-2xl border border-dashed border-line bg-card px-5 py-10 text-center text-muted"
             >
               {{ emptyNewsLabel }}
             </p>
+            <button
+              v-else-if="hiddenCount > 0"
+              type="button"
+              class="mx-auto inline-flex min-h-11 cursor-pointer items-center rounded-full border border-line bg-card px-5 text-sm font-medium text-ink"
+              @click="revealMore"
+            >
+              看更多
+            </button>
           </div>
         </template>
       </section>

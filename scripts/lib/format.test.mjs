@@ -17,6 +17,10 @@ test('版次跟著台北時間的小時走', () => {
 test('只有比上一份更新還晚出現的事件算新', () => {
   const previous = '2026-11-24T07:10:00+08:00'
   assert.equal(isFreshItem('2026-11-24T12:10:00+08:00', previous), true)
+  assert.equal(isFreshItem('2026-11-24T04:10:00Z', previous), true)
+  assert.equal(isFreshItem('2026-11-23T23:10:00Z', previous), false)
   assert.equal(isFreshItem(previous, previous), false)
   assert.equal(isFreshItem('2026-11-24T12:10:00+08:00', ''), false)
+  assert.equal(isFreshItem('', previous), false)
+  assert.equal(isFreshItem(undefined, undefined), false)
 })

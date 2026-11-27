@@ -119,11 +119,19 @@ body {
   transform: translateY(0.75rem);
 }
 
-.tab-scroll {
+.page-shell {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.tab-scroll,
+.brief-scroll {
   scrollbar-width: none;
 }
 
-.tab-scroll::-webkit-scrollbar {
+.tab-scroll::-webkit-scrollbar,
+.brief-scroll::-webkit-scrollbar {
   display: none;
 }
 

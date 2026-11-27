@@ -31,13 +31,15 @@ export const formatEdition = (iso) => {
   return '晚間版'
 }
 
-// 這則是不是上次更新之後才出現
+// 這則是不是上次更新之後才出現。沒有上一份產生時間時一律不當成新的
 // firstSeenAt: 事件第一次出現的時間
 // previousGeneratedAt: 上一份檔案的產生時間
 // 回傳: 要不要顯示「新」
 export const isFreshItem = (firstSeenAt, previousGeneratedAt) => {
-  if (!firstSeenAt || !previousGeneratedAt) return false
-  return firstSeenAt > previousGeneratedAt
+  const seen = toDate(firstSeenAt)
+  const prev = toDate(previousGeneratedAt)
+  if (!seen || !prev) return false
+  return seen.getTime() > prev.getTime()
 }
 
 // 格式化刊頭日期

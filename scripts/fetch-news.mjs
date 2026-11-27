@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises'
 import { prepareItems } from './lib/attribute.mjs'
+import { attachEventImages } from './lib/image.mjs'
 import { loadEnv, redact, readEnv } from './lib/env.mjs'
 import {
   applyMerges,
@@ -13,9 +14,9 @@ import {
   unionGroups,
 } from './lib/group.mjs'
 import { carryAfterLimit } from './lib/carry.mjs'
-import { editionTooSmall, indexPrevious, reusedEvent } from './lib/incremental.mjs'
+import { editionTooSmall, indexPrevious, inheritFirstSeen, reusedEvent } from './lib/incremental.mjs'
 import { completeJson, configureLlmCalls, llmCallCount, llmCallLimitValue, llmCallsRemaining, llmLimitReached } from './lib/llm.mjs'
-import { limitPerFeed, parseFeed, withinAge } from './lib/rss.mjs'
+import { fetchMetaDescription, limitPerFeed, parseFeed, withinAge } from './lib/rss.mjs'
 import {
   applyBrief,
   applyCluster,
@@ -290,6 +291,36 @@ const main = async () => {
   }
 }
 
+// 為即將送進摘要但缺少描述片段的代表文章補讀 meta description（不抓全文）
+// clusters: 待重新摘要的事件
+// limit: 最多補讀篇數
+// 回傳: 成功補上片段的篇數
+const fillMissingSnippets = async (clusters, limit = 25) => {
+  const targets = []
+  const seen = new Set()
+  for (const group of clusters) {
+    const picked = group.sourceCount >= 2
+      ? group.sources.map((source) => group.members.find((item) => item.id === source.memberId)).filter(Boolean)
+      : [newest(group.members)].filter(Boolean)
+    for (const draft of picked) {
+      if (draft.snippet || seen.has(draft.url)) continue
+      seen.add(draft.url)
+      targets.push(draft)
+      if (targets.length >= limit) break
+    }
+    if (targets.length >= limit) break
+  }
+  if (!targets.length) return 0
+  const results = await Promise.all(targets.map((draft) => fetchMetaDescription(draft.url)))
+  let filled = 0
+  targets.forEach((draft, index) => {
+    if (!results[index]) return
+    draft.snippet = results[index]
+    filled += 1
+  })
+  return filled
+}
+
 // 執行一次抓取。呼叫次數達到上限後，剩下的批次沿用原本的退回
 // 回傳: 無
 const run = async () => {
@@ -346,6 +377,8 @@ const run = async () => {
     else pending.push(cluster)
   }
   console.log(`[news] 分組 ${clusters.length} 個事件，送出 ${chosen.length} 個，沿用摘要 ${carried.length} 則，重新摘要 ${pending.length} 則`)
+  const filledSnippets = await fillMissingSnippets(pending)
+  if (filledSnippets) console.log(`[news] 補讀文章頁短述 ${filledSnippets} 則`)
   const multi = pending.filter((group) => group.sourceCount >= 2)
   const single = pending.filter((group) => group.sourceCount < 2)
   const clustered = await summarizeClusters(multi, batchSize)
@@ -400,6 +433,11 @@ const run = async () => {
     console.error(`[news] 新事件 ${written.length} 則，少於上一份 ${previousCount} 則的一半，保留上一份 news.json`)
     return
   }
+  written = inheritFirstSeen(written, previous?.items, previousGeneratedAt)
+  const draftsByUrl = new Map(picked.map((item) => [item.url, item]))
+  const membersByEvent = new Map(chosen.map((cluster) => [cluster.id, cluster.members]))
+  const images = await attachEventImages(written, { draftsByUrl, membersByEvent })
+  console.log(`[news] 封面 ${images.withImage} 則，文章頁 ${images.fetched} 次`)
   await writeJson(newsFile, buildNewsFile(written, new Date(), { previousGeneratedAt, todayBrief }))
   const multiCount = written.filter((item) => item.sourceCount >= 2).length
   const returned = merged.rejected + clustered.fallbackCount

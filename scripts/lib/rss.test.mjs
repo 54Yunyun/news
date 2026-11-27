@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { canonicalUrl, dedupe, hintFromRssCategory, parseFeed, selectByCategory, stripHtml, titleScore, withinAge } from './rss.mjs'
+import { canonicalUrl, dedupe, hintFromRssCategory, hintFromUrlPath, metaDescriptionFromHtml, parseFeed, selectByCategory, stripHtml, titleScore, withinAge } from './rss.mjs'
 
 const source = { id: 'demo', name: '示例報', category: 'international' }
 
@@ -37,6 +37,7 @@ test('連結去掉追蹤參數', () => {
 test('解析 RSS 並依連結去重，保留較新的一則', () => {
   const parsed = parseFeed(rss, source)
   assert.equal(parsed[0].snippet, 'Hello & world')
+  assert.equal(parsed[0].image, null)
   const items = dedupe(parsed)
   assert.equal(items.length, 2)
   assert.equal(items[0].title, 'Markets open higher')
@@ -87,4 +88,72 @@ test('解析 Atom', () => {
   assert.equal(items.length, 1)
   assert.equal(items[0].url, 'https://example.com/atom')
   assert.equal(items[0].snippet, 'atom summary')
+  assert.equal(items[0].image, null)
+})
+
+test('RSS 圖片依序取 enclosure、thumbnail，太小或標誌就改看下一張', () => {
+  const xml = `<?xml version="1.0"?>
+  <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel>
+    <item>
+      <title>With photo</title>
+      <link>https://example.com/photo</link>
+      <pubDate>Mon, 23 Nov 2026 01:00:00 GMT</pubDate>
+      <enclosure url="https://cdn.example/audio.mp3" type="audio/mpeg"/>
+      <media:thumbnail url="https://cdn.example/logo.png" width="800" height="450"/>
+      <media:content url="https://cdn.example/story.jpg" medium="image" width="640" height="360"/>
+      <description><![CDATA[<img src="https://cdn.example/ignored.jpg" width="800">]]></description>
+    </item>
+  </channel></rss>`
+  const [item] = parseFeed(xml, source)
+  assert.equal(item.image, 'https://cdn.example/story.jpg')
+  assert.equal(item.imageWidth, 640)
+  assert.equal(item.imageHeight, 360)
+})
+
+test('解析 Google News Sitemap 並依網址路徑分五類，略過娛樂與體育', () => {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+          xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+          xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+      <loc>https://news.nextapple.com/politics/20261127/AAA111</loc>
+      <lastmod>2026-11-27T09:50:00+08:00</lastmod>
+      <news:news>
+        <news:publication_date>2026-11-27T09:50:00+08:00</news:publication_date>
+        <news:title><![CDATA[首都選戰倒數]]></news:title>
+      </news:news>
+      <image:image>
+        <image:loc>https://static-cdn.nextapple.tw/prod/2026-11/AAA111/photo_1280.webp</image:loc>
+      </image:image>
+    </url>
+    <url>
+      <loc>https://news.nextapple.com/entertainment/20261127/BBB222</loc>
+      <news:news>
+        <news:publication_date>2026-11-27T09:45:00+08:00</news:publication_date>
+        <news:title><![CDATA[娛樂新聞]]></news:title>
+      </news:news>
+    </url>
+    <url>
+      <loc>https://news.nextapple.com/aitech/20261127/CCC333</loc>
+      <news:news>
+        <news:publication_date>2026-11-27T09:40:00+08:00</news:publication_date>
+        <news:title><![CDATA[AI 晶片發表]]></news:title>
+      </news:news>
+    </url>
+  </urlset>`
+  const nextapple = { id: 'nextapple', name: '壹蘋新聞網', category: 'life', splitByUrlCategory: true }
+  const items = parseFeed(xml, nextapple)
+  assert.equal(items.length, 2)
+  assert.equal(items[0].category, 'politics')
+  assert.equal(items[0].feedId, 'nextapple:politics')
+  assert.equal(items[0].image, 'https://static-cdn.nextapple.tw/prod/2026-11/AAA111/photo_1280.webp')
+  assert.equal(items[1].category, 'tech')
+  assert.equal(items[1].feedId, 'nextapple:tech')
+  assert.equal(hintFromUrlPath('https://news.nextapple.com/sports/20261127/DDD444'), '')
+})
+
+test('從文章頁 HTML 取出 description 或 og:description', () => {
+  const html = '<meta content="第一段 &amp; 重點" name="description"><meta property="og:description" content="備用">'
+  assert.equal(metaDescriptionFromHtml(html), '第一段 & 重點')
+  assert.equal(metaDescriptionFromHtml('<meta property="og:description" content="只有 OG 描述">'), '只有 OG 描述')
 })

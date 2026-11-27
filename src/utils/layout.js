@@ -1,4 +1,8 @@
-// 依家數挑頭條。同一 topicId 只佔一格，子事件不另佔頭條或次頭條
+import { categories } from '../constants/categories.js'
+
+const newsCategories = new Set(categories.filter((item) => item.id !== 'all').map((item) => item.id))
+
+// 依家數挑頭條與最多四則次要。同一 topicId 只佔一格，子事件不另佔頭條或次要
 // items: 目前要顯示的新聞，順序沿用清單排序
 // 回傳: { lead, sides, rest }
 export const splitLead = (items) => {
@@ -16,9 +20,7 @@ export const splitLead = (items) => {
   }
   if (!picked.length) return { lead: null, sides: [], rest: [] }
   const lead = picked[0]
-  const available = picked.length - 1
-  const sideCount = available >= 4 ? 4 : available >= 2 ? 2 : 0
-  const sides = picked.slice(1, 1 + sideCount)
+  const sides = picked.slice(1, 5)
   const shownTopics = new Set([lead, ...sides].map((item) => item?.topicId).filter(Boolean))
   const shownIds = new Set([lead, ...sides].map((item) => item.id))
   const rest = (items ?? []).filter((item) => {
@@ -28,34 +30,80 @@ export const splitLead = (items) => {
   return { lead, sides, rest }
 }
 
-// 把其餘新聞排成話題區塊、完整卡片或緊湊列。同話題收成一區，3 家以上用卡片，1–2 家用緊湊列
-// items: 頭條區以外的新聞
-// 回傳: { type, item?, topicId?, topicName?, items? } 陣列
+// 其餘新聞每則一列。展開前只顯示分類、標題、家數與時間
+// items: 頭條與次要以外的新聞
+// 回傳: { type, item } 陣列
 export const groupBlocks = (items) => {
-  const counts = new Map()
-  for (const item of items ?? []) {
-    if (!item?.topicId) continue
-    counts.set(item.topicId, (counts.get(item.topicId) ?? 0) + 1)
+  return (items ?? []).map((item) => ({ type: 'row', item }))
+}
+
+// 預設只取前幾則。已經展開的分頁回傳全部
+// items: 這個分頁排序後的新聞
+// open: 這個分頁是否已按過看更多
+// size: 預設則數
+// 回傳: 要畫出來的新聞
+export const takePage = (items, open = false, size = 15) => {
+  const list = items ?? []
+  if (open) return list
+  return list.slice(0, size)
+}
+
+// 兩段文字的二字組重疊比例
+// a: 已去掉標點的文字
+// b: 已去掉標點的文字
+// 回傳: 0 到 1
+const overlap = (a, b) => {
+  if (!a || !b) return 0
+  if (a === b) return 1
+  if (a.length < 2 || b.length < 2) return 0
+  const grams = new Map()
+  for (let i = 0; i < a.length - 1; i += 1) {
+    const gram = a.slice(i, i + 2)
+    grams.set(gram, (grams.get(gram) ?? 0) + 1)
   }
-  const seen = new Set()
-  const blocks = []
-  for (const item of items ?? []) {
-    if (item?.topicId && counts.get(item.topicId) >= 2) {
-      if (seen.has(item.topicId)) continue
-      seen.add(item.topicId)
-      const members = items.filter((other) => other.topicId === item.topicId)
-      blocks.push({
-        type: 'topic',
-        topicId: item.topicId,
-        topicName: item.topicName || '話題',
-        items: members,
-      })
-      continue
+  let hit = 0
+  for (let i = 0; i < b.length - 1; i += 1) {
+    const gram = b.slice(i, i + 2)
+    const count = grams.get(gram) ?? 0
+    if (count > 0) {
+      grams.set(gram, count - 1)
+      hit += 1
     }
-    blocks.push({
-      type: (item.sourceCount ?? 1) >= 3 ? 'card' : 'compact',
-      item,
-    })
   }
-  return blocks
+  return (2 * hit) / (a.length + b.length - 2)
+}
+
+// 用標題重疊判斷這句重點屬於哪個分類
+// text: 一句今日重點
+// events: 新聞事件
+// 回傳: 分類代碼，對不上時回傳空字串
+const categoryForBrief = (text, events) => {
+  const key = String(text ?? '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '')
+  let best = ''
+  let bestScore = 0.2
+  for (const event of events ?? []) {
+    const title = String(event?.title ?? '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '')
+    const score = overlap(key, title)
+    if (score > bestScore) {
+      best = event.category || ''
+      bestScore = score
+    }
+  }
+  return newsCategories.has(best) ? best : ''
+}
+
+// 今日重點配上分類。已帶合法分類的沿用，否則依標題對應
+// lines: 字串或 { text, category }
+// events: 新聞事件
+// 回傳: { text, category } 陣列，最多三則
+export const briefCards = (lines, events) => {
+  const cards = []
+  for (const line of lines ?? []) {
+    const text = typeof line === 'string' ? line.trim() : String(line?.text ?? '').trim()
+    if (!text) continue
+    const given = typeof line === 'object' && line ? String(line.category ?? '') : ''
+    const category = newsCategories.has(given) ? given : categoryForBrief(text, events)
+    cards.push({ text, category })
+  }
+  return cards.slice(0, 3)
 }

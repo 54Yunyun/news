@@ -89,10 +89,30 @@ export const buildNewsFile = (items, now = new Date(), { previousGeneratedAt = '
     if (item.sourceCount != null) next.sourceCount = item.sourceCount
     next.title = item.title
     next.highlights = item.highlights
+    const cover = item.image
+    if (cover?.url && cover?.sourceName) {
+      next.image = { url: cover.url, sourceName: cover.sourceName }
+      if (Number.isInteger(cover.width) && cover.width >= 400) next.image.width = cover.width
+      if (Number.isInteger(cover.height) && cover.height > 1) next.image.height = cover.height
+    } else {
+      next.image = null
+    }
     if (Array.isArray(item.commonFacts)) next.commonFacts = item.commonFacts
     if (item.topicId) next.topicId = item.topicId
     if (item.topicName) next.topicName = item.topicName
-    if (Array.isArray(item.sources)) next.sources = item.sources
+    if (Array.isArray(item.sources)) {
+      next.sources = item.sources.map((source) => {
+        const row = {
+          name: source.name,
+          title: source.title,
+          url: source.url,
+          publishedAt: source.publishedAt,
+        }
+        if (source.angle) row.angle = source.angle
+        row.image = source.image ?? null
+        return row
+      })
+    }
     return next
   }
   file.items = [...items].map(stampItem).sort((a, b) => {

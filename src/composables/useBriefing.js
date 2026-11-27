@@ -1,6 +1,7 @@
 import { computed, onMounted, ref } from 'vue'
+import { readSavedCity, resolveCityId, saveCity } from '../utils/city.js'
 import { isFreshItem } from '../utils/format.js'
-import { groupBlocks, splitLead } from '../utils/layout.js'
+import { groupBlocks, splitLead, takePage } from '../utils/layout.js'
 
 // 組成 public 資料的網址，並帶上站台子路徑
 // name: 檔名
@@ -13,7 +14,7 @@ export const useBriefing = () => {
   const news = ref([])
   const weather = ref(null)
   const catalog = ref(null)
-  const cityId = ref('taipei')
+  const cityId = ref(readSavedCity())
   const generatedAt = ref('')
   const previousGeneratedAt = ref('')
   const todayBrief = ref([])
@@ -22,6 +23,18 @@ export const useBriefing = () => {
   const loading = ref(true)
   const category = ref('all')
   const sortMode = ref('coverage')
+  const openPages = ref({})
+
+  // 今日重點收成字串或帶分類的物件
+  // line: news.json 的一句
+  // 回傳: 字串、{ text, category }，空的回傳 null
+  const briefLine = (line) => {
+    if (typeof line === 'string' && line.trim()) return line.trim()
+    if (line && typeof line.text === 'string' && line.text.trim()) {
+      return { text: line.text.trim(), category: typeof line.category === 'string' ? line.category : '' }
+    }
+    return null
+  }
 
   // 讀取 JSON。不快取，方便同一天替換檔案後重新整理
   // name: data 目錄裡的檔名
@@ -62,22 +75,12 @@ export const useBriefing = () => {
       generatedAt.value = data.generatedAt || data.updatedAt || ''
       previousGeneratedAt.value = data.previousGeneratedAt || ''
       todayBrief.value = Array.isArray(data.todayBrief)
-        ? data.todayBrief.filter((line) => typeof line === 'string' && line.trim()).slice(0, 3)
+        ? data.todayBrief.map(briefLine).filter(Boolean).slice(0, 3)
         : []
     } catch (err) {
       newsError.value = err?.message === 'parse'
         ? '新聞資料無法讀取。'
         : '今天的新聞暫時讀不到，請稍後再試。'
-    }
-  }
-
-  // 讀縣市選擇。讀不到時用臺北市
-  // 回傳: 縣市代碼
-  const readCity = () => {
-    try {
-      return localStorage.getItem('news-city') || 'taipei'
-    } catch {
-      return 'taipei'
     }
   }
 
@@ -108,8 +111,7 @@ export const useBriefing = () => {
   // 回傳: 無
   const applyCity = async (id) => {
     const data = catalog.value
-    const options = cityOptions.value
-    const next = options.some((item) => item.id === id) ? id : (options.find((item) => item.id === 'taipei')?.id || options[0]?.id || '')
+    const next = resolveCityId(id, cityOptions.value)
     cityId.value = next
     if (!data || !next) {
       weather.value = null
@@ -141,7 +143,7 @@ export const useBriefing = () => {
       const usable = data?.split || data?.cities || data?.current
       if (!usable) throw new Error('parse')
       catalog.value = data
-      await applyCity(readCity())
+      await applyCity(readSavedCity())
       if (!weather.value) throw new Error('parse')
     } catch (err) {
       weatherError.value = err?.message === 'parse'
@@ -154,11 +156,7 @@ export const useBriefing = () => {
   // id: 縣市代碼
   // 回傳: 無
   const selectCity = async (id) => {
-    try {
-      localStorage.setItem('news-city', id)
-    } catch {
-      // 瀏覽器擋住儲存時，這次畫面仍切換
-    }
+    saveCity(id)
     try {
       await applyCity(id)
       weatherError.value = ''
@@ -196,10 +194,24 @@ export const useBriefing = () => {
     return orderedNews.value.filter((item) => item.category === category.value)
   })
 
-  // 頭條、旁邊的卡片，以及其餘的話題或列表
+  // 這個分頁目前畫出來的新聞。沒按看更多時只有前 15 則
+  // 回傳: 新聞陣列
+  const visibleNews = computed(() => takePage(filteredNews.value, Boolean(openPages.value[category.value])))
+
+  // 這個分頁還沒展開的則數
+  // 回傳: 0 或正整數
+  const hiddenCount = computed(() => Math.max(0, filteredNews.value.length - visibleNews.value.length))
+
+  // 展開目前分頁。其他分頁維持各自的 15 則
+  // 回傳: 無
+  const revealMore = () => {
+    openPages.value = { ...openPages.value, [category.value]: true }
+  }
+
+  // 頭條、次要，以及其餘的單行
   // 回傳: { lead, sides, blocks }
   const presented = computed(() => {
-    const { lead, sides, rest } = splitLead(filteredNews.value)
+    const { lead, sides, rest } = splitLead(visibleNews.value)
     return { lead, sides, blocks: groupBlocks(rest) }
   })
 
@@ -235,6 +247,9 @@ export const useBriefing = () => {
     generatedAt,
     todayBrief,
     presented,
+    visibleNews,
+    hiddenCount,
+    revealMore,
     isFresh,
     newsError,
     weatherError,

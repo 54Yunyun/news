@@ -1,12 +1,13 @@
 import { XMLParser } from 'fast-xml-parser'
 import { briefCategories } from './categories.mjs'
+import { imageFromNode } from './image.mjs'
 import { toTaipeiIso } from './time.mjs'
 
 const parser = new XMLParser({
   ignoreAttributes: false,
   attributeNamePrefix: '@_',
   trimValues: true,
-  isArray: (tagName) => tagName === 'item' || tagName === 'entry',
+  isArray: (tagName) => tagName === 'item' || tagName === 'entry' || tagName === 'url',
 })
 
 const CATEGORIES = briefCategories
@@ -134,29 +135,106 @@ export const hintFromRssCategory = (label) => {
   return 'life'
 }
 
-// 解析 RSS 2.0 或 Atom，只取標題、描述片段、連結與時間
+// 依網址第一段路徑將新聞對應到五類提示。娛樂、體育等非日常範圍回傳空字串
+// raw: 正規化後的文章網址
+// 回傳: 五類之一，不屬五類時回傳空字串
+export const hintFromUrlPath = (raw) => {
+  try {
+    const seg = new URL(raw).pathname.split('/').filter(Boolean)[0]?.toLowerCase() ?? ''
+    if (seg === 'international') return 'international'
+    if (seg === 'politics') return 'politics'
+    if (seg === 'finance') return 'finance'
+    if (seg === 'gadget' || seg === 'aitech' || seg === 'tech') return 'tech'
+    if (seg === 'local' || seg === 'life' || seg === 'lifestyle' || seg === 'property' || seg === 'eattravel') return 'life'
+    return ''
+  } catch {
+    return ''
+  }
+}
+
+// 取出單一 HTML 標籤上的屬性值
+// tag: HTML 標籤字串
+// name: 屬性名稱
+// 回傳: 屬性值，沒有時回傳空字串
+const metaAttr = (tag, name) => {
+  const matched = String(tag ?? '').match(new RegExp(`\\b${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s"'=<>]+))`, 'i'))
+  return matched?.[1] ?? matched?.[2] ?? matched?.[3] ?? ''
+}
+
+// 從文章頁 HTML 取出 description 或 og:description，作為缺乏摘要片段時的短述
+// html: 文章頁 HTML
+// 回傳: 最多 280 字的純文字，沒有時回傳空字串
+export const metaDescriptionFromHtml = (html) => {
+  let desc = ''
+  let ogDesc = ''
+  for (const tag of String(html ?? '').match(/<meta\b[^>]*>/gi) ?? []) {
+    const key = (metaAttr(tag, 'name') || metaAttr(tag, 'property')).toLowerCase()
+    const content = stripHtml(metaAttr(tag, 'content'))
+    if (!content) continue
+    if (key === 'description' && !desc) desc = content
+    else if (key === 'og:description' && !ogDesc) ogDesc = content
+  }
+  return (desc || ogDesc).slice(0, 280)
+}
+
+// 補讀文章頁的 meta description。逾時或非 HTML 時回傳空字串，不抓全文
+// pageUrl: 文章網址
+// options: timeout（毫秒）與測試用 fetchImpl
+// 回傳: 短述文字，失敗時回傳空字串
+export const fetchMetaDescription = async (pageUrl, { timeout = 5000, fetchImpl = fetch } = {}) => {
+  try {
+    const res = await fetchImpl(pageUrl, {
+      headers: { 'user-agent': 'daily-briefing/1.0', accept: 'text/html' },
+      redirect: 'follow',
+      signal: AbortSignal.timeout(timeout),
+    })
+    if (!res.ok) return ''
+    const type = res.headers.get('content-type') || ''
+    if (type && !type.includes('html') && !type.includes('xml')) return ''
+    return metaDescriptionFromHtml(await res.text())
+  } catch {
+    return ''
+  }
+}
+
+// 解析 RSS 2.0、Atom 或 Google News Sitemap，取標題、描述片段、連結、時間與圖片網址
 // xml: 訂閱源文字
-// source: { id, name, category, splitByRssCategory }
+// source: { id, name, category, splitByRssCategory, splitByUrlCategory }
 // 回傳: 新聞草稿陣列
 export const parseFeed = (xml, source) => {
   if (!CATEGORIES.has(source.category)) return []
   const doc = parser.parse(String(xml).slice(0, 1_500_000))
   const rssItems = asList(doc?.rss?.channel?.item)
   const atomItems = asList(doc?.feed?.entry)
-  const nodes = rssItems.length ? rssItems : atomItems
+  const sitemapItems = asList(doc?.urlset?.url)
+  const isSitemap = !rssItems.length && !atomItems.length && sitemapItems.length > 0
+  const nodes = rssItems.length ? rssItems : atomItems.length ? atomItems : sitemapItems
   const items = []
   for (const node of nodes) {
+    const newsNode = isSitemap ? node['news:news'] : null
     const linkNode = asList(node.link).find((link) => !link?.['@_rel'] || link['@_rel'] === 'alternate') ?? node.link
-    const link = textOf(linkNode) || linkNode?.['@_href'] || textOf(node.guid) || ''
+    const link = isSitemap
+      ? textOf(node.loc)
+      : textOf(linkNode) || linkNode?.['@_href'] || textOf(node.guid) || ''
     const url = canonicalUrl(link)
-    const title = stripHtml(textOf(node.title)).slice(0, 180)
-    const published = textOf(node.pubDate) || textOf(node.published) || textOf(node.updated) || textOf(node.dc?.date)
+    const title = stripHtml(textOf(isSitemap ? newsNode?.['news:title'] : node.title)).slice(0, 180)
+    const published = isSitemap
+      ? textOf(newsNode?.['news:publication_date']) || textOf(node.lastmod)
+      : textOf(node.pubDate) || textOf(node.published) || textOf(node.updated) || textOf(node.dc?.date)
     const publishedAt = parseRssDate(published)
     if (!url || !title || !publishedAt) continue
-    const snippet = stripHtml(textOf(node.description) || textOf(node.summary) || textOf(node['content'])).slice(0, 280)
-    const rssCategory = stripHtml(textOf(node.category))
-    const hinted = source.splitByRssCategory ? hintFromRssCategory(rssCategory) : ''
+    const snippet = isSitemap
+      ? ''
+      : stripHtml(textOf(node.description) || textOf(node.summary) || textOf(node['content'])).slice(0, 280)
+    let hinted = ''
+    if (source.splitByUrlCategory) {
+      hinted = hintFromUrlPath(url)
+      if (!hinted) continue
+    } else if (source.splitByRssCategory) {
+      hinted = hintFromRssCategory(stripHtml(textOf(node.category)))
+    }
     const category = hinted || source.category
+    const image = imageFromNode(node, url)
     items.push({
       id: itemId(source.id, url),
       feedId: hinted ? `${source.id}:${hinted}` : source.id,
@@ -168,6 +246,9 @@ export const parseFeed = (xml, source) => {
       title,
       snippet,
       url,
+      image: image?.url ?? null,
+      ...(image?.width ? { imageWidth: image.width } : {}),
+      ...(image?.height ? { imageHeight: image.height } : {}),
     })
   }
   return items

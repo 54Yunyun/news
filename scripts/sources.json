@@ -182,6 +182,13 @@
       "name": "公視",
       "category": "life",
       "url": "https://news.pts.org.tw/xml/newsfeed.xml"
+    },
+    {
+      "id": "nextapple",
+      "name": "壹蘋新聞網",
+      "category": "life",
+      "splitByUrlCategory": true,
+      "url": "https://news.nextapple.com/api/xml/site-map/news"
     }
   ]
 }

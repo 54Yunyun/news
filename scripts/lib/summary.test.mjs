@@ -85,6 +85,7 @@ test('news.json 同時有 generatedAt 與 updatedAt', () => {
   assert.equal(file.generatedAt, '2026-11-23T06:30:00+08:00')
   assert.equal(file.updatedAt, file.generatedAt)
   assert.equal(file.items[0].firstSeenAt, file.generatedAt)
+  assert.equal(file.items[0].image, null)
   assert.equal(file.previousGeneratedAt, undefined)
   assert.equal(file.items.length, 1)
 })
@@ -105,4 +106,45 @@ test('沿用的 firstSeenAt 會保留，並寫入上一份的產生時間', () =
   )
   assert.equal(file.previousGeneratedAt, '2026-11-22T18:10:00+08:00')
   assert.equal(file.items[0].firstSeenAt, '2026-11-22T18:10:00+08:00')
+})
+
+test('事件圖片與來源圖片會寫進檔案，沒有來源名稱就當成沒有圖', () => {
+  const file = buildNewsFile(
+    [{
+      id: 'evt-1',
+      category: 'life',
+      publishedAt: '2026-11-23T06:00:00+08:00',
+      sourceCount: 1,
+      title: '標題',
+      highlights: ['一', '二', '三'],
+      image: { url: 'https://img.example/a.jpg', sourceName: '中央社', width: 640, height: 360 },
+      sources: [{
+        name: '中央社',
+        title: '原題',
+        url: 'https://example.com/1',
+        publishedAt: '2026-11-23T06:00:00+08:00',
+        image: 'https://img.example/a.jpg',
+      }],
+    }],
+    new Date('2026-11-23T06:30:00+08:00'),
+  )
+  assert.deepEqual(file.items[0].image, {
+    url: 'https://img.example/a.jpg',
+    sourceName: '中央社',
+    width: 640,
+    height: 360,
+  })
+  assert.equal(file.items[0].sources[0].image, 'https://img.example/a.jpg')
+  const bare = buildNewsFile(
+    [{
+      id: 'evt-2',
+      category: 'life',
+      publishedAt: '2026-11-23T06:00:00+08:00',
+      title: '標題',
+      highlights: ['一', '二', '三'],
+      image: { url: 'https://img.example/a.jpg' },
+    }],
+    new Date('2026-11-23T06:30:00+08:00'),
+  )
+  assert.equal(bare.items[0].image, null)
 })

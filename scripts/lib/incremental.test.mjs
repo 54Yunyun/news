@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { editionTooSmall, indexPrevious, reusedEvent } from './incremental.mjs'
+import { editionTooSmall, indexPrevious, inheritFirstSeen, reusedEvent } from './incremental.mjs'
 import { configureLlmCalls, llmCallCount, reserveLlmCall } from './llm.mjs'
 
 const cluster = {
@@ -72,4 +72,33 @@ test('呼叫次數達到上限後不再增加', () => {
   reserveLlmCall()
   assert.equal(llmCallCount(), 2)
   assert.throws(() => reserveLlmCall(), (err) => err?.code === 'llm-limit' && llmCallCount() === 2)
+})
+
+test('重新摘要的事件若與上一份共用來源或發布早於前版，不應當成新事件', () => {
+  const prevAt = '2026-11-26T09:50:37+08:00'
+  const previous = [{
+    firstSeenAt: '2026-11-26T07:00:00+08:00',
+    sources: [{ url: 'https://a.example/1' }],
+  }]
+  const events = [
+    {
+      id: 'expanded',
+      publishedAt: '2026-11-26T11:20:00+08:00',
+      sources: [{ url: 'https://a.example/1' }, { url: 'https://b.example/2' }],
+    },
+    {
+      id: 'older-pub',
+      publishedAt: '2026-11-26T08:00:00+08:00',
+      sources: [{ url: 'https://c.example/3' }],
+    },
+    {
+      id: 'brand-new',
+      publishedAt: '2026-11-26T11:30:00+08:00',
+      sources: [{ url: 'https://d.example/4' }],
+    },
+  ]
+  const next = inheritFirstSeen(events, previous, prevAt)
+  assert.equal(next[0].firstSeenAt, '2026-11-26T07:00:00+08:00')
+  assert.equal(next[1].firstSeenAt, prevAt)
+  assert.equal(next[2].firstSeenAt, undefined)
 })
