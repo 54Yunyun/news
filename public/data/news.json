@@ -1,147 +1,231 @@
 {
-  "generatedAt": "2026-11-27T10:12:40+08:00",
-  "updatedAt": "2026-11-27T10:12:40+08:00",
-  "previousGeneratedAt": "2026-11-26T11:47:11+08:00",
+  "generatedAt": "2026-11-27T10:17:33+08:00",
+  "updatedAt": "2026-11-27T10:17:33+08:00",
+  "previousGeneratedAt": "2026-11-27T10:12:40+08:00",
   "todayBrief": [
-    "新北精神護理之家涉嫌超收住民，百名住民遭到不當對待與關狗籠。",
-    "台積電德國廠預計二〇二七年底投產，川普將出席亞利桑那州擴廠動土。",
-    "假短劇App藏有惡意程式誘騙轉帳，多家國銀與警方發布示警。"
+    "台北市長選舉倒數，候選人密集衝刺並推出競選影片與直播。",
+    "新北精神護理之家涉嫌超收住民並施以關狗籠等不當對待。",
+    "美國擬豁免台韓半導體關稅，引發市場關注相關產業發展。"
   ],
   "items": [
     {
-      "id": "evt-1hkwtnd",
+      "id": "evt-1kipnt4",
       "category": "politics",
-      "publishedAt": "2026-11-27T09:43:19+08:00",
+      "publishedAt": "2026-11-27T10:12:00+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 6,
-      "title": "民進黨台北市長候選人沈伯洋合體前總統蔡英文直播，吸引大批線上觀看",
+      "sourceCount": 7,
+      "title": "台北市長選舉倒數 沈伯洋合體蔡英文直播並釋出競選影片",
       "highlights": [
-        "民進黨台北市長候選人沈伯洋於26日晚間與前總統蔡英文合體直播，吸引27萬人在線觀看。",
-        "直播中蔡英文對沈伯洋小時候的對話與影片內容讓沈伯洋相當感動。",
-        "國民黨對手蔣萬安則持續在內湖、南港展開大車掃，並回應路權相關議題。"
+        "民進黨台北市長候選人沈伯洋在選前夕推出催票影片，並發表「最後一次以市長候選人身分自我介紹」。",
+        "沈伯洋與前總統蔡英文合體開直播對談，吸引27萬人在線觀看，蔡英文稱讚沈伯洋具備適合當市長的雞婆性格。",
+        "針對沈伯洋涉境外資金及競總路權等爭議，柯文哲與蔣萬安分別提出批評與回應。"
       ],
       "image": {
-        "url": "https://static-cdn.nextapple.tw/prod/2026-11/8AF6EE1C6601B162F8E5CB03519BB62B/2c511508db5d0cf685c1773f97e7d0fc_1280.webp",
+        "url": "https://static-cdn.nextapple.tw/prod/2026-11/7041C5635B5E939C97C86507830DAB22/c3c8ce705f3e0c1813973fe7c01b830e_1280.webp",
         "sourceName": "壹蘋新聞網"
       },
       "commonFacts": [
-        "民進黨台北市長候選人沈伯洋與前總統蔡英文於26日晚間合體直播。",
-        "直播線上觀看人數達到27萬人。"
+        "沈伯洋與前總統蔡英文合體開直播。"
       ],
-      "topicId": "topic-cwx6r6",
-      "topicName": "沈伯洋選前活動",
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
       "sources": [
+        {
+          "name": "壹蘋新聞網",
+          "title": "沈伯洋「最後一次以市長候選人身分自我介紹」 最新影片曝光",
+          "url": "https://news.nextapple.com/politics/20261127/7041C5635B5E939C97C86507830DAB22",
+          "publishedAt": "2026-11-27T10:12:00+08:00",
+          "angle": "報導沈伯洋發表最後一次以市長候選人身分的自我介紹與競選影片。",
+          "image": "https://static-cdn.nextapple.tw/prod/2026-11/7041C5635B5E939C97C86507830DAB22/c3c8ce705f3e0c1813973fe7c01b830e_1280.webp"
+        },
+        {
+          "name": "聯合報",
+          "title": "聯手張啓楷轟沈伯洋收境外資金 柯文哲：沈伯洋這局大概玩完了",
+          "url": "https://udn.com/news/story/124652/9905111",
+          "publishedAt": "2026-11-27T09:57:38+08:00",
+          "angle": "報導柯文哲聯手張啓楷質疑沈伯洋涉及境外資金爭議。",
+          "image": null
+        },
         {
           "name": "自由時報",
           "title": "沈伯洋上訴「公正第三方」裁決爆炸頭vs現在髮型 小英秀說話的藝術",
           "url": "https://news.ltn.com.tw/news/politics/breakingnews/5654718",
           "publishedAt": "2026-11-27T09:43:19+08:00",
-          "angle": "報導沈伯洋與前總統蔡英文於競選總部直播互動情形。",
+          "angle": "報導沈伯洋與前總統蔡英文在競總直播互動。",
           "image": null
-        },
-        {
-          "name": "壹蘋新聞網",
-          "title": "蔡英文「不要把小男生弄丟了」 沈伯洋反應曝！網友看到想哭",
-          "url": "https://news.nextapple.com/politics/20261127/8AF6EE1C6601B162F8E5CB03519BB62B",
-          "publishedAt": "2026-11-27T09:40:00+08:00",
-          "angle": "聚焦蔡英文在直播中的談話讓沈伯洋感到感動與網友反應。",
-          "image": "https://static-cdn.nextapple.tw/prod/2026-11/8AF6EE1C6601B162F8E5CB03519BB62B/2c511508db5d0cf685c1773f97e7d0fc_1280.webp"
         },
         {
           "name": "公視",
           "title": "北市選戰沈伯洋合體蔡英文直播 蔣萬安掃街與市民互動",
           "url": "https://news.pts.org.tw/article/837606",
-          "publishedAt": "2026-11-27T08:11:56+08:00",
-          "angle": "報導沈伯洋合體蔡英文直播及蔣萬安在內湖南港車掃與回應路權。",
+          "publishedAt": "2026-11-27T09:30:25+08:00",
+          "angle": "報導沈伯洋合體蔡英文直播及蔣萬安展開內湖南港大車掃。",
           "image": null
         },
         {
           "name": "ETtoday",
-          "title": "沈伯洋搶看蔡英文送「10歲的他一段話」 反應曝光：早知在家看",
-          "url": "https://www.ettoday.net/news/20261127/3279177.htm",
-          "publishedAt": "2026-11-27T06:15:00+08:00",
-          "angle": "強調蔡英文對10歲沈伯洋喊話的內容讓沈伯洋直呼感動。",
-          "image": "https://cdn2.ettoday.net/images/9035/c9035205.jpg"
+          "title": "沈伯洋稱「實力好」拿到索羅斯經費 柯文哲：賣國的實力嗎",
+          "url": "https://www.ettoday.net/news/20261127/3279193.htm",
+          "publishedAt": "2026-11-27T07:40:00+08:00",
+          "angle": "報導柯文哲針對沈伯洋索羅斯經費爭議的批評。id_err",
+          "image": "https://cdn2.ettoday.net/images/9032/c9032634.jpg"
         },
         {
           "name": "Yahoo奇摩新聞",
           "title": "合體蔡英文看催票片秒破防！沈伯洋聽見「這1人」獻聲8字險淚崩",
           "url": "https://tw.news.yahoo.com/%E5%90%88%E9%AB%94%E8%94%A1%E8%8B%B1%E6%96%87%E7%9C%8B%E5%82%AC%E7%A5%A8%E7%89%87%E7%A7%92%E7%A0%B4%E9%98%B2-%E6%B2%88%E4%BC%AF%E6%B4%8B%E8%81%BD%E8%A6%8B-%E9%80%991%E4%BA%BA-%E7%8D%BB%E8%81%B28%E5%AD%97%E9%9A%AA%E6%B7%9A%E5%B4%A9-020100532.html",
           "publishedAt": "2026-11-27T02:01:00+08:00",
-          "angle": "報導沈伯洋推出吳念真配音的催票影片，並提及女兒獻聲讓其破防。",
+          "angle": "報導沈伯洋看催票影片落淚及女兒獻聲的橋段。",
           "image": null
         },
         {
           "name": "中央社",
-          "title": "沈伯洋合體蔡英文 公布27日白天赴多地與市民聊天、晚間線上直播",
-          "url": "https://www.cna.com.tw/news/aipl/202611260295.aspx",
-          "publishedAt": "2026-11-26T20:59:30+08:00",
-          "angle": "報導沈伯洋與蔡英文直播並公布選前之夜的白天與晚間行程規劃。",
+          "title": "蔡英文稱沈伯洋「雞婆」適合當市長 直播對談吸27萬人",
+          "url": "https://www.cna.com.tw/news/aipl/202611260319.aspx",
+          "publishedAt": "2026-11-26T22:54:28+08:00",
+          "angle": "報導蔡英文在直播中稱讚沈伯洋適合當市長。",
           "image": null
         }
       ]
     },
     {
-      "id": "evt-bo5ve7",
-      "category": "international",
-      "publishedAt": "2026-11-27T10:06:45+08:00",
+      "id": "evt-wpci3l",
+      "category": "life",
+      "publishedAt": "2026-11-27T09:57:07+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 5,
-      "title": "台積電前景與輝達執行長動向引發關注，美國持續調整出口管制",
+      "sourceCount": 6,
+      "title": "投票日天氣轉晴朗舒適 入夜後輻射冷卻注意保暖",
       "highlights": [
-        "美國更新出口管制規定，防堵企業藉由海外存取取得算力的漏洞。",
-        "美國媒體與學者探討黃仁勳重掌輝達後面對的挑戰與市場轉變。",
-        "有美國媒體報導指出川普將出席台積電擴廠動土儀式並關注輝達市值。"
+        "明天投票日各地天氣大致晴朗穩定，白天舒適微熱，僅東半部有零星降雨。",
+        "受偏強東北季風與輻射冷卻影響，入夜後氣溫明顯下降，清晨平地低溫可能降至12至15度左右。",
+        "氣象專家指出未來一週天氣相對穩定，下週氣溫將逐日回升。"
       ],
       "image": {
-        "url": "https://cdn2.ettoday.net/images/9030/c9030968.png",
+        "url": "https://cdn2.ettoday.net/images/9035/c9035217.jpg",
         "sourceName": "ETtoday"
       },
       "commonFacts": [
-        "美國政府更新出口管制規定以防堵漏洞。",
-        "輝達執行長黃仁勳的動向受到外界與市場討論。"
+        "投票日各地天氣大致晴朗穩定，但入夜後氣溫轉涼。"
       ],
-      "topicId": "topic-5ayr3x",
-      "topicName": "台積電與晶片動向",
       "sources": [
         {
-          "name": "自由時報",
-          "title": "輝達、美光誰贏都不怕！美媒一文揭台積電「通吃秘密」值得抱股至2030年",
-          "url": "https://ec.ltn.com.tw/article/breakingnews/5654891",
-          "publishedAt": "2026-11-27T10:06:45+08:00",
-          "angle": "分析台積電在AI半導體領域的優勢與長期抱股潛力。",
+          "name": "聯合報",
+          "title": "未來1周沒有明顯的大範圍降雨訊號 明天投票注意東北季風增強帶涼空氣",
+          "url": "https://udn.com/news/story/7266/9905110",
+          "publishedAt": "2026-11-27T09:57:07+08:00",
+          "angle": "報導未來一週天氣相對穩定且投票日天氣可望良好。",
           "image": null
         },
         {
-          "name": "聯合報",
-          "title": "美國靠一招在美中AI競爭占上風 《晶片戰爭》作者這麼說",
-          "url": "https://udn.com/news/story/6811/9905100",
-          "publishedAt": "2026-11-27T09:49:41+08:00",
-          "angle": "報導美國更新出口管制漏洞以應對美中AI競爭。",
+          "name": "自由時報",
+          "title": "投票日偏強東北季風襲台！賈新興曝低溫探15度、史上最強聖嬰恐成形",
+          "url": "https://news.ltn.com.tw/news/life/breakingnews/5654932",
+          "publishedAt": "2026-11-27T09:38:10+08:00",
+          "angle": "報導投票日受到偏強東北季風影響，早晚氣溫偏涼。",
+          "image": null
+        },
+        {
+          "name": "中央社",
+          "title": "投票日晴朗 吳德榮：下週氣溫逐日升 冷氣團還有得等",
+          "url": "https://www.cna.com.tw/news/ahel/202611270020.aspx",
+          "publishedAt": "2026-11-27T08:20:29+08:00",
+          "angle": "報導投票日轉晴朗，入夜輻射冷卻將使清晨出現低溫。id_err",
           "image": null
         },
         {
           "name": "ETtoday",
-          "title": "耶魯學者：黃仁勳過去成功不代表無可取代 輝達考題已經變了",
-          "url": "https://www.ettoday.net/news/20261127/3279196.htm",
-          "publishedAt": "2026-11-27T07:46:00+08:00",
-          "angle": "引述學者觀點探討輝達面臨的出口管制與挑戰。",
-          "image": "https://cdn2.ettoday.net/images/9030/c9030968.png"
+          "title": "明投票日變天3地最有感 新一波東北季風下探15度",
+          "url": "https://www.ettoday.net/news/20261127/3279184.htm",
+          "publishedAt": "2026-11-27T06:58:00+08:00",
+          "angle": "報導投票日受東北季風增強影響，北台灣及東部降溫最有感。",
+          "image": "https://cdn2.ettoday.net/images/9035/c9035217.jpg"
+        },
+        {
+          "name": "壹蘋新聞網",
+          "title": "明天開票之夜轉冷！週日清晨降到12℃以下",
+          "url": "https://news.nextapple.com/life/20261127/170EABFF23B6CC1E50589ED7FFA27E91",
+          "publishedAt": "2026-11-27T06:21:00+08:00",
+          "angle": "報導投票日晴朗穩定但入夜與週日清晨氣溫顯著下降。",
+          "image": "https://static-cdn.nextapple.tw/prod/2026-11/170EABFF23B6CC1E50589ED7FFA27E91/0200fde32bce8d8818bf241787864621_1280.webp"
+        },
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "陰雨終於要停了！東北季風影響全台 一圖看「投票日天氣」",
+          "url": "https://tw.news.yahoo.com/%E9%99%B0%E9%9B%A8%E7%B5%82%E6%96%BC%E8%A6%81%E5%81%9C%E4%BA%86-%E6%9D%B1%E5%8C%97%E5%AD%A3%E9%A2%A8%E5%BD%B1%E9%9F%BF%E5%85%A8%E5%8F%B0-%E5%9C%96%E7%9C%8B-%E6%8A%95%E7%A5%A8%E6%97%A5%E5%A4%A9%E6%B0%A3-020500510.html",
+          "publishedAt": "2026-11-27T02:05:00+08:00",
+          "angle": "報導投票日東北季風增強使北部及東北部天氣轉涼。",
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "evt-q8veq",
+      "category": "international",
+      "publishedAt": "2026-11-27T08:09:00+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 6,
+      "title": "黃仁勳重返輝達執行長掀波瀾 美擬豁免台韓半導體關稅",
+      "highlights": [
+        "黃仁勳重返輝達執行長職位引發全球市場關注與亞股波動。",
+        "報導指出美國新關稅擬豁免台韓晶片，台指期與台股近期表現受到市場關注。",
+        "輝達高層相關人事與東南亞輸出禁令等政經動態也引發媒體報導。"
+      ],
+      "image": {
+        "url": "https://cdn2.ettoday.net/images/9032/c9032063.jpg",
+        "sourceName": "ETtoday"
+      },
+      "commonFacts": [
+        "黃仁勳重返輝達引發各界關注。"
+      ],
+      "topicId": "topic-14ih6no",
+      "topicName": "輝達與AI晶片動態",
+      "sources": [
+        {
+          "name": "ETtoday",
+          "title": "今晨國際頭條／美擬豁免台韓半導體關稅 黃仁勳復職輝達掀議",
+          "url": "https://www.ettoday.net/news/20261127/3279199.htm",
+          "publishedAt": "2026-11-27T08:09:00+08:00",
+          "angle": "綜合報導黃仁勳復職輝達及美擬豁免台韓晶片關稅等國際頭條。",
+          "image": "https://cdn2.ettoday.net/images/9032/c9032063.jpg"
+        },
+        {
+          "name": "中央社",
+          "title": "美股休市台積電期貨上揚 台股拚緩步墊高",
+          "url": "https://www.cna.com.tw/news/afe/202611270018.aspx",
+          "publishedAt": "2026-11-27T07:53:24+08:00",
+          "angle": "報導美股休市與台積電期貨上揚及台股緩步墊高格局。",
+          "image": null
+        },
+        {
+          "name": "壹蘋新聞網",
+          "title": "黃樂翻版？黃仁勳副手娶中國女 曾握「輝達晶片分配權」遭FBI調查",
+          "url": "https://news.nextapple.com/international/20261127/C6E299934440BC8B7E14380BCCE6D0E8",
+          "publishedAt": "2026-11-27T07:26:00+08:00",
+          "angle": "報導輝達前高層浦立的私人關係與相關調查。",
+          "image": "https://static-cdn.nextapple.tw/prod/2026-11/C6E299934440BC8B7E14380BCCE6D0E8/3fccf40da27e13c6ac74b64ddb323cd6_1280.webp"
         },
         {
           "name": "BBC News",
           "title": "Asia made a big AI bet on Nvidia. What happens now?",
           "url": "https://www.bbc.co.uk/news/articles/cqevr4lnd1nxo?at_medium=RSS&at_campaign=rss",
           "publishedAt": "2026-11-27T07:08:12+08:00",
-          "angle": "報導亞洲股市在黃仁勳回任輝達執行長後的波動情形。",
+          "angle": "報導黃仁勳重返輝達執行長對亞洲股市造成的波動。",
           "image": null
         },
         {
-          "name": "中央社",
-          "title": "美媒：川普關注輝達市值 將出席台積電擴廠動土",
-          "url": "https://www.cna.com.tw/news/aopl/202611270014.aspx",
-          "publishedAt": "2026-11-27T07:07:15+08:00",
-          "angle": "報導川普將出席台積電擴廠動土並關注輝達市值對經濟的影響。",
+          "name": "NHK",
+          "title": "エヌビディアが東南アジア4か国への輸出を停止 欧米メディア",
+          "url": "https://news.web.nhk/newsweb/na/nd-20261127de82164",
+          "publishedAt": "2026-11-27T07:00:00+08:00",
+          "angle": "報導輝達停止向東南亞四國輸出先端半導體的相關消息。",
+          "image": null
+        },
+        {
+          "name": "TechCrunch",
+          "title": "Jensen Huang broke Nvidia&#8217;s code of conduct, and his employees may not forget it",
+          "url": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it",
+          "publishedAt": "2026-11-26T03:54:57+08:00",
+          "angle": "探討黃仁勳重返職位對輝達企業文化的影響。",
           "image": null
         }
       ]
@@ -201,6 +285,60 @@
       ]
     },
     {
+      "id": "evt-8byywp",
+      "category": "life",
+      "publishedAt": "2026-11-27T09:57:06+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 4,
+      "title": "選前多起賄選查緝行動 檢方聲押多名候選人與樁腳",
+      "highlights": [
+        "檢警在選前夕積極查緝賄選，苗栗、嘉義及新竹等地傳出多起現金與餐會買票案件。",
+        "苗栗與嘉義有縣議員候選人因涉嫌以現金買票遭檢方聲請羈押禁見。",
+        "新竹也有山地原住民議員候選人與樁腳因涉嫌設宴招待選民而被起訴。"
+      ],
+      "image": {
+        "url": "https://cdn2.ettoday.net/images/9034/c9034610.jpg",
+        "sourceName": "ETtoday"
+      },
+      "commonFacts": [],
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
+      "sources": [
+        {
+          "name": "自由時報",
+          "title": "竹縣議員山地原住民選區爆餐會賄選 候選人及樁腳選民共8人被起訴",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5654979",
+          "publishedAt": "2026-11-27T09:57:06+08:00",
+          "angle": "報導新竹縣議員候選人與樁腳涉嫌餐會賄選遭起訴。",
+          "image": null
+        },
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "每票1千現金賄選！苗議員候選人投票前夕遭收押禁見 檢傳喚44證人",
+          "url": "https://tw.news.yahoo.com/%E6%AF%8F%E7%A5%A81%E5%8D%83%E7%8F%BE%E9%87%91%E8%B3%84%E9%81%B8-%E8%8B%97%E8%AD%B0%E5%93%A1%E5%80%99%E9%81%B8%E4%BA%BA%E6%8A%95%E7%A5%A8%E5%89%8D%E5%A4%95%E9%81%AD%E6%94%B6%E6%8A%BC%E7%A6%81%E8%A6%8B-%E6%AA%A2%E5%82%B3%E5%96%9A44%E8%AD%89%E4%BA%BA-014400753.html",
+          "publishedAt": "2026-11-27T01:44:00+08:00",
+          "angle": "報導苗栗縣議員候選人涉嫌現金買票遭聲押禁見。",
+          "image": null
+        },
+        {
+          "name": "中央社",
+          "title": "苗檢查獲現金、茶葉賄選案3案 羈押2人1人交保",
+          "url": "https://www.cna.com.tw/news/asoc/202611260316.aspx",
+          "publishedAt": "2026-11-26T22:27:21+08:00",
+          "angle": "報導苗栗地檢署查獲多起候選人涉及現金與茶葉賄選案。id_err",
+          "image": null
+        },
+        {
+          "name": "ETtoday",
+          "title": "1千元買1票！嘉義縣7連霸議員爆賄選 遭羈押禁見",
+          "url": "https://www.ettoday.net/news/20261126/3278972.htm",
+          "publishedAt": "2026-11-26T20:16:00+08:00",
+          "angle": "報導嘉義縣議員吳思蓉涉嫌現金買票遭聲押禁見。",
+          "image": "https://cdn2.ettoday.net/images/9034/c9034610.jpg"
+        }
+      ]
+    },
+    {
       "id": "evt-avdl4g",
       "category": "life",
       "publishedAt": "2026-11-27T09:39:46+08:00",
@@ -256,40 +394,40 @@
       ]
     },
     {
-      "id": "evt-1ywq0yo",
+      "id": "evt-1q5wr35",
       "category": "finance",
-      "publishedAt": "2026-11-27T09:18:11+08:00",
+      "publishedAt": "2026-11-27T09:15:49+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
       "sourceCount": 4,
-      "title": "台股早盤開高震盪 權值股與台積電走勢備受關注",
+      "title": "台股早盤開高震盪 權值股與衛星題材股表現受關注",
       "highlights": [
-        "台股27日開高後一度大漲逾200點，隨後陷入震盪。",
-        "權值股表現不一，台積電盤中在平盤附近與小漲之間震盪。",
-        "市場關注多空交戰情況，多檔個股盤中各有漲跌表現。"
+        "美股感恩節休市，台股早盤開高走高，一度漲逾200點後震盪。",
+        "台積電盤中呈現上漲或平盤震盪走勢，鴻海、聯發科等權值股各自表現。",
+        "低軌衛星題材與部分個股勁揚，但部分類股隨後出現壓回或熄火。"
       ],
       "image": {
         "url": "https://cdn2.ettoday.net/images/5581/c5581187.jpg",
         "sourceName": "ETtoday"
       },
       "commonFacts": [
-        "美股感恩節休市",
-        "台股27日開高後震盪"
+        "美股因感恩節休市",
+        "台股早盤曾漲逾200點後震盪"
       ],
       "sources": [
-        {
-          "name": "聯合報",
-          "title": "台股多空激戰3萬9！聯發科、台達電翻黑 台積電能扛住？",
-          "url": "https://udn.com/news/story/7251/9905052",
-          "publishedAt": "2026-11-27T09:18:11+08:00",
-          "angle": "報導台股開高後隨台積電與權值股震盪，多空激戰3萬9千點。",
-          "image": null
-        },
         {
           "name": "中央社",
           "title": "台股早盤漲逾200點後震盪 權值股穩盤衛星題材股勁揚",
           "url": "https://www.cna.com.tw/news/afe/202611270029.aspx",
           "publishedAt": "2026-11-27T09:15:49+08:00",
-          "angle": "指出早盤漲逾200點後震盪，台積電及部分題材股有表現。",
+          "angle": "報導台股早盤漲逾200點後震盪，台積電上揚，國巨勁揚後壓回。",
+          "image": null
+        },
+        {
+          "name": "自由時報",
+          "title": "台股開盤》記憶體、AI股熄火 指數跌逾百點",
+          "url": "https://ec.ltn.com.tw/article/breakingnews/5654946",
+          "publishedAt": "2026-11-27T09:13:10+08:00",
+          "angle": "指出台股開盤小漲後一度漲逾200點，但記憶體與AI股熄火。",
           "image": null
         },
         {
@@ -297,7 +435,7 @@
           "title": "快訊／台積電漲5元至2150 台股漲80點來到39232點",
           "url": "https://finance.ettoday.net/news/3279216",
           "publishedAt": "2026-11-27T09:13:00+08:00",
-          "angle": "以快訊記錄早盤開高及台積電與指數的即時漲跌點數。",
+          "angle": "報導台股開盤與台積電盤中漲幅情形。",
           "image": "https://cdn2.ettoday.net/images/5581/c5581187.jpg"
         },
         {
@@ -305,215 +443,58 @@
           "title": "台股開盤漲逾230點 台積電2145元平盤開出",
           "url": "https://news.nextapple.com/finance/20261127/3F7B6487899C5075434923B057193CBD",
           "publishedAt": "2026-11-27T09:04:00+08:00",
-          "angle": "提到台股開高後漲幅曾擴大至逾230點。",
+          "angle": "提及台股延續反彈，加權指數一度擴大漲幅至233.99點。",
           "image": "https://static-cdn.nextapple.tw/prod/2026-11/3F7B6487899C5075434923B057193CBD/6199d6e4c35067bc38a50e07a1c56642_1280.webp"
         }
       ]
     },
     {
-      "id": "evt-1u3ahp6",
-      "category": "international",
-      "publishedAt": "2026-11-27T08:52:11+08:00",
+      "id": "evt-38459i",
+      "category": "politics",
+      "publishedAt": "2026-11-27T10:01:09+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 4,
-      "title": "美國感恩節遭強烈風暴襲擊 釀大規模停電與航班取消",
+      "sourceCount": 3,
+      "title": "選前最後一天 候選人密集衝刺與呼籲投票",
       "highlights": [
-        "強烈風暴夾擊美國東西兩岸，造成近百萬戶家庭與客戶停電。",
-        "惡劣天氣導致數百架航班取消，嚴重影響假期返鄉與出遊交通。",
-        "紐約知名的梅西感恩節大遊行因強風與惡劣天氣首度宣布延期。"
+        "選戰進入最後一天，各地候選人把握機會向鄉親表達感謝並尋求支持。",
+        "基隆市長候選人公布前總統蔡英文推薦影片，呼籲青年返鄉投票。",
+        "國民黨基隆市長候選人謝國樑舉辦造勢晚會，細數政績爭取連任。"
       ],
       "image": {
-        "url": "https://imgcdn.cna.com.tw/www/webphotos/WebCover/800/20261127/1067x799_265564328408.jpg",
+        "url": "https://imgcdn.cna.com.tw/www/WebPhotos/1024/20261126/1365x768_wmkn_0_C20261126000245.jpg",
         "sourceName": "中央社",
         "width": 1024,
         "height": 1024
       },
       "commonFacts": [
-        "美國感恩節遭到風暴襲擊",
-        "造成大規模停電與航班取消",
-        "梅西感恩節遊行因此延期"
+        "選戰進入最後一天"
       ],
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
       "sources": [
         {
-          "name": "BBC News",
-          "title": "Major Thanksgiving storm brings flooding, flight delays across US",
-          "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
-          "publishedAt": "2026-11-27T08:52:11+08:00",
-          "angle": "報導風暴侵襲美國兩岸，導致近百萬客戶無電可用。",
+          "name": "自由時報",
+          "title": "選前最後一天 吳秀華請鄉親給她為台東打拚的機會",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5654986",
+          "publishedAt": "2026-11-27T10:01:09+08:00",
+          "angle": "報導台東縣長候選人吳秀華在選前最後一天向鄉親表達感謝與爭取支持。",
+          "image": null
+        },
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "選前最後一天！蔡英文籲青年返鄉投票 童子瑋：將努力改變基隆",
+          "url": "https://tw.news.yahoo.com/%E9%81%B8%E5%89%8D%E6%9C%80%E5%BE%8C-%E5%A4%A9-%E8%94%A1%E8%8B%B1%E6%96%87%E7%B1%B2%E9%9D%92%E5%B9%B4%E8%BF%94%E9%84%89%E6%8A%95%E7%A5%A8-%E7%AB%A5%E5%AD%90%E7%91%8B-%E5%B0%87%E5%8A%AA%E5%8A%9B%E6%94%B9%E8%AE%8A%E5%9F%BA%E9%9A%86-020358874.html",
+          "publishedAt": "2026-11-27T02:03:58+08:00",
+          "angle": "報導基隆市長候選人童子瑋公布蔡英文推薦影片並呼籲青年返鄉投票。",
           "image": null
         },
         {
           "name": "中央社",
-          "title": "感恩節風暴 美國東岸航班大亂逾83萬戶停電",
-          "url": "https://www.cna.com.tw/news/aopl/202611270021.aspx",
-          "publishedAt": "2026-11-27T08:31:31+08:00",
-          "angle": "指出超過83萬戶停電及紐約梅西遊行首度因天氣延期。",
-          "image": "https://imgcdn.cna.com.tw/www/webphotos/WebCover/800/20261127/1067x799_265564328408.jpg"
-        },
-        {
-          "name": "公視",
-          "title": "美國感恩節遇風暴80萬戶停電 紐約梅西百貨遊行延期",
-          "url": "https://news.pts.org.tw/article/837594",
-          "publishedAt": "2026-11-27T08:30:10+08:00",
-          "angle": "提及近80萬戶停電、逾400架航班取消及遊行順延至28日。",
-          "image": null
-        },
-        {
-          "name": "聯合報",
-          "title": "影／美國感恩節遭風暴攪局！全美逾90萬戶停電 逾400班航班取消",
-          "url": "https://udn.com/news/story/6813/9904984",
-          "publishedAt": "2026-11-27T08:29:45+08:00",
-          "angle": "報導風暴打亂東岸過節安排，造成停電與航班取消。",
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "evt-1hkkg0a",
-      "category": "politics",
-      "publishedAt": "2026-11-27T07:40:00+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 4,
-      "title": "沈伯洋陷經費爭議與蔡英文合體直播 柯文哲質疑其資金來源",
-      "highlights": [
-        "民進黨台北市長候選人沈伯洋遭質疑台灣民主實驗室接受索羅斯基金會資助。",
-        "沈伯洋回應能申請到經費是因為實力很好，柯文哲則對此提出質疑與批評。",
-        "前總統蔡英文與沈伯洋透過直播對談，肯定其特質並吸引大量民眾觀看。"
-      ],
-      "image": {
-        "url": "https://cdn2.ettoday.net/images/9032/c9032634.jpg",
-        "sourceName": "ETtoday"
-      },
-      "commonFacts": [],
-      "topicId": "topic-cwx6r6",
-      "topicName": "沈伯洋選前活動",
-      "sources": [
-        {
-          "name": "ETtoday",
-          "title": "沈伯洋稱「實力好」拿到索羅斯經費 柯文哲：賣國的實力嗎",
-          "url": "https://www.ettoday.net/news/20261127/3279193.htm",
-          "publishedAt": "2026-11-27T07:40:00+08:00",
-          "angle": "報導沈伯洋稱憑實力拿到經費，遭柯文哲反問與批評。",
-          "image": "https://cdn2.ettoday.net/images/9032/c9032634.jpg"
-        },
-        {
-          "name": "壹蘋新聞網",
-          "title": "黃樂翻版？黃仁勳副手娶中國女 曾握「輝達晶片分配權」遭FBI調查",
-          "url": "https://news.nextapple.com/international/20261127/C6E299934440BC8B7E14380BCCE6D0E8",
-          "publishedAt": "2026-11-27T07:26:00+08:00",
-          "angle": "報導輝達高層相關的敏感私人與調查傳聞。",
-          "image": "https://static-cdn.nextapple.tw/prod/2026-11/C6E299934440BC8B7E14380BCCE6D0E8/3fccf40da27e13c6ac74b64ddb323cd6_1280.webp"
-        },
-        {
-          "name": "Yahoo奇摩新聞",
-          "title": "沈伯洋陷索羅斯金援爭議！柯文哲連拋6問",
-          "url": "https://tw.news.yahoo.com/%E6%B2%88%E4%BC%AF%E6%B4%8B%E9%99%B7%E7%B4%A2%E7%BE%85%E6%96%AF%E9%87%91%E6%8F%B4%E7%88%AD%E8%AD%B0-%E6%9F%AF%E6%96%87%E5%93%B2%E9%80%A3%E6%8B%8B6%E5%95%8F-015301074.html",
-          "publishedAt": "2026-11-27T01:53:01+08:00",
-          "angle": "提及沈伯洋的索羅斯金援爭議及柯文哲連拋6問。",
-          "image": null
-        },
-        {
-          "name": "中央社",
-          "title": "蔡英文稱沈伯洋「雞婆」適合當市長 直播對談吸27萬人",
-          "url": "https://www.cna.com.tw/news/aipl/202611260319.aspx",
-          "publishedAt": "2026-11-26T22:54:28+08:00",
-          "angle": "報導蔡英文與沈伯洋直播對談並肯定其適合當市長。",
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "evt-v8zvze",
-      "category": "politics",
-      "publishedAt": "2026-11-27T10:04:59+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 3,
-      "title": "徐欣瑩絕食抗議司法介選持續住院 缺席選前之夜由胞弟代為出席",
-      "highlights": [
-        "新竹縣長候選人徐欣瑩絕食抗議司法不公，進入醫院治療並持續中。",
-        "因身體虛弱缺席溪南選前之夜，由胞弟徐世勳代為出席表達訴求。",
-        "團隊分享支持者創作的歌曲，徐欣瑩聽後深受感動落淚。"
-      ],
-      "image": {
-        "url": "https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/t3/2026/11/27/35558376.jpg&M=1&s=Y&x=0&y=0&sw=1280&sh=853&exp=3600",
-        "sourceName": "聯合報",
-        "width": 1280,
-        "height": 853
-      },
-      "commonFacts": [
-        "徐欣瑩因絕食抗議住院",
-        "缺席選前之夜活動"
-      ],
-      "sources": [
-        {
-          "name": "自由時報",
-          "title": "絕食超過153小時 徐欣瑩「病床掛點滴」照曝光",
-          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5654969",
-          "publishedAt": "2026-11-27T10:04:59+08:00",
-          "angle": "報導徐欣瑩絕食進入第8天，病床掛點滴且身體虛弱。",
-          "image": null
-        },
-        {
-          "name": "聯合報",
-          "title": "徐欣瑩缺席溪南選前之夜 胞弟代出征揭心聲：盼為司法受害者發聲",
-          "url": "https://udn.com/news/story/124652/9905087",
-          "publishedAt": "2026-11-27T09:36:48+08:00",
-          "angle": "報導其缺席選前之夜，由胞弟徐世勳代打並說明抗議司法不公初衷。",
-          "image": "https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/t3/2026/11/27/35558376.jpg&M=1&s=Y&x=0&y=0&sw=1280&sh=853&exp=3600"
-        },
-        {
-          "name": "Yahoo奇摩新聞",
-          "title": "支持者寫下「毋驚寒的油桐花」 幕僚：徐欣瑩聽後紅了眼框",
-          "url": "https://tw.news.yahoo.com/%E6%94%AF%E6%8C%81%E8%80%85%E5%AF%AB%E4%B8%8B-%E6%AF%8B%E9%A9%9A%E5%AF%92%E7%9A%84%E6%B2%B9%E6%A1%90%E8%8A%B1-%E5%B9%95%E5%83%9A-%E5%BE%90%E6%AC%A3%E7%91%A9%E8%81%BD%E5%BE%8C%E7%B4%85%E4%BA%86%E7%9C%BC%E6%A1%86-084446614.html",
-          "publishedAt": "2026-11-26T08:44:46+08:00",
-          "angle": "提及團隊分享客家子弟為她寫的歌曲，聽後紅了眼眶。",
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "evt-1dzn6rz",
-      "category": "politics",
-      "publishedAt": "2026-11-27T09:59:04+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 3,
-      "title": "台北市長選前之夜交通管制，周邊路段塞車並引發陣營口水戰",
-      "highlights": [
-        "國民黨台北市長候選人蔣萬安選前之夜於凱道舉辦，周邊道路交通管制並塞車。",
-        "台北市長選情激烈，蔣萬安與民進黨候選人沈伯洋備受關注。",
-        "沈伯洋取消選前之夜引發藍營質疑，綠營則翻出四年前蔣萬安陣營說法反擊。"
-      ],
-      "image": {
-        "url": "https://cdn2.ettoday.net/images/8912/c8912921.jpg",
-        "sourceName": "ETtoday"
-      },
-      "commonFacts": [
-        "台北市長選舉將於次日投票。"
-      ],
-      "sources": [
-        {
-          "name": "自由時報",
-          "title": "圖輯》蔣萬安凱道選前昨晚起交管34小時、22條公車改道 今早周邊塞爆",
-          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5654967",
-          "publishedAt": "2026-11-27T09:59:04+08:00",
-          "angle": "報導蔣萬安選前之夜交管造成的交通大打結與塞車狀況。",
-          "image": null
-        },
-        {
-          "name": "壹蘋新聞網",
-          "title": "蔣萬安vs.沈伯洋！專家揭最大致命傷 首都之戰史上最激烈明天定輸贏（壹蘋10點強打）",
-          "url": "https://news.nextapple.com/politics/20261127/68B15A042D1952008863D2DA5A7BC47F",
-          "publishedAt": "2026-11-27T09:50:00+08:00",
-          "angle": "分析台北市長選戰的激烈程度與兩位主要候選人的優勢或策略。",
-          "image": "https://static-cdn.nextapple.tw/prod/2026-11/68B15A042D1952008863D2DA5A7BC47F/c8d152be66c8190bee512de5d34a61fb_1280.webp"
-        },
-        {
-          "name": "ETtoday",
-          "title": "蔣萬安陣營也曾說搭舞台要3天 4年前這段話被翻出打臉",
-          "url": "https://www.ettoday.net/news/20261127/3279176.htm",
-          "publishedAt": "2026-11-27T06:10:00+08:00",
-          "angle": "報導沈伯洋取消選前之夜遭藍營質疑，以及吳欣岱翻出四年前舊說法反擊。",
-          "image": "https://cdn2.ettoday.net/images/8912/c8912921.jpg"
+          "title": "挺善樑造勢晚會 謝國樑細數政績盼再給4年",
+          "url": "https://www.cna.com.tw/news/aipl/202611260312.aspx",
+          "publishedAt": "2026-11-26T22:08:12+08:00",
+          "angle": "報導謝國樑舉辦造勢晚會細數政績盼市民支持連任。",
+          "image": "https://imgcdn.cna.com.tw/www/WebPhotos/1024/20261126/1365x768_wmkn_0_C20261126000245.jpg"
         }
       ]
     },
@@ -560,42 +541,49 @@
       ]
     },
     {
-      "id": "evt-zp0pn6",
-      "category": "life",
-      "publishedAt": "2026-11-27T09:38:10+08:00",
+      "id": "evt-pedsyq",
+      "category": "international",
+      "publishedAt": "2026-11-27T09:36:28+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
       "sourceCount": 3,
-      "title": "投票日東北季風影響偏涼！專家曝低溫探 15 度與天氣概況",
+      "title": "西班牙伊維薩島外海油輪翻覆 當局防範漏油生態危機",
       "highlights": [
-        "投票日受到偏強東北季風影響，早晚氣溫偏涼。",
-        "花東及鵝鑾鼻有零星降雨，其餘地區天氣大致穩定。",
-        "專家指出明晚至週日清晨台北低溫可能下探 15 度。"
+        "一艘載有7000噸柴油的油輪在西班牙伊維薩島外海翻覆。",
+        "事故造成一人死亡，地中海海域生態面臨潛在威脅。",
+        "有關當局已緊急採取措施試圖減輕損害並評估環境風險。"
       ],
       "image": {
-        "url": "https://cdn2.ettoday.net/images/9035/c9035217.jpg",
-        "sourceName": "ETtoday"
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/3e73/live/33d0e9f0-e99e-11f1-b880-15b494ba858d.jpg",
+        "sourceName": "BBC News"
       },
+      "commonFacts": [
+        "載有7000噸柴油的油輪在西班牙伊維薩島外海翻覆",
+        "事故造成一人死亡"
+      ],
       "sources": [
         {
-          "name": "自由時報",
-          "title": "投票日偏強東北季風襲台！賈新興曝低溫探15度、史上最強聖嬰恐成形",
-          "url": "https://news.ltn.com.tw/news/life/breakingnews/5654932",
-          "publishedAt": "2026-11-27T09:38:10+08:00",
+          "name": "聯合報",
+          "title": "西班牙伊維薩島外海油輪翻覆 當局急阻漏油護生態",
+          "url": "https://udn.com/news/story/6809/9905060",
+          "publishedAt": "2026-11-27T09:36:28+08:00",
+          "angle": "報導油輪翻覆及當局緊急阻漏油以維護地中海生態。",
           "image": null
         },
         {
-          "name": "ETtoday",
-          "title": "明投票日變天3地最有感 新一波東北季風下探15度",
-          "url": "https://www.ettoday.net/news/20261127/3279184.htm",
-          "publishedAt": "2026-11-27T06:58:00+08:00",
-          "image": "https://cdn2.ettoday.net/images/9035/c9035217.jpg"
+          "name": "中央社",
+          "title": "西班牙伊維薩島外海油輪翻覆 當局急阻漏油護生態",
+          "url": "https://www.cna.com.tw/news/aopl/202611270027.aspx",
+          "publishedAt": "2026-11-27T09:11:45+08:00",
+          "angle": "綜合外電報導油輪翻覆事故與當局應對措施。",
+          "image": null
         },
         {
-          "name": "壹蘋新聞網",
-          "title": "明天開票之夜轉冷！週日清晨降到12℃以下",
-          "url": "https://news.nextapple.com/life/20261127/170EABFF23B6CC1E50589ED7FFA27E91",
-          "publishedAt": "2026-11-27T06:21:00+08:00",
-          "image": "https://static-cdn.nextapple.tw/prod/2026-11/170EABFF23B6CC1E50589ED7FFA27E91/0200fde32bce8d8818bf241787864621_1280.webp"
+          "name": "BBC News",
+          "title": "Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one",
+          "url": "https://www.bbc.co.uk/news/articles/c9gklryvj24do?at_medium=RSS&at_campaign=rss",
+          "publishedAt": "2026-11-27T06:01:22+08:00",
+          "angle": "指出西班牙海上救援服務持續評估可能造成的環境損害。",
+          "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/3e73/live/33d0e9f0-e99e-11f1-b880-15b494ba858d.jpg"
         }
       ]
     },
@@ -640,238 +628,99 @@
       ]
     },
     {
-      "id": "evt-19h953f",
-      "category": "finance",
-      "publishedAt": "2026-11-27T09:04:49+08:00",
+      "id": "evt-10xhe3o",
+      "category": "international",
+      "publishedAt": "2026-11-27T08:52:11+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
       "sourceCount": 3,
-      "title": "台積電德國廠預計2027年底投產，川普將出席亞利桑那州擴廠動土",
+      "title": "美國感恩節遭強烈風暴侵襲 造成大規模停電與航班大亂",
       "highlights": [
-        "台積電合資成立的歐積電首座晶圓廠預計2027年底投產。",
-        "德國媒體報導明年預估有500至800名台灣專業人才赴德國工作。",
-        "美國總統川普將前往亞利桑那州鳳凰城參加台積電擴廠動土儀式。"
+        "強烈風暴在感恩節期間夾擊美國東西兩岸，帶來強風與豪雨。",
+        "全美數十萬戶住家與企業面臨停電，航班受到延誤或取消。",
+        "紐約知名的梅西百貨感恩節大遊行因惡劣天氣被迫順延。"
       ],
       "image": {
-        "url": "https://cdn2.ettoday.net/images/8109/c8109741.jpg",
-        "sourceName": "ETtoday"
+        "url": "https://imgcdn.cna.com.tw/www/webphotos/WebCover/800/20261127/1067x799_265564328408.jpg",
+        "sourceName": "中央社",
+        "width": 1024,
+        "height": 1024
       },
-      "commonFacts": [],
-      "topicId": "topic-5ayr3x",
-      "topicName": "台積電與晶片動向",
+      "commonFacts": [
+        "美國在感恩節期間遭受強烈風暴襲擊",
+        "造成大規模停電與航班延誤"
+      ],
       "sources": [
         {
-          "name": "聯合報",
-          "title": "台積電德國廠估2027年底投產 德勒斯登台灣社群擴大",
-          "url": "https://udn.com/news/story/7240/9905023",
-          "publishedAt": "2026-11-27T09:04:49+08:00",
-          "angle": "報導台積電德國廠預計2027年底投產，以及德勒斯登台灣社群擴大。",
+          "name": "BBC News",
+          "title": "Major Thanksgiving storm brings flooding, flight delays across US",
+          "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
+          "publishedAt": "2026-11-27T08:52:11+08:00",
+          "angle": "報導風暴侵襲美國兩岸造成近百萬用戶停電與航班延誤。",
           "image": null
         },
         {
           "name": "中央社",
-          "title": "台積電德國廠估2027年底投產 德勒斯登台灣社群擴大",
-          "url": "https://www.cna.com.tw/news/afe/202611270023.aspx",
-          "publishedAt": "2026-11-27T08:50:36+08:00",
-          "angle": "報導歐積電廠房主體結構完工與預計投產時間，並提及明年將有數百名台灣人才赴德國薩克森邦。",
-          "image": null
-        },
-        {
-          "name": "ETtoday",
-          "title": "川普將出席台積電擴廠動土 多次關注輝達市值",
-          "url": "https://www.ettoday.net/news/20261127/3279204.htm",
-          "publishedAt": "2026-11-27T08:25:00+08:00",
-          "angle": "報導美國總統川普將出席台積電亞利桑那州擴廠動土儀式並發表談話。",
-          "image": "https://cdn2.ettoday.net/images/8109/c8109741.jpg"
-        }
-      ]
-    },
-    {
-      "id": "evt-4cq629",
-      "category": "life",
-      "publishedAt": "2026-11-27T09:01:19+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 3,
-      "title": "假短劇App藏惡意程式誘騙轉帳，多家國銀與警方示警",
-      "highlights": [
-        "民眾下載假追劇App遭植入惡意程式，導致網銀帳戶存款被盜轉。",
-        "惡意程式透過假冒更新與無障礙權限控制手機，並側錄密碼與驗證簡訊。",
-        "警方與銀行業者針對此類盜轉事件提出示警與檢查步驟。"
-      ],
-      "image": {
-        "url": "https://cdn2.ettoday.net/images/9035/c9035195.png",
-        "sourceName": "ETtoday"
-      },
-      "commonFacts": [
-        "民眾下載假短劇App遭到惡意程式入侵並被盜轉帳戶存款。"
-      ],
-      "sources": [
-        {
-          "name": "聯合報",
-          "title": "存款被盜光竟是下載App看AI短劇？國銀擬祭對策防駭客",
-          "url": "https://udn.com/news/story/7238/9905025",
-          "publishedAt": "2026-11-27T09:01:19+08:00",
-          "angle": "報導多起國銀客戶帳戶被盜轉，與下載App看AI短劇有關。",
-          "image": null
-        },
-        {
-          "name": "ETtoday",
-          "title": "手機半夜自己在轉帳？1類用戶載短劇App「被偷錢」 3步驟檢查",
-          "url": "https://www.ettoday.net/news/20261127/3279166.htm",
-          "publishedAt": "2026-11-27T01:09:00+08:00",
-          "angle": "嘉義市警察局示警惡意程式透過假冒畫面及無障礙權限控制手機盜轉帳戶。",
-          "image": "https://cdn2.ettoday.net/images/9035/c9035195.png"
+          "title": "感恩節風暴 美國東岸航班大亂逾83萬戶停電",
+          "url": "https://www.cna.com.tw/news/aopl/202611270021.aspx",
+          "publishedAt": "2026-11-27T08:31:31+08:00",
+          "angle": "指出美國東岸風暴造成超過83萬戶停電及梅西大遊行首度延期。",
+          "image": "https://imgcdn.cna.com.tw/www/webphotos/WebCover/800/20261127/1067x799_265564328408.jpg"
         },
         {
           "name": "公視",
-          "title": "假追劇APP藏盜轉網銀惡意程式 避免帳戶遭入侵方法一次看",
-          "url": "https://news.pts.org.tw/article/837477",
-          "publishedAt": "2026-11-26T22:00:26+08:00",
-          "angle": "報導假追劇App藏盜轉網銀惡意程式，並整理避免入侵的方法。",
+          "title": "美國感恩節遇風暴80萬戶停電 紐約梅西百貨遊行延期",
+          "url": "https://news.pts.org.tw/article/837594",
+          "publishedAt": "2026-11-27T08:30:10+08:00",
+          "angle": "提及兩岸惡劣天氣影響交通，梅西百貨大遊行順延至28日。",
           "image": null
         }
       ]
     },
     {
-      "id": "evt-1hudeui",
+      "id": "evt-1i19t07",
       "category": "life",
-      "publishedAt": "2026-11-27T08:23:21+08:00",
+      "publishedAt": "2026-11-27T07:16:00+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
       "sourceCount": 3,
-      "title": "未來一週各地天氣轉趨穩定，投票日乾涼舒適",
+      "title": "國民黨高雄市長候選人柯志恩開直播復刻AI版造型",
       "highlights": [
-        "華南雲雨帶即將遠離，未來一週各地迎接穩定好天氣。",
-        "投票日受到東北季風影響，各地大多為多雲到晴的乾涼天氣。",
-        "下週一東北季風減弱後氣溫將逐漸回升。"
+        "國民黨高雄市長候選人柯志恩26日晚間開直播，慶祝臉書追蹤數突破30萬人。",
+        "柯志恩換上百褶短裙、黑色長靴及西裝外套等造型，復刻網路熱門AI韓劇《鐵拳教育》的角色。",
+        "對手陣營方面，民進黨候選人賴瑞隆則與潘孟安合體拜票，並準備出席造勢活動。"
       ],
       "image": {
-        "url": "https://imgcdn.cna.com.tw/www/webphotos/WebCover/800/20261127/1933x1449_657117520173.jpg",
-        "sourceName": "中央社",
-        "width": 1024,
-        "height": 1024
-      },
-      "commonFacts": [
-        "未來一週各地天氣將轉趨穩定。"
-      ],
-      "sources": [
-        {
-          "name": "自由時報",
-          "title": "未來一週好天氣！投票日「乾涼」穩定 下週二起明顯回暖",
-          "url": "https://news.ltn.com.tw/news/life/breakingnews/5654879",
-          "publishedAt": "2026-11-27T08:23:21+08:00",
-          "angle": "報導華南雲雨帶將遠離，投票日及未來一週各地以乾冷或乾涼天氣為主。",
-          "image": null
-        },
-        {
-          "name": "中央社",
-          "title": "投票日晴朗 吳德榮：下週氣溫逐日升 冷氣團還有得等",
-          "url": "https://www.cna.com.tw/news/ahel/202611270020.aspx",
-          "publishedAt": "2026-11-27T08:20:29+08:00",
-          "angle": "引述吳德榮說法指出投票日轉晴朗，下週氣溫將逐日回升。",
-          "image": "https://imgcdn.cna.com.tw/www/webphotos/WebCover/800/20261127/1933x1449_657117520173.jpg"
-        },
-        {
-          "name": "Yahoo奇摩新聞",
-          "title": "陰雨終於要停了！東北季風影響全台 一圖看「投票日天氣」",
-          "url": "https://tw.news.yahoo.com/%E9%99%B0%E9%9B%A8%E7%B5%82%E6%96%BC%E8%A6%81%E5%81%9C%E4%BA%86-%E6%9D%B1%E5%8C%97%E5%AD%A3%E9%A2%A8%E5%BD%B1%E9%9F%BF%E5%85%A8%E5%8F%B0-%E5%9C%96%E7%9C%8B-%E6%8A%95%E7%A5%A8%E6%97%A5%E5%A4%A9%E6%B0%A3-020500510.html",
-          "publishedAt": "2026-11-27T02:05:00+08:00",
-          "angle": "氣象署指出投票日北部與東北部轉涼，下週起天氣穩定適合戶外活動。",
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "evt-wxade3",
-      "category": "tech",
-      "publishedAt": "2026-11-27T07:00:00+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 3,
-      "title": "防堵中國取得AI算力，傳輝達暫停對東南亞4國出貨伺服器",
-      "highlights": [
-        "美國收緊出口管制，防止中國取得人工智慧運算能力。",
-        "輝達已要求製造合作夥伴停止向東南亞4國出貨伺服器。",
-        "外媒報導此舉旨在防範中國透過該地區繞道取得先進半導體產品。"
-      ],
-      "image": {
-        "url": "https://imgcdn.cna.com.tw/www/webphotos/WebOg/600/20261126/1999x1049_81925728545.jpg",
-        "sourceName": "中央社",
-        "width": 1024,
-        "height": 1024
-      },
-      "commonFacts": [
-        "輝達暫停對東南亞4國出貨伺服器與AI晶片產品。"
-      ],
-      "topicId": "topic-5ayr3x",
-      "topicName": "台積電與晶片動向",
-      "sources": [
-        {
-          "name": "NHK",
-          "title": "エヌビディアが東南アジア4か国への輸出を停止 欧米メディア",
-          "url": "https://news.web.nhk/newsweb/na/nd-20261127de82164",
-          "publishedAt": "2026-11-27T07:00:00+08:00",
-          "angle": "報導輝達因應川普政權防範中國繞道輸出，對東南亞4國停止輸出先端半導體產品。",
-          "image": null
-        },
-        {
-          "name": "TechCrunch",
-          "title": "Nvidia hits pause on chip shipments to Southeast Asia",
-          "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
-          "publishedAt": "2026-11-27T04:03:54+08:00",
-          "angle": "報導輝達要求製造夥伴暫停對馬來西亞、新加坡、泰國與印尼出貨伺服器。",
-          "image": null
-        },
-        {
-          "name": "中央社",
-          "title": "金融時報：輝達暫停對東南亞4國出貨 防堵中國取得AI算力",
-          "url": "https://www.cna.com.tw/news/aopl/202611260186.aspx",
-          "publishedAt": "2026-11-26T16:08:34+08:00",
-          "angle": "引述金融時報報導輝達因美國收緊出口管制而暫停對東南亞4國出貨。",
-          "image": "https://imgcdn.cna.com.tw/www/webphotos/WebOg/600/20261126/1999x1049_81925728545.jpg"
-        }
-      ]
-    },
-    {
-      "id": "evt-166oyft",
-      "category": "politics",
-      "publishedAt": "2026-11-27T01:30:04+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 3,
-      "title": "選前積極查賄！嘉義與苗栗地檢署單日連續破獲多起買票案",
-      "highlights": [
-        "嘉義地檢署單日連破3起現金買票案，涉案人員包含村長候選人與七連霸議員。",
-        "苗栗地檢署查獲茶葉與現金賄選共3案，向法院聲請羈押3人，其中2人羈押禁見、1人交保。",
-        "檢調單位在選戰倒數關鍵時刻積極打擊賄選，維護選舉公正。"
-      ],
-      "image": {
-        "url": "https://cdn2.ettoday.net/images/9034/c9034610.jpg",
+        "url": "https://cdn2.ettoday.net/images/9035/c9035224.jpg",
         "sourceName": "ETtoday"
       },
       "commonFacts": [
-        "檢調單位在選戰倒數關鍵時刻查獲多起賄選案。"
+        "國民黨高雄市長候選人柯志恩於26日晚間進行直播。"
       ],
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
       "sources": [
         {
-          "name": "Yahoo奇摩新聞",
-          "title": "杜絕金錢介入選舉 嘉檢單日連破3起現金買票案",
-          "url": "https://tw.news.yahoo.com/%E6%9D%9C%E7%B5%95%E9%87%91%E9%8C%A2%E4%BB%8B%E5%85%A5%E9%81%B8%E8%88%89-%E5%98%89%E6%AA%A2%E5%96%AE%E6%97%A5%E9%80%A3%E7%A0%B43%E8%B5%B7%E7%8F%BE%E9%87%91%E8%B2%B7%E7%A5%A8%E6%A1%88-013004514.html",
-          "publishedAt": "2026-11-27T01:30:04+08:00",
-          "angle": "報導嘉義地檢署單日連破3起現金買票案，涉案樁腳及村長候選人遭聲請羈押禁見。",
-          "image": null
-        },
-        {
-          "name": "中央社",
-          "title": "苗檢查獲現金、茶葉賄選案3案 羈押2人1人交保",
-          "url": "https://www.cna.com.tw/news/asoc/202611260316.aspx",
-          "publishedAt": "2026-11-26T22:27:21+08:00",
-          "angle": "報導苗栗地檢署查獲茶葉與現金賄選3案，聲請羈押3人其中2人羈押禁見、1人交保。",
-          "image": null
-        },
-        {
           "name": "ETtoday",
-          "title": "1千元買1票！嘉義縣7連霸議員爆賄選 遭羈押禁見",
-          "url": "https://www.ettoday.net/news/20261126/3278972.htm",
-          "publishedAt": "2026-11-26T20:16:00+08:00",
-          "angle": "報導嘉義縣七連霸議員吳思蓉與樁腳涉嫌以每票1000元買票遭檢方聲請羈押。",
-          "image": "https://cdn2.ettoday.net/images/9034/c9034610.jpg"
+          "title": "柯志恩復刻「AI版鐵拳志恩」 百褶短裙亮相",
+          "url": "https://www.ettoday.net/news/20261127/3279190.htm",
+          "publishedAt": "2026-11-27T07:16:00+08:00",
+          "angle": "報導柯志恩為慶祝臉書追蹤數破30萬，換上百褶短裙與長靴開直播。",
+          "image": "https://cdn2.ettoday.net/images/9035/c9035224.jpg"
+        },
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "決戰高雄！柯志恩重現《鐵拳教育》造型 賴瑞隆合體潘孟安拚陸戰",
+          "url": "https://tw.news.yahoo.com/%E6%B1%BA%E6%88%B0%E9%AB%98%E9%9B%84-%E6%9F%AF%E5%BF%97%E6%81%A9%E9%87%8D%E7%8F%BE-%E9%90%B5%E6%8B%B3%E6%95%99%E8%82%B2-%E9%80%A0%E5%9E%8B-%E8%B3%B4%E7%91%9E%E9%9A%86%E5%90%88%E9%AB%94%E6%BD%98%E5%AD%9F%E5%AE%89%E6%8B%9A%E9%99%B8%E6%88%B0-013419176.html",
+          "publishedAt": "2026-11-27T02:00:02+08:00",
+          "angle": "提到選前最後關鍵時刻，並提及對手賴瑞隆合體潘孟安拜票的行程。",
+          "image": null
+        },
+        {
+          "name": "壹蘋新聞網",
+          "title": "柯志恩選前復刻AI版「鐵拳志恩」造型 短髮、西裝外套配百褶裙",
+          "url": "https://news.nextapple.com/politics/20261126/409D6F7EE1AE64232DA7B53EEAC4EB67",
+          "publishedAt": "2026-11-26T22:50:00+08:00",
+          "angle": "詳細描述柯志恩的短髮、西裝外套與紅領帶等造型細節及網友反應。",
+          "image": "https://static-cdn.nextapple.tw/prod/2026-11/409D6F7EE1AE64232DA7B53EEAC4EB67/d6552032f3e28bfa2f9ae5037487dac3_1280.webp"
         }
       ]
     },
@@ -923,48 +772,152 @@
       ]
     },
     {
-      "id": "evt-6d9i5q",
-      "category": "politics",
-      "publishedAt": "2026-11-26T22:30:00+08:00",
+      "id": "evt-i0jsdl",
+      "category": "life",
+      "publishedAt": "2026-11-27T10:10:26+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 3,
-      "title": "九合一選舉選前之夜倒數 各地候選人積極衝刺造勢",
+      "sourceCount": 2,
+      "title": "無照毒駕致死傷案車主父子判賠，另有高中生酒駕報導",
       "highlights": [
-        "台北市長選戰進入最後衝刺，各陣營積極規劃選前之夜與造勢活動。",
-        "台南市長候選人謝龍介舉辦大型造勢晚會，藍白陣營重量級人物到場助陣。",
-        "基隆市長候選人謝國樑舉辦造勢晚會細數政績，爭取市民支持連任。"
+        "何姓男子無照且毒駕逆向撞死黃男並致許男右眼失明，被判刑定讞後遭提告求償。",
+        "法官認定實際管領車輛者與掛名車主均有過失，判賠287萬餘元。",
+        "另有一篇報導提及高中生酒駕相關內容。"
       ],
       "image": {
-        "url": "https://static-cdn.nextapple.tw/prod/2026-11/44437D5FC238944612112E3E25DFA90C/f50b214804b3e684d1a34fa5fd06e82c_1280.webp",
-        "sourceName": "壹蘋新聞網"
+        "url": "https://s.yimg.com/lo/mysterio/api/09d7cefa4a11d95101e3837f26766eaca334754e503a44ad63e61133d2425ef4/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fko%2Febc.net.tw%2Fab6577edd37709d703d3e054c192137d.jpg_up.jpg",
+        "sourceName": "Yahoo奇摩新聞",
+        "width": 1200,
+        "height": 629
       },
-      "commonFacts": [
-        "九合一選舉即將於28日投票，各地候選人正進行選前最後衝刺。"
-      ],
+      "commonFacts": [],
       "sources": [
         {
-          "name": "ETtoday",
-          "title": "選前之夜倒數1天！賈永婕親曝動向 最後2句話讓網喊：懂了",
-          "url": "https://www.ettoday.net/news/20261126/3279141.htm",
-          "publishedAt": "2026-11-26T22:30:00+08:00",
-          "angle": "報導台北市長選戰選前之夜動向與賈永婕公開的行程與心聲。",
-          "image": "https://cdn2.ettoday.net/images/9024/c9024614.jpg"
-        },
-        {
-          "name": "壹蘋新聞網",
-          "title": "謝龍介選前之夜「藍白合」總動員！鄭麗文轟南北雙標 黃國昌喊翻轉台南",
-          "url": "https://news.nextapple.com/politics/20261126/44437D5FC238944612112E3E25DFA90C",
-          "publishedAt": "2026-11-26T22:30:00+08:00",
-          "angle": "報導謝龍介舉辦選前之夜，集結藍白政壇要角與支持者湧入現場。",
-          "image": "https://static-cdn.nextapple.tw/prod/2026-11/44437D5FC238944612112E3E25DFA90C/f50b214804b3e684d1a34fa5fd06e82c_1280.webp"
-        },
-        {
-          "name": "中央社",
-          "title": "挺善樑造勢晚會 謝國樑細數政績盼再給4年",
-          "url": "https://www.cna.com.tw/news/aipl/202611260312.aspx",
-          "publishedAt": "2026-11-26T22:08:12+08:00",
-          "angle": "報導謝國樑舉辦挺善樑造勢晚會，細數政績並盼市民支持連任。",
+          "name": "自由時報",
+          "title": "賣車給無照毒駕！試車逆向撞1死1失明 車主父子判賠287萬",
+          "url": "https://news.ltn.com.tw/news/society/breakingnews/5654982",
+          "publishedAt": "2026-11-27T10:10:26+08:00",
+          "angle": "報導無照毒駕逆向撞死傷案，法院認定何男與車主父子皆有過失並判賠287萬餘元。",
           "image": null
+        },
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "高中就開喝！他2年半3度酒駕 判刑又收罰單終醒悟",
+          "url": "https://tw.news.yahoo.com/%E9%AB%98%E4%B8%AD%E5%B0%B1%E9%96%8B%E5%96%9D-%E4%BB%962%E5%B9%B4%E5%8D%8A3%E5%BA%A6%E9%85%92%E9%A7%95-%E5%88%A4%E5%88%91%E5%8F%88%E6%94%B6%E7%BD%B0%E5%96%AE%E7%B5%82%E9%86%92%E6%82%9F-014900776.html",
+          "publishedAt": "2026-11-27T01:49:00+08:00",
+          "angle": "簡短報導關於酒駕判刑與罰單的醒悟經驗。",
+          "image": "https://s.yimg.com/lo/mysterio/api/09d7cefa4a11d95101e3837f26766eaca334754e503a44ad63e61133d2425ef4/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fko%2Febc.net.tw%2Fab6577edd37709d703d3e054c192137d.jpg_up.jpg"
+        }
+      ]
+    },
+    {
+      "id": "evt-dxj2jw",
+      "category": "politics",
+      "publishedAt": "2026-11-27T10:09:48+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "張善政掃街拜票爭取青年支持，並回應賴清德煮不到位說法",
+      "highlights": [
+        "國民黨桃園市長候選人張善政由年輕市議員候選人陪同，在街頭向市民拜票掃街。",
+        "總統賴清德在造勢晚會上批評張善政如「國宴大廚」煮在地料理「絕對煮不到位」。",
+        "張善政競選辦公室隨即反擊，強調桃園值得擁有具有國宴大廚功力的市長。"
+      ],
+      "image": {
+        "url": "https://img.ltn.com.tw/Upload/news/600/2026/11/27/5655001_1_1.jpg",
+        "sourceName": "自由時報",
+        "width": 800,
+        "height": 450
+      },
+      "commonFacts": [],
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
+      "sources": [
+        {
+          "name": "自由時報",
+          "title": "張善政與年輕議員候選人街頭拜票掃街 盼給青年更多機會",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5655001",
+          "publishedAt": "2026-11-27T10:09:48+08:00",
+          "angle": "報導張善政與年輕議員候選人一同拜票，強調桃園是年輕城市應給青年機會。",
+          "image": "https://img.ltn.com.tw/Upload/news/600/2026/11/27/5655001_1_1.jpg"
+        },
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "賴清德酸張善政「煮不到位」 競辦反擊：桃園值得擁有國宴大廚",
+          "url": "https://tw.news.yahoo.com/%E8%B3%B4%E6%B8%85%E5%BE%B7%E9%85%B8%E5%BC%B5%E5%96%84%E6%94%BF-%E7%85%AE%E4%B8%8D%E5%88%B0%E4%BD%8D-%E7%AB%B6%E8%BE%A6%E5%8F%8D%E6%93%8A-%E6%A1%83%E5%9C%92%E5%80%BC%E5%BE%97%E6%93%81%E6%9C%89%E5%9C%8B%E5%AE%B4%E5%A4%A7%E5%BB%9A-015952274.html",
+          "publishedAt": "2026-11-27T01:59:52+08:00",
+          "angle": "報導賴清德在造勢晚會批評張善政「煮不到位」，張辦則反擊桃園值得國宴大廚。",
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "evt-12rt7i2",
+      "category": "finance",
+      "publishedAt": "2026-11-27T10:06:45+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "美媒揭露台積電通吃秘密",
+      "highlights": [
+        "探討至二〇三〇年最具潛力的AI半導體股票",
+        "分析台積電在產業鏈中的關鍵地位",
+        "顯示其具備長期持有的投資價值"
+      ],
+      "image": {
+        "url": "https://img.ltn.com.tw/Upload/business/page/800/2026/11/27/phpYiT7Np.jpg",
+        "sourceName": "自由時報",
+        "width": 800,
+        "height": 533
+      },
+      "sources": [
+        {
+          "name": "自由時報",
+          "title": "輝達、美光誰贏都不怕！美媒一文揭台積電「通吃秘密」值得抱股至2030年",
+          "url": "https://ec.ltn.com.tw/article/breakingnews/5654891",
+          "publishedAt": "2026-11-27T10:06:45+08:00",
+          "image": "https://img.ltn.com.tw/Upload/business/page/800/2026/11/27/phpYiT7Np.jpg"
+        },
+        {
+          "name": "聯合報",
+          "title": "美國靠一招在美中AI競爭占上風 《晶片戰爭》作者這麼說",
+          "url": "https://udn.com/news/story/6811/9905100",
+          "publishedAt": "2026-11-27T09:49:41+08:00",
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "evt-109t9pb",
+      "category": "politics",
+      "publishedAt": "2026-11-27T10:04:59+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "徐欣瑩自曝絕食逾一五三小時",
+      "highlights": [
+        "國民黨新竹縣長候選人持續絕食抗議司法介選",
+        "幕僚曝光其躺在病床掛點滴的照片",
+        "目前人在醫院且身體非常虛弱與暈眩"
+      ],
+      "image": {
+        "url": "https://s.yimg.com/lo/mysterio/api/efc368caeb2a7a14e0cff7cf66826275792f9cc698a4c4fd38a8d8a561113f9d/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fcnews.com.tw%2Fde31dc7686e188c21de005b1f24d8a45.jpg_up.jpg",
+        "sourceName": "Yahoo奇摩新聞",
+        "width": 1200,
+        "height": 801
+      },
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
+      "sources": [
+        {
+          "name": "自由時報",
+          "title": "自曝絕食超過153小時 徐欣瑩「病床掛點滴」照曝光",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5654969",
+          "publishedAt": "2026-11-27T10:04:59+08:00",
+          "image": null
+        },
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "支持者寫下「毋驚寒的油桐花」 幕僚：徐欣瑩聽後紅了眼框",
+          "url": "https://tw.news.yahoo.com/%E6%94%AF%E6%8C%81%E8%80%85%E5%AF%AB%E4%B8%8B-%E6%AF%8B%E9%A9%9A%E5%AF%92%E7%9A%84%E6%B2%B9%E6%A1%90%E8%8A%B1-%E5%B9%95%E5%83%9A-%E5%BE%90%E6%AC%A3%E7%91%A9%E8%81%BD%E5%BE%8C%E7%B4%85%E4%BA%86%E7%9C%BC%E6%A1%86-084446614.html",
+          "publishedAt": "2026-11-26T08:44:46+08:00",
+          "image": "https://s.yimg.com/lo/mysterio/api/efc368caeb2a7a14e0cff7cf66826275792f9cc698a4c4fd38a8d8a561113f9d/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fcnews.com.tw%2Fde31dc7686e188c21de005b1f24d8a45.jpg_up.jpg"
         }
       ]
     },
@@ -998,6 +951,116 @@
           "url": "https://www.cna.com.tw/news/asoc/202611260292.aspx",
           "publishedAt": "2026-11-26T20:54:24+08:00",
           "image": null
+        }
+      ]
+    },
+    {
+      "id": "evt-fngntd",
+      "category": "life",
+      "publishedAt": "2026-11-27T10:01:12+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "法國編舞大師舞作來台映照社會動盪",
+      "highlights": [
+        "法國編舞大師約恩布爾熱瓦攜代表作訪台",
+        "舞作隱喻法國社會並呼應台灣選前氛圍",
+        "拉近大眾與藝術之間的距離"
+      ],
+      "image": {
+        "url": "https://imgcdn.cna.com.tw/www/WebPhotos/1024/20261126/1151x768_wmkn_0_C20261126000163.jpg",
+        "sourceName": "中央社",
+        "width": 1024,
+        "height": 1024
+      },
+      "sources": [
+        {
+          "name": "聯合報",
+          "title": "舞作映照社會動盪 新舞臺走出「新舞台」拉近藝術距離",
+          "url": "https://udn.com/news/story/7266/9905125",
+          "publishedAt": "2026-11-27T10:01:12+08:00",
+          "image": null
+        },
+        {
+          "name": "中央社",
+          "title": "王宇光獨走朝聖之路 舞作「逆行」台灣國際藝術節首演",
+          "url": "https://www.cna.com.tw/news/acul/202611260248.aspx",
+          "publishedAt": "2026-11-26T17:55:47+08:00",
+          "image": "https://imgcdn.cna.com.tw/www/WebPhotos/1024/20261126/1151x768_wmkn_0_C20261126000163.jpg"
+        }
+      ]
+    },
+    {
+      "id": "evt-wiz046",
+      "category": "finance",
+      "publishedAt": "2026-11-27T10:00:37+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "外資大舉敲進長榮航與華航，高檔留意利多出盡",
+      "highlights": [
+        "外資近期積極掃進長榮航與華航籌碼",
+        "航空雙雄先前曾面臨油價高漲與獲利腰斬挑戰",
+        "市場關注股價處於高檔時是否會出現利多出盡"
+      ],
+      "image": {
+        "url": "https://cdn2.ettoday.net/images/8235/c8235926.jpg",
+        "sourceName": "ETtoday"
+      },
+      "sources": [
+        {
+          "name": "聯合報",
+          "title": "油價飆破142美元仍大賺！外資狂掃長榮航、華航籌碼：高檔小心利多出盡",
+          "url": "https://udn.com/news/story/7251/9903586",
+          "publishedAt": "2026-11-27T10:00:37+08:00",
+          "image": null
+        },
+        {
+          "name": "ETtoday",
+          "title": "地中海線運價八周來漲約三成、歐線持平 美線跌幅加大",
+          "url": "https://finance.ettoday.net/news/3279173",
+          "publishedAt": "2026-11-27T07:00:00+08:00",
+          "image": "https://cdn2.ettoday.net/images/8235/c8235926.jpg"
+        }
+      ]
+    },
+    {
+      "id": "evt-o3wc7f",
+      "category": "politics",
+      "publishedAt": "2026-11-27T09:47:29+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "黃世杰桃園市長選戰衝刺 綠營大咖與地方人士全力輔選",
+      "highlights": [
+        "民進黨桃園市長候選人黃世杰在中壢舉辦造勢晚會，總統賴清德親自出席力挺。",
+        "賴清德表示黃世杰是全心投入的在地人，能為桃園找到新動力再次向前。",
+        "前立委鄭運鵬在臉書發文終極推薦黃世杰，呼籲民眾支持。"
+      ],
+      "image": {
+        "url": "https://imgcdn.cna.com.tw/www/WebPhotos/1024/20261126/1365x768_wmky_0_C20261126000227.jpg",
+        "sourceName": "中央社",
+        "width": 1024,
+        "height": 1024
+      },
+      "commonFacts": [
+        "黃世杰為民進黨桃園市長候選人。"
+      ],
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
+      "sources": [
+        {
+          "name": "自由時報",
+          "title": "鄭運鵬終極推薦：桃園市錯過黃世杰 會錯過讓孩子們超越我們的關鍵時代",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5654978",
+          "publishedAt": "2026-11-27T09:47:29+08:00",
+          "angle": "前立委鄭運鵬在臉書發文終極推薦黃世杰，呼籲支持。",
+          "image": null
+        },
+        {
+          "name": "中央社",
+          "title": "黃世杰中壢造勢晚會 賴清德力挺能為桃園找到新動力",
+          "url": "https://www.cna.com.tw/news/aipl/202611260305.aspx",
+          "publishedAt": "2026-11-26T21:43:57+08:00",
+          "angle": "總統賴清德出席黃世杰中壢造勢晚會，肯定其能為桃園找到新動力。",
+          "image": "https://imgcdn.cna.com.tw/www/WebPhotos/1024/20261126/1365x768_wmky_0_C20261126000227.jpg"
         }
       ]
     },
@@ -1041,74 +1104,6 @@
       ]
     },
     {
-      "id": "evt-eevu6e",
-      "category": "international",
-      "publishedAt": "2026-11-27T09:36:28+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 2,
-      "title": "西班牙伊維薩島外海油輪翻覆 當局全力防範漏油危機",
-      "highlights": [
-        "一艘載運七千噸柴油的油輪在西班牙伊維薩外海不幸翻覆。",
-        "這起意外目前已造成一人死亡，並威脅當地重要生態。",
-        "相關當局已緊急採取應變措施，試圖減輕事故造成的環境損害。"
-      ],
-      "image": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/3e73/live/33d0e9f0-e99e-11f1-b880-15b494ba858d.jpg",
-        "sourceName": "BBC News"
-      },
-      "sources": [
-        {
-          "name": "聯合報",
-          "title": "西班牙伊維薩島外海油輪翻覆 當局急阻漏油護生態",
-          "url": "https://udn.com/news/story/6809/9905060",
-          "publishedAt": "2026-11-27T09:36:28+08:00",
-          "image": null
-        },
-        {
-          "name": "BBC News",
-          "title": "Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one",
-          "url": "https://www.bbc.co.uk/news/articles/c9gklryvj24do?at_medium=RSS&at_campaign=rss",
-          "publishedAt": "2026-11-27T06:01:22+08:00",
-          "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/3e73/live/33d0e9f0-e99e-11f1-b880-15b494ba858d.jpg"
-        }
-      ]
-    },
-    {
-      "id": "evt-1woxuhm",
-      "category": "politics",
-      "publishedAt": "2026-11-27T09:32:23+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 2,
-      "title": "沈伯洋停辦選前之夜 苦苓發文諷刺首都機器太強大",
-      "highlights": [
-        "民進黨台北市長候選人沈伯洋深夜宣布停辦選前市民之夜。",
-        "沈伯洋透露多處大型路段借不到場地，引發網路社群熱烈討論。",
-        "作家苦苓發文諷刺首都機器強大，並點名批評相關人士心腸壞。"
-      ],
-      "image": {
-        "url": "https://static-cdn.nextapple.tw/prod/2026-11/42A46B517A5100D3B640B6D04CCFFC7B/372885e24ec01a5fa2631148b27746a9_1280.webp",
-        "sourceName": "壹蘋新聞網"
-      },
-      "topicId": "topic-cwx6r6",
-      "topicName": "沈伯洋選前活動",
-      "sources": [
-        {
-          "name": "自由時報",
-          "title": "諷「首都機器比國家機器還強」 苦苓點名這2人：比蔣萬安還壞心腸",
-          "url": "https://news.ltn.com.tw/news/politics/breakingnews/5654930",
-          "publishedAt": "2026-11-27T09:32:23+08:00",
-          "image": null
-        },
-        {
-          "name": "壹蘋新聞網",
-          "title": "狠毒卡場地「不是蔣萬安幹得出」 作家點名「壞心腸2人組」",
-          "url": "https://news.nextapple.com/politics/20261127/42A46B517A5100D3B640B6D04CCFFC7B",
-          "publishedAt": "2026-11-27T09:01:00+08:00",
-          "image": "https://static-cdn.nextapple.tw/prod/2026-11/42A46B517A5100D3B640B6D04CCFFC7B/372885e24ec01a5fa2631148b27746a9_1280.webp"
-        }
-      ]
-    },
-    {
       "id": "evt-6cxa58",
       "category": "finance",
       "publishedAt": "2026-11-27T09:14:06+08:00",
@@ -1139,88 +1134,6 @@
           "title": "新台幣開盤升2.7分 為32.92元",
           "url": "https://www.cna.com.tw/news/afe/202611270026.aspx",
           "publishedAt": "2026-11-27T09:07:43+08:00",
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "evt-964te3",
-      "category": "finance",
-      "publishedAt": "2026-11-27T09:13:10+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 2,
-      "title": "台股開盤小漲後走勢震盪",
-      "highlights": [
-        "台股開盤小漲16.76點，加權股價指數為39168.57點。",
-        "盤中一度因ABF載板等類股續揚而漲逾200點。",
-        "隨後部分記憶體與AI股熄火，指數轉為下跌逾百點。"
-      ],
-      "image": {
-        "url": "https://img.ltn.com.tw/Upload/business/page/800/2026/11/27/php8Q4TS8.jpg",
-        "sourceName": "自由時報",
-        "width": 676,
-        "height": 511
-      },
-      "commonFacts": [
-        "台股開盤漲16.76點，指數為39168.57點。"
-      ],
-      "sources": [
-        {
-          "name": "自由時報",
-          "title": "台股開盤》記憶體、AI股熄火 指數跌逾百點",
-          "url": "https://ec.ltn.com.tw/article/breakingnews/5654946",
-          "publishedAt": "2026-11-27T09:13:10+08:00",
-          "angle": "報導台股開盤後因ABF載板與低軌衛星揚升而一度漲逾200點，但隨後記憶體與AI股熄火轉跌。",
-          "image": "https://img.ltn.com.tw/Upload/business/page/800/2026/11/27/php8Q4TS8.jpg"
-        },
-        {
-          "name": "中央社",
-          "title": "台股開盤漲16.76點",
-          "url": "https://www.cna.com.tw/news/afe/202611270024.aspx",
-          "publishedAt": "2026-11-27T09:06:39+08:00",
-          "angle": "簡要報導台北股市開盤漲16.76點及成交金額。",
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "evt-m7kdcx",
-      "category": "finance",
-      "publishedAt": "2026-11-27T09:09:51+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 2,
-      "title": "中東供應疑慮再起，國際油價逼近100美元",
-      "highlights": [
-        "葉門叛軍青年運動宣稱攻擊沙烏地阿拉伯最大煉油廠。",
-        "伊朗表示荷莫茲海峽有船隻遭水雷擊中。",
-        "中東局勢引發原油供應中斷疑慮，推升國際油價收高。"
-      ],
-      "image": {
-        "url": "https://img.ltn.com.tw/Upload/business/page/800/2026/11/27/php9BlGJl.jpg",
-        "sourceName": "自由時報",
-        "width": 2000,
-        "height": 1333
-      },
-      "commonFacts": [
-        "葉門叛軍青年運動表示擊中沙烏地阿拉伯最大煉油廠。",
-        "伊朗指出荷莫茲海峽有船隻遭到攻擊。",
-        "相關消息導致國際油價上漲。"
-      ],
-      "sources": [
-        {
-          "name": "自由時報",
-          "title": "沙國煉油廠遇襲、荷姆茲海峽再傳油輪爆炸 國際油價逼近100美元",
-          "url": "https://ec.ltn.com.tw/article/breakingnews/5654941",
-          "publishedAt": "2026-11-27T09:09:51+08:00",
-          "angle": "指出國際油價逼近100美元，並提及沙國煉油廠遇襲與荷姆茲海峽油輪爆炸事件。",
-          "image": "https://img.ltn.com.tw/Upload/business/page/800/2026/11/27/php9BlGJl.jpg"
-        },
-        {
-          "name": "中央社",
-          "title": "中東供應疑慮再起 布倫特原油收高",
-          "url": "https://www.cna.com.tw/news/afe/202611270009.aspx",
-          "publishedAt": "2026-11-27T03:42:58+08:00",
-          "angle": "報導中東供應疑慮再起導致布倫特原油收高。",
           "image": null
         }
       ]
@@ -1268,158 +1181,236 @@
       ]
     },
     {
-      "id": "evt-1ggd8hv",
+      "id": "evt-ghmd8t",
       "category": "international",
-      "publishedAt": "2026-11-27T08:36:51+08:00",
+      "publishedAt": "2026-11-27T07:56:00+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
       "sourceCount": 2,
-      "title": "歐洲啟用大型衛星工廠並關注SpaceX太空中心計畫",
+      "title": "瑞媒評台灣地方選舉：民生議題背後牽動中國與民主防衛",
       "highlights": [
-        "比利時啟用歐洲最大衛星工廠，年產能上看500顆。",
-        "歐洲新工廠助力抗衡馬斯克的星鏈並減少依賴美國基礎設施。",
-        "SpaceX獲准部署100萬顆衛星打造太空資料中心帶動台廠商機。"
+        "瑞士媒體新蘇黎世報評論台灣九合一地方選舉。",
+        "報導指出選舉表面上爭論種樹、青年政策、城市發展等民生議題。",
+        "深層仍牽涉如何面對中國以及如何維護民主制度與生活方式。"
       ],
       "image": {
-        "url": "https://cdn2.ettoday.net/images/8741/c8741943.jpg",
-        "sourceName": "ETtoday"
-      },
-      "commonFacts": [],
-      "sources": [
-        {
-          "name": "聯合報",
-          "title": "抗衡馬斯克Starlink 歐洲最大衛星工廠啟用 年產能上看500顆",
-          "url": "https://udn.com/news/story/6811/9904996",
-          "publishedAt": "2026-11-27T08:36:51+08:00",
-          "angle": "報導比利時啟用歐洲最大衛星工廠以抗衡馬斯克的星鏈並降低對美依賴。",
-          "image": null
-        },
-        {
-          "name": "ETtoday",
-          "title": "5台廠受惠！ 馬斯克打造100萬衛星太空中心",
-          "url": "https://finance.ettoday.net/news/3279191",
-          "publishedAt": "2026-11-27T07:25:00+08:00",
-          "angle": "報導SpaceX獲准部署100萬顆衛星打造太空中心，帶動太陽能等台廠商機。",
-          "image": "https://cdn2.ettoday.net/images/8741/c8741943.jpg"
-        }
-      ]
-    },
-    {
-      "id": "evt-1egnjcr",
-      "category": "finance",
-      "publishedAt": "2026-11-27T08:29:00+08:00",
-      "firstSeenAt": "2026-11-27T10:12:40+08:00",
-      "sourceCount": 2,
-      "title": "美股休市台積電期貨上揚，法人調節力道趨緩助台股拚緩步墊高",
-      "highlights": [
-        "美股因感恩節休市，台指期盤後指數收平盤39492點，台積電期貨上漲9元。",
-        "美國301調查關稅疑慮緩解，台股前一日大漲956.38點收在39151.81點。",
-        "投顧分析指出法人調節力道趨緩，有利台股從區間整理轉為緩步墊高格局。"
-      ],
-      "image": {
-        "url": "https://cdn2.ettoday.net/images/7500/c7500990.jpg",
-        "sourceName": "ETtoday"
+        "url": "https://static-cdn.nextapple.tw/prod/2026-11/927BBFE8C572BB4B7EBF2D58563D2BA2/c9a80eab42ac2baeb45ef03760cf7504_1280.webp",
+        "sourceName": "壹蘋新聞網"
       },
       "commonFacts": [
-        "美股因感恩節休市",
-        "台指期盤後指數收平盤39492點",
-        "台積電期貨上漲9元",
-        "台股26日漲956.38點收在39151.81點"
+        "瑞士媒體新蘇黎世報評論台灣九合一地方選舉。",
+        "選舉表面爭論民生議題，深層牽涉面對中國與維護民主制度。"
       ],
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
       "sources": [
         {
-          "name": "ETtoday",
-          "title": "美股休市台積電期貨上揚 台股拚緩步墊高",
-          "url": "https://finance.ettoday.net/news/3279206",
-          "publishedAt": "2026-11-27T08:29:00+08:00",
-          "angle": "報導台股受關稅疑慮緩解大漲，並提及投顧分析法人調節力道趨緩有助台股緩步墊高。",
-          "image": "https://cdn2.ettoday.net/images/7500/c7500990.jpg"
+          "name": "壹蘋新聞網",
+          "title": "台灣選舉外媒大開眼界！談種樹竟扯出「政治現實」：無法迴避",
+          "url": "https://news.nextapple.com/international/20261127/927BBFE8C572BB4B7EBF2D58563D2BA2",
+          "publishedAt": "2026-11-27T07:56:00+08:00",
+          "angle": "指出台灣選舉表面爭論民生議題，實際上無法迴避中國與民主制度的政治現實。",
+          "image": "https://static-cdn.nextapple.tw/prod/2026-11/927BBFE8C572BB4B7EBF2D58563D2BA2/c9a80eab42ac2baeb45ef03760cf7504_1280.webp"
         },
         {
           "name": "中央社",
-          "title": "美股休市台積電期貨上揚 台股拚緩步墊高",
-          "url": "https://www.cna.com.tw/news/afe/202611270018.aspx",
-          "publishedAt": "2026-11-27T07:53:24+08:00",
-          "angle": "中央社報導台股行情，指出美股休市與台指期盤後表現，分析法人調節趨緩帶動區間轉為墊高。",
+          "title": "瑞媒評台灣地方選舉 民生議題與中國因素不可迴避",
+          "url": "https://www.cna.com.tw/news/aopl/202611270016.aspx",
+          "publishedAt": "2026-11-27T07:24:19+08:00",
+          "angle": "引述瑞媒觀點，強調民生議題與中國因素在台灣地方選舉中不可迴避。",
           "image": null
         }
       ]
     },
     {
-      "id": "evt-1wvhl1s",
-      "category": "politics",
-      "publishedAt": "2026-11-27T06:59:00+08:00",
+      "id": "evt-57tdfx",
+      "category": "tech",
+      "publishedAt": "2026-11-27T04:03:54+08:00",
       "firstSeenAt": "2026-11-27T10:12:40+08:00",
       "sourceCount": 2,
-      "title": "沈伯洋取消選前之夜引發路權爭議，陳文茜轉發貼文遭灌爆後刪文",
+      "title": "防堵中國取得AI算力 輝達暫停對東南亞4國出貨",
       "highlights": [
-        "民進黨台北市長候選人沈伯洋因封路民怨緊急取消選前之夜。",
-        "策展人程詩郁揭露北市路權漏洞，資深媒體人陳文茜轉發質疑行政中立。",
-        "陳文茜的轉發貼文遭藍營支持者灌爆後緊急刪文。"
+        "美國收緊對中國的AI晶片出口管制。",
+        "輝達（Nvidia）已要求製造合作夥伴，暫停向東南亞4國出貨伺服器。",
+        "此舉旨在防止中國透過管道取得AI運算能力。"
       ],
       "image": {
-        "url": "https://cdn2.ettoday.net/images/9035/c9035216.jpg",
-        "sourceName": "ETtoday"
+        "url": "https://imgcdn.cna.com.tw/www/webphotos/WebOg/600/20261126/1999x1049_81925728545.jpg",
+        "sourceName": "中央社",
+        "width": 1024,
+        "height": 1024
       },
       "commonFacts": [
-        "民進黨台北市長候選人沈伯洋取消選前之夜",
-        "資深媒體人陳文茜轉發貼文質疑行政中立並刪文"
+        "輝達暫停向東南亞國家出貨伺服器。",
+        "目的是防堵中國取得AI算力及配合美國出口管制。"
       ],
-      "topicId": "topic-cwx6r6",
-      "topicName": "沈伯洋選前活動",
+      "topicId": "topic-14ih6no",
+      "topicName": "輝達與AI晶片動態",
       "sources": [
         {
-          "name": "ETtoday",
-          "title": "陳文茜轉發「仁愛路大陷阱」：說好的行政中立呢 被灌爆刪文",
-          "url": "https://www.ettoday.net/news/20261127/3279185.htm",
-          "publishedAt": "2026-11-27T06:59:00+08:00",
-          "angle": "報導策展人程詩郁揭露北市路權漏洞，以及陳文茜轉發遭藍營支持者灌爆而刪文的經過。",
-          "image": "https://cdn2.ettoday.net/images/9035/c9035216.jpg"
+          "name": "TechCrunch",
+          "title": "Nvidia hits pause on chip shipments to Southeast Asia",
+          "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia",
+          "publishedAt": "2026-11-27T04:03:54+08:00",
+          "angle": "報導輝達已要求製造夥伴暫停向馬來西亞、新加坡、泰國和印尼出貨伺服器。",
+          "image": null
         },
         {
-          "name": "Yahoo奇摩新聞",
-          "title": "遭陳文茜辣問「行政中立呢？」蔣萬安回應了",
-          "url": "https://tw.news.yahoo.com/%E9%81%AD%E9%99%B3%E6%96%87%E8%8C%9C%E8%BE%A3%E5%95%8F-%E8%A1%8C%E6%94%BF%E4%B8%AD%E7%AB%8B%E5%91%A2-%E8%94%A3%E8%90%AC%E5%AE%89%E5%9B%9E%E6%87%89%E4%BA%86-015410409.html",
-          "publishedAt": "2026-11-27T01:54:10+08:00",
-          "angle": "提及台北市路權之爭延燒，並關注蔣萬安對陳文茜質疑的回應。",
-          "image": null
+          "name": "中央社",
+          "title": "金融時報：輝達暫停對東南亞4國出貨 防堵中國取得AI算力",
+          "url": "https://www.cna.com.tw/news/aopl/202611260186.aspx",
+          "publishedAt": "2026-11-26T16:08:34+08:00",
+          "angle": "引述金融時報指出，美國收緊出口管制促使輝達暫停對東南亞4國出貨。",
+          "image": "https://imgcdn.cna.com.tw/www/webphotos/WebOg/600/20261126/1999x1049_81925728545.jpg"
         }
       ]
     },
     {
-      "id": "evt-18orvi6",
-      "category": "tech",
-      "publishedAt": "2026-11-26T10:34:00+08:00",
-      "firstSeenAt": "2026-11-26T11:47:11+08:00",
+      "id": "evt-1wk4sbn",
+      "category": "finance",
+      "publishedAt": "2026-11-27T02:51:00+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
       "sourceCount": 2,
-      "title": "PC版《GTA 6》恐面臨無卡可買困境，遊戲預算龐大仍須割捨機制",
+      "title": "網銀遠端盜轉頻傳 金管會證實8家銀行通報重大偶發",
       "highlights": [
-        "顯卡市場短期內缺貨與漲價局面難解，下一代顯卡也傳出延後問世。",
-        "隨著《GTA 6》最快明年推出 PC 版，玩家恐面臨無卡可升級的窘境。",
-        "《GTA 6》擁有高達 15 億美元預算與龐大規模，但傳出仍須割捨部分機制與內容。"
+        "刑事局受理多起詐騙集團遠端遙控手機盜轉網銀存款案件。",
+        "金管會證實有8家銀行針對用戶帳戶遭不明原因盜轉通報重大偶發事件。",
+        "目前已知共有10名客戶遭盜轉，財損金額達新台幣182萬元。"
       ],
       "image": {
-        "url": "https://cdn2.ettoday.net/images/9030/c9030829.jpg",
-        "sourceName": "ETtoday"
+        "url": "https://static-cdn.nextapple.tw/prod/2026-11/B1407F654DEF21182657EE16DC3FBEE0/5684a22e0c0db2b7da401816ff1e989b_1280.webp",
+        "sourceName": "壹蘋新聞網"
       },
       "commonFacts": [
-        "提及《GTA 6》相關消息"
+        "金管會證實有8家銀行通報重大偶發事件。",
+        "有客戶帳戶遭不明原因盜轉。"
       ],
       "sources": [
         {
-          "name": "ETtoday",
-          "title": "黃仁勳回歸也難救！想玩 PC 版《GTA 6》恐無顯卡可買",
-          "url": "https://www.ettoday.net/news/20261126/3278707.htm",
-          "publishedAt": "2026-11-26T10:34:00+08:00",
-          "angle": "指出顯卡缺貨與漲價問題難解，導致玩家想玩 PC 版《GTA 6》恐面臨無卡可升級的困境。",
-          "image": "https://cdn2.ettoday.net/images/9030/c9030829.jpg"
+          "name": "壹蘋新聞網",
+          "title": "網銀盜轉驚傳百餘起 8銀行證實「10客戶被盜182萬」",
+          "url": "https://news.nextapple.com/finance/20261127/B1407F654DEF21182657EE16DC3FBEE0",
+          "publishedAt": "2026-11-27T02:51:00+08:00",
+          "angle": "報導刑事局受理百餘起遠端遙控手機盜轉案，金管會證實8銀行有10名客戶遭盜轉182萬元。",
+          "image": "https://static-cdn.nextapple.tw/prod/2026-11/B1407F654DEF21182657EE16DC3FBEE0/5684a22e0c0db2b7da401816ff1e989b_1280.webp"
         },
         {
+          "name": "ETtoday",
+          "title": "快訊／「存款隔空消失」！ 8家通報銀行曝光 金管會回應",
+          "url": "https://finance.ettoday.net/news/3279106",
+          "publishedAt": "2026-11-26T19:09:00+08:00",
+          "angle": "提及刑事局接獲多家金融機構客戶遭盜轉的總金額，並報導金管會對8家通報銀行的回應。",
+          "image": "https://cdn2.ettoday.net/images/5206/c5206481.jpg"
+        }
+      ]
+    },
+    {
+      "id": "evt-i0b484",
+      "category": "politics",
+      "publishedAt": "2026-11-27T02:02:00+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "作家苦苓細數蔣萬安政見跳票，並呼籲外省同胞理性投票",
+      "highlights": [
+        "作家苦苓在臉書盤點蔣萬安七大政見跳票，質疑長照、社宅及內湖交通等政策，並點名是否該向柯文哲道歉。",
+        "北市都發局回應強調上任後已開工多處社宅且完工戶數超越前朝，呼籲理性檢視施政成果。",
+        "苦苓另發表信件呼籲台北市外省族群，不要單純因身分認同或意識形態將票投給蔣萬安。"
+      ],
+      "image": {
+        "url": "https://cdn2.ettoday.net/images/9029/c9029197.jpg",
+        "sourceName": "ETtoday"
+      },
+      "commonFacts": [],
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
+      "sources": [
+        {
           "name": "Yahoo奇摩新聞",
-          "title": "《GTA6》多項刪減內容曝光！15 億美元預算仍然得割捨部分機制",
-          "url": "https://tw.news.yahoo.com/gta6-%E5%A4%9A%E9%A0%85%E5%88%AA%E6%B8%9B%E5%85%A7%E5%AE%B9%E6%9B%9D%E5%85%89-15-%E5%84%84%E7%BE%8E%E5%85%83%E9%A0%90%E7%AE%97%E4%BB%8D%E7%84%B6%E5%BE%97%E5%89%B2%E6%8D%A8%E9%83%A8%E5%88%86%E6%A9%9F%E5%88%B6-100000070.html",
-          "publishedAt": "2026-11-26T10:00:00+08:00",
-          "angle": "報導《GTA 6》擁有龐大預算與規模，但仍有部分遊戲機制與內容遭到割捨。",
+          "title": "選戰倒數！苦苓列蔣萬安「7大政見跳票」 嗆：要不要出來跟阿北道歉？",
+          "url": "https://tw.news.yahoo.com/%E9%81%B8%E6%88%B0%E5%80%92%E6%95%B8-%E8%8B%A6%E8%8B%93%E5%88%97%E8%94%A3%E8%90%AC%E5%AE%89-7%E5%A4%A7%E6%94%BF%E8%A6%8B%E8%B7%B3%E7%A5%A8-%E5%97%86-%E8%A6%81%E4%B8%8D%E8%A6%81%E5%87%BA%E4%BE%86%E8%B7%9F%E9%98%BF%E5%8C%97%E9%81%93%E6%AD%89-020200164.html",
+          "publishedAt": "2026-11-27T02:02:00+08:00",
+          "angle": "報導苦苓列出蔣萬安7大政見跳票並要求道歉，以及都發局的回應。",
           "image": null
+        },
+        {
+          "name": "ETtoday",
+          "title": "苦苓大選前夕寫一封信喊話外省同胞 別再因4理由投給蔣萬安",
+          "url": "https://www.ettoday.net/news/20261127/3279153.htm",
+          "publishedAt": "2026-11-27T01:38:00+08:00",
+          "angle": "報導苦苓向外省同胞發聲，呼籲擺脫家國情懷與意識形態理性投票。",
+          "image": "https://cdn2.ettoday.net/images/9029/c9029197.jpg"
+        }
+      ]
+    },
+    {
+      "id": "evt-1jrieub",
+      "category": "politics",
+      "publishedAt": "2026-11-27T02:01:34+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "花蓮縣長選戰倒數，前縣長謝深山現身力挺游淑貞",
+      "highlights": [
+        "花蓮縣長選戰進入最後倒數，前花蓮縣長謝深山至游淑貞競選總部加油打氣，展現國民黨團結態度。",
+        "游淑貞預告將舉辦選前之夜，並承續優良縣政打造黃金十年。",
+        "同日無黨籍候選人張峻舉辦選前大遊行，游淑貞與魏嘉賢也規劃進行掃街拜票。"
+      ],
+      "image": {
+        "url": "https://imgcdn.cna.com.tw/www/WebPhotos/1024/20261126/1024x768_wmky_0_C20261126000215.jpg",
+        "sourceName": "中央社",
+        "width": 1024,
+        "height": 1024
+      },
+      "commonFacts": [],
+      "topicId": "topic-1slhpos",
+      "topicName": "選前衝刺與賄選查緝",
+      "sources": [
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "謝深山現身競總力挺 游淑貞承諾延續優良縣政",
+          "url": "https://tw.news.yahoo.com/%E8%AC%9D%E6%B7%B1%E5%B1%B1%E7%8F%BE%E8%BA%AB%E7%AB%B6%E7%B8%BD%E5%8A%9B%E6%8C%BA-%E6%B8%B8%E6%B7%91%E8%B2%9E%E6%89%BF%E8%AB%BE%E5%BB%B6%E7%BA%8C%E5%84%AA%E8%89%AF%E7%B8%A3%E6%94%BF-020134503.html",
+          "publishedAt": "2026-11-27T02:01:34+08:00",
+          "angle": "聚焦前縣長謝深山現身競總力挺游淑貞，游淑貞承續優良縣政並預告選前之夜。",
+          "image": null
+        },
+        {
+          "name": "中央社",
+          "title": "張峻花蓮遊行季連成力挺 游淑貞、魏嘉賢掃街拜票",
+          "url": "https://www.cna.com.tw/news/aipl/202611260294.aspx",
+          "publishedAt": "2026-11-26T20:57:28+08:00",
+          "angle": "報導張峻舉行選前大遊行及游淑貞、魏嘉賢的掃街拜票行程。",
+          "image": "https://imgcdn.cna.com.tw/www/WebPhotos/1024/20261126/1024x768_wmky_0_C20261126000215.jpg"
+        }
+      ]
+    },
+    {
+      "id": "evt-zjm1ln",
+      "category": "finance",
+      "publishedAt": "2026-11-27T01:46:00+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 2,
+      "title": "台股早盤震盪拉回，飆股五虎將全面熄火",
+      "highlights": [
+        "台股今日漲勢暫歇，早盤呈現震盪拉回走勢",
+        "加權指數在盤中上下震盪整理",
+        "盤面點名的多檔飆股在早盤同步熄火"
+      ],
+      "image": {
+        "url": "https://cdn2.ettoday.net/images/7575/c7575824.jpg",
+        "sourceName": "ETtoday"
+      },
+      "sources": [
+        {
+          "name": "Yahoo奇摩新聞",
+          "title": "郭哲榮押0050賠千萬才翻正！點名「飆股五虎將」今早全部熄火 台股踩煞車小幅拉回",
+          "url": "https://tw.stock.yahoo.com/news/%E9%83%AD%E5%93%B2%E6%A6%AE%E6%8A%BC0050%E8%B3%A0%E5%8D%83%E8%90%AC%E6%89%8D%E7%BF%BB%E6%AD%A3-%E9%BB%9E%E5%90%8D-%E9%A3%86%E8%82%A1%E4%BA%94%E8%99%8E%E5%B0%87-%E4%BB%8A%E6%97%A9%E5%85%A8%E9%83%A8%E7%86%84%E7%81%AB-%E5%8F%B0%E8%82%A1%E8%B8%A9%E7%85%9E%E8%BB%8A%E5%B0%8F%E5%B9%85%E6%8B%89%E5%9B%9E-014600547.html",
+          "publishedAt": "2026-11-27T01:46:00+08:00",
+          "image": null
+        },
+        {
+          "name": "ETtoday",
+          "title": "慘賠千萬今大逆轉！郭哲榮重押2.3億0050翻正 點名8檔黑馬股出列",
+          "url": "https://finance.ettoday.net/news/3279152",
+          "publishedAt": "2026-11-26T23:44:00+08:00",
+          "image": "https://cdn2.ettoday.net/images/7575/c7575824.jpg"
         }
       ]
     },
@@ -1464,6 +1455,118 @@
       ]
     },
     {
+      "id": "evt-dl06e5",
+      "category": "tech",
+      "publishedAt": "2026-11-27T09:20:00+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 1,
+      "title": "台灣人平均一天開 LINE 14 次，穩居國民 App 寶座",
+      "highlights": [
+        "調查顯示台灣人平均每日開啟 LINE 多達 14 次",
+        "超越一般認知，使用頻率相當高",
+        "被公認為是國人使用率最高的應用程式"
+      ],
+      "image": {
+        "url": "https://cdn2.ettoday.net/images/9030/c9030611.jpg",
+        "sourceName": "ETtoday"
+      },
+      "sources": [
+        {
+          "name": "ETtoday",
+          "title": "你一天會開幾次 LINE？調查揭台灣人平均數、10 次都嫌少",
+          "url": "https://www.ettoday.net/news/20261127/3279219.htm",
+          "publishedAt": "2026-11-27T09:20:00+08:00",
+          "image": "https://cdn2.ettoday.net/images/9030/c9030611.jpg"
+        }
+      ]
+    },
+    {
+      "id": "evt-1oq8oyi",
+      "category": "tech",
+      "publishedAt": "2026-11-27T04:00:00+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 1,
+      "title": "輝達醜聞核心：前高管 Alice Huang 是否為間諜？",
+      "highlights": [
+        "輝達執行長黃仁勳曾與前 Megaspeed 高管 Alice Huang 有婚外情",
+        "該醜聞的核心指控為 Alice Huang 是否為中國間諜",
+        "相關說法目前仍未獲得證實"
+      ],
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2297774940.jpg?resize=1200,832",
+        "sourceName": "TechCrunch",
+        "width": 1200,
+        "height": 832
+      },
+      "topicId": "topic-14ih6no",
+      "topicName": "輝達與AI晶片動態",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "title": "Is Alice Huang a spy or not?",
+          "url": "https://techcrunch.com/2026/11/26/is-alice-huang-a-spy-or-not",
+          "publishedAt": "2026-11-27T04:00:00+08:00",
+          "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2297774940.jpg?resize=1200,832"
+        }
+      ]
+    },
+    {
+      "id": "evt-xx70e",
+      "category": "tech",
+      "publishedAt": "2026-11-27T03:31:50+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 1,
+      "title": "社群平台 X 推出家長監護功能，守護青少年使用安全",
+      "highlights": [
+        "社群平台 X 在推出二十年後終於加入家長監護功能",
+        "提供家長與監護人管理青少年在平台上的內容瀏覽",
+        "協助控管未成年使用者看到的資訊"
+      ],
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/twitter-x-musk-graffiti-hand.jpg?resize=1200,675",
+        "sourceName": "TechCrunch",
+        "width": 1200,
+        "height": 675
+      },
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "title": "X finally gets parental controls after 20 years",
+          "url": "https://techcrunch.com/2026/11/26/x-finally-gets-parental-controls-after-20-years",
+          "publishedAt": "2026-11-27T03:31:50+08:00",
+          "image": "https://techcrunch.com/wp-content/uploads/2026/10/twitter-x-musk-graffiti-hand.jpg?resize=1200,675"
+        }
+      ]
+    },
+    {
+      "id": "evt-144mn9t",
+      "category": "tech",
+      "publishedAt": "2026-11-27T01:00:00+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 1,
+      "title": "使用蘋果摺疊機一個月，徹底改變日常手機習慣",
+      "highlights": [
+        "蘋果摺疊機改變了作者的日常使用習慣",
+        "幫助減少無意識滑手機的行為",
+        "讓人們有更多時間閱讀書籍"
+      ],
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/11/iphone-duo-GettyImages-2301595744.jpg?w=1024",
+        "sourceName": "TechCrunch",
+        "width": 1024,
+        "height": 684
+      },
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "title": "A month with the iPhone Duo has changed how I use my phone",
+          "url": "https://techcrunch.com/2026/11/26/a-month-with-the-iphone-duo-has-changed-how-i-use-my-phone",
+          "publishedAt": "2026-11-27T01:00:00+08:00",
+          "image": "https://techcrunch.com/wp-content/uploads/2026/11/iphone-duo-GettyImages-2301595744.jpg?w=1024"
+        }
+      ]
+    },
+    {
       "id": "evt-i4u45y",
       "category": "tech",
       "publishedAt": "2026-11-27T00:04:00+08:00",
@@ -1486,6 +1589,34 @@
           "url": "https://news.nextapple.com/gadget/20261127/085BBBA3AC4B154D5BF8BAF72A15AB90",
           "publishedAt": "2026-11-27T00:04:00+08:00",
           "image": "https://static-cdn.nextapple.tw/prod/2026-11/085BBBA3AC4B154D5BF8BAF72A15AB90/3948826ba5a87a9f38432e3ffb1d6201_1280.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-241e6y",
+      "category": "tech",
+      "publishedAt": "2026-11-27T00:00:00+08:00",
+      "firstSeenAt": "2026-11-27T10:12:40+08:00",
+      "sourceCount": 1,
+      "title": "《GTA 6》證明效率並非絕對美德",
+      "highlights": [
+        "《GTA 6》成為史上最成功的娛樂產品之一",
+        "該遊戲展現了高度人工創作的價值",
+        "與AI企業上市形成強烈對比"
+      ],
+      "image": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/11/Jason_and_Lucia_17.117_b11r13mg5.jpg?resize=1200,675",
+        "sourceName": "TechCrunch",
+        "width": 1200,
+        "height": 675
+      },
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue",
+          "publishedAt": "2026-11-27T00:00:00+08:00",
+          "image": "https://techcrunch.com/wp-content/uploads/2026/11/Jason_and_Lucia_17.117_b11r13mg5.jpg?resize=1200,675"
         }
       ]
     }
