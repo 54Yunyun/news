@@ -2,14 +2,17 @@ import { categories } from '../constants/categories.js'
 
 const newsCategories = new Set(categories.filter((item) => item.id !== 'all').map((item) => item.id))
 
-// 依家數挑頭條與最多四則次要。同一 topicId 只佔一格，子事件不另佔頭條或次要
+// 依排序模式挑頭條與最多四則次要。同一 topicId 只佔一格，子事件不另佔頭條或次要
 // items: 目前要顯示的新聞，順序沿用清單排序
+// mode: coverage（多家優先）或 time（依時間由新到舊）
 // 回傳: { lead, sides, rest }
-export const splitLead = (items) => {
+export const splitLead = (items, mode = 'coverage') => {
   const ranked = [...(items ?? [])].sort((a, b) => {
-    const byCount = (b.sourceCount ?? 1) - (a.sourceCount ?? 1)
-    if (byCount) return byCount
-    return String(b.publishedAt).localeCompare(String(a.publishedAt))
+    if (mode !== 'time') {
+      const byCount = (b.sourceCount ?? 1) - (a.sourceCount ?? 1)
+      if (byCount) return byCount
+    }
+    return new Date(b.publishedAt) - new Date(a.publishedAt) || String(b.publishedAt).localeCompare(String(a.publishedAt))
   })
   const picked = []
   const seenTopics = new Set()
@@ -46,6 +49,23 @@ export const takePage = (items, open = false, size = 15) => {
   const list = items ?? []
   if (open) return list
   return list.slice(0, size)
+}
+
+// 限制每個分類最多顯示幾則，供「全部」分頁避免單一分類佔滿版面
+// items: 已排序好的新聞陣列
+// maxPerCategory: 每個分類上限，預設 6
+// 回傳: 篩選後的新聞陣列
+export const capByCategory = (items, maxPerCategory = 6) => {
+  const counts = new Map()
+  const picked = []
+  for (const item of items ?? []) {
+    const key = item?.category || ''
+    const count = counts.get(key) ?? 0
+    if (count >= maxPerCategory) continue
+    counts.set(key, count + 1)
+    picked.push(item)
+  }
+  return picked
 }
 
 // 兩段文字的二字組重疊比例

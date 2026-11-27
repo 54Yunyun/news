@@ -80,3 +80,42 @@ test('Yahoo 轉載壹蘋新聞網時改記壹蘋並優先保留原站連結', ()
   assert.equal(items[0].url, direct.url)
   assert.equal(items[0].publishedAt, '2026-11-27T08:30:00+08:00')
 })
+
+test('遊戲角落與巴哈姆特 GNN、4Gamers 會正確歸屬，不會把遊戲角落誤判為聯合報', () => {
+  const items = prepareItems([
+    {
+      id: 'game-1',
+      feedId: 'udn-game',
+      source: '遊戲角落',
+      title: '《GTA6》最新預告解析',
+      snippet: '玩家熱議新畫面。',
+      url: 'https://game.udn.com/game/story/122089/123456',
+      publishedAt: '2026-11-27T09:00:00+08:00',
+      category: 'gaming',
+    },
+    {
+      id: 'gnn-1',
+      feedId: 'gnn',
+      source: '巴哈姆特GNN',
+      title: '新作上市情報公開',
+      snippet: '官方今日公布發售日。',
+      url: 'https://gnn.gamer.com.tw/detail.php?sn=280000',
+      publishedAt: '2026-11-27T09:10:00+08:00',
+      category: 'gaming',
+    },
+    {
+      id: '4g-1',
+      feedId: '4gamers',
+      source: '4Gamers',
+      title: '電競總決賽結果出爐',
+      snippet: '冠軍隊伍抱走獎盃。',
+      url: 'https://www.4gamers.com.tw/news/detail/99999/test',
+      publishedAt: '2026-11-27T09:20:00+08:00',
+      category: 'gaming',
+    },
+  ])
+  const byId = new Map(items.map((item) => [item.id, item]))
+  assert.equal(byId.get('game-1').source, '遊戲角落')
+  assert.equal(byId.get('gnn-1').source, '巴哈姆特GNN')
+  assert.equal(byId.get('4g-1').source, '4Gamers')
+})

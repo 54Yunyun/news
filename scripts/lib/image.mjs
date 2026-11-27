@@ -1,4 +1,6 @@
-// 封面只留原站網址。台灣媒體優先、國外媒體排最後，並過濾標誌、預設圖、太小或比例不合的圖
+import sharp from 'sharp'
+
+// 封面只留原站網址。台灣媒體優先、國外媒體排最後，並過濾標誌、預設圖、太小、比例不合或左右有明顯黑邊的圖
 
 const FOREIGN_OUTLETS = new Set([
   'BBC News',
@@ -17,8 +19,11 @@ const WEIGHTS = new Map([
   ['公視', 90],
   ['自由時報', 80],
   ['聯合報', 70],
+  ['巴哈姆特GNN', 65],
+  ['遊戲角落', 65],
   ['ETtoday', 60],
   ['壹蘋新聞網', 60],
+  ['4Gamers', 60],
   ['Yahoo奇摩新聞', 50],
   ['BBC News', 20],
   ['NHK', 15],
@@ -28,6 +33,11 @@ const WEIGHTS = new Map([
 const MIN_WIDTH = 400
 const MIN_RATIO = 0.8
 const MAX_RATIO = 2.4
+const BLACK_BAR_MAX_LUMA = 18
+const BLACK_BAR_PIXEL_LUMA = 24
+const BLACK_BAR_DARK_RATIO = 0.85
+const BLACK_BAR_CENTER_GAP = 18
+const MAX_IMAGE_BYTES = 5 * 1024 * 1024
 
 // 把單一節點收成陣列
 // value: 節點或陣列
@@ -390,17 +400,117 @@ const draftImage = (draft) => {
   return usableImage({ url: draft.image, width: draft.imageWidth, height: draft.imageHeight })
 }
 
-// 幫每個來源補上 image，並為事件挑封面。台灣媒體優先，僅國外媒體有 RSS 圖時仍先嘗試台灣媒體文章頁
+// 計算指定矩形區域內的平均亮度與極暗像素比例
+// pixels: 原始 RGB/RGBA 位元組
+// width: 圖片寬度
+// channels: 每像素通道數
+// box: { x0, x1, y0, y1 }
+// 回傳: { avg, darkRatio }
+const regionLuma = (pixels, width, channels, { x0, x1, y0, y1 }) => {
+  let sum = 0
+  let dark = 0
+  let count = 0
+  for (let y = y0; y < y1; y += 1) {
+    for (let x = x0; x < x1; x += 1) {
+      const idx = (y * width + x) * channels
+      const luma = 0.299 * pixels[idx] + 0.587 * pixels[idx + 1] + 0.114 * pixels[idx + 2]
+      sum += luma
+      if (luma <= BLACK_BAR_PIXEL_LUMA) dark += 1
+      count += 1
+    }
+  }
+  if (!count) return { avg: 255, darkRatio: 0 }
+  return { avg: sum / count, darkRatio: dark / count }
+}
+
+// 偵測圖片左右兩側是否有明顯黑邊（例如直式畫面轉橫圖造成的兩側黑條）
+// pixels: 原始 RGB/RGBA 位元組
+// width: 圖片寬度
+// height: 圖片高度
+// channels: 每像素通道數
+// 回傳: 是否有左右黑邊
+export const hasDarkSideBars = (pixels, width, height, channels = 3) => {
+  if (!pixels?.length || width < 20 || height < 20 || channels < 3) return false
+  const sideWidth = Math.max(2, Math.floor(width * 0.08))
+  const y0 = Math.floor(height * 0.05)
+  const y1 = Math.max(y0 + 1, Math.ceil(height * 0.95))
+  const left = regionLuma(pixels, width, channels, { x0: 0, x1: sideWidth, y0, y1 })
+  const right = regionLuma(pixels, width, channels, { x0: width - sideWidth, x1: width, y0, y1 })
+  if (left.avg > BLACK_BAR_MAX_LUMA || right.avg > BLACK_BAR_MAX_LUMA) return false
+  if (left.darkRatio < BLACK_BAR_DARK_RATIO || right.darkRatio < BLACK_BAR_DARK_RATIO) return false
+  const center = regionLuma(pixels, width, channels, {
+    x0: Math.floor(width * 0.25),
+    x1: Math.ceil(width * 0.75),
+    y0,
+    y1,
+  })
+  return center.avg - Math.max(left.avg, right.avg) >= BLACK_BAR_CENTER_GAP
+}
+
+// 下載並縮小圖片後檢查左右兩側是否有明顯黑邊。逾時、過大或解碼失敗時回傳 false
+// imageUrl: 圖片網址
+// options: timeout（毫秒）與測試用 fetchImpl
+// 回傳: 是否有左右黑邊
+export const detectBlackBars = async (imageUrl, { timeout = 5000, fetchImpl = fetch } = {}) => {
+  try {
+    const res = await fetchImpl(imageUrl, {
+      headers: { 'user-agent': 'daily-briefing/1.0', accept: 'image/*' },
+      redirect: 'follow',
+      signal: AbortSignal.timeout(timeout),
+    })
+    if (!res.ok) return false
+    const length = Number(res.headers.get('content-length') || 0)
+    if (length > MAX_IMAGE_BYTES) return false
+    const bytes = Buffer.from(await res.arrayBuffer())
+    if (!bytes.length || bytes.length > MAX_IMAGE_BYTES) return false
+    const { data, info } = await sharp(bytes)
+      .resize({ width: 120, withoutEnlargement: true })
+      .removeAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true })
+    return hasDarkSideBars(data, info.width, info.height, info.channels)
+  } catch {
+    return false
+  }
+}
+
+// 幫每個來源補上 image，並為事件挑封面。台灣媒體優先，並略過左右有明顯黑邊的圖改用下一家
 // events: 要寫入的事件，就地補上 image
 // draftsByUrl: 文章網址對應草稿
 // membersByEvent: 事件 id 對應組內草稿
 // fetchPage: (url) => 圖片或 null
+// checkBlackBars: (url) => Promise<boolean>，偵測圖片左右是否有明顯黑邊
 // limit: 文章頁上限
-// 回傳: { withImage, fetched }
+// 回傳: { withImage, fetched, skippedDarkBars }
 export const attachEventImages = async (
   events,
-  { draftsByUrl = new Map(), membersByEvent = new Map(), fetchPage = fetchOgImage, limit = 40 } = {},
+  {
+    draftsByUrl = new Map(),
+    membersByEvent = new Map(),
+    fetchPage = fetchOgImage,
+    checkBlackBars = detectBlackBars,
+    limit = 40,
+  } = {},
 ) => {
+  const darkCache = new Map()
+  let skippedDarkBars = 0
+  // 快取同一網址的黑邊檢查結果，避免重複下載
+  // url: 圖片網址
+  // 回傳: 是否有左右黑邊
+  const hasBars = async (url) => {
+    if (!url || !checkBlackBars) return false
+    if (!darkCache.has(url)) {
+      let dark = false
+      try {
+        dark = Boolean(await checkBlackBars(url))
+      } catch {
+        dark = false
+      }
+      darkCache.set(url, dark)
+    }
+    return darkCache.get(url)
+  }
+
   const jobs = []
   for (const event of events ?? []) {
     const counts = memberCounts(membersByEvent.get(event.id))
@@ -408,17 +518,34 @@ export const attachEventImages = async (
       source.image = draftImage(draftsByUrl.get(source.url))?.url ?? null
     }
     const ranked = rankSources(event.sources, counts)
-    const rows = ranked.map((source) => ({ source, image: draftImage(draftsByUrl.get(source.url)) }))
-    const hitIndex = rows.findIndex((row) => row.image)
-    const hit = hitIndex >= 0 ? rows[hitIndex] : null
+    let hit = null
+    let hitIndex = -1
+    const rejectedUrls = new Set()
+    for (let index = 0; index < ranked.length; index += 1) {
+      const source = ranked[index]
+      const image = draftImage(draftsByUrl.get(source.url))
+      if (!image) continue
+      if (await hasBars(image.url)) {
+        skippedDarkBars += 1
+        rejectedUrls.add(image.url)
+        continue
+      }
+      hit = { source, image }
+      hitIndex = index
+      break
+    }
     const fallback = hit ? eventImage(hit.image, hit.source.name) : null
     const needsLocal = hit && tierOf(hit.source.name) === 0 && ranked.slice(0, hitIndex).some((source) => tierOf(source.name) > 0)
     if (hit && !needsLocal) {
       event.image = fallback
     } else {
       event.image = null
-      const candidates = needsLocal ? ranked.slice(0, hitIndex) : ranked
-      jobs.push({ event, ranked: candidates, fallback })
+      const candidates = (needsLocal ? ranked.slice(0, hitIndex) : ranked).filter((source) => {
+        const draftUrl = draftImage(draftsByUrl.get(source.url))?.url
+        return !draftUrl || !rejectedUrls.has(draftUrl)
+      })
+      if (candidates.length) jobs.push({ event, ranked: candidates, fallback, rejectedUrls })
+      else if (fallback) event.image = fallback
     }
   }
   jobs.sort((a, b) => {
@@ -444,6 +571,11 @@ export const attachEventImages = async (
         found = null
       }
       if (!found) continue
+      if (job.rejectedUrls.has(found.url) || await hasBars(found.url)) {
+        skippedDarkBars += 1
+        job.rejectedUrls.add(found.url)
+        continue
+      }
       source.image = found.url
       job.event.image = eventImage(found, source.name)
     }
@@ -453,5 +585,5 @@ export const attachEventImages = async (
     if (!job.event.image && job.fallback) job.event.image = job.fallback
   }
   const withImage = (events ?? []).filter((event) => event.image?.url).length
-  return { withImage, fetched }
+  return { withImage, fetched, skippedDarkBars }
 }

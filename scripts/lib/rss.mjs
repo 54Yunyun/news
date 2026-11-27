@@ -122,9 +122,9 @@ export const parseRssDate = (raw) => {
   return Number.isNaN(date.getTime()) ? null : date
 }
 
-// 聯合報總覽這類混合訂閱，把原分類收成五類提示
+// 聯合報總覽這類混合訂閱，把原分類收成七類提示
 // label: RSS category 文字
-// 回傳: 五類之一，對不上時回傳空字串
+// 回傳: 七類之一，對不上時回傳空字串
 export const hintFromRssCategory = (label) => {
   const text = stripHtml(label)
   if (!text) return ''
@@ -132,12 +132,14 @@ export const hintFromRssCategory = (label) => {
   if (/政治|選舉|國會|立法院|政黨/.test(text)) return 'politics'
   if (/股市|產經|財經|經濟/.test(text)) return 'finance'
   if (/科技|數位|3C|AI/.test(text)) return 'tech'
+  if (/運動|體育|NBA|MLB|棒球|籃球|羽球|網球|足球/.test(text)) return 'sports'
+  if (/遊戲|電玩|電競/.test(text)) return 'gaming'
   return 'life'
 }
 
-// 依網址第一段路徑將新聞對應到五類提示。娛樂、體育等非日常範圍回傳空字串
+// 依網址第一段路徑將新聞對應到七類提示。娛樂、醫美等非日常範圍回傳空字串
 // raw: 正規化後的文章網址
-// 回傳: 五類之一，不屬五類時回傳空字串
+// 回傳: 七類之一，不屬七類時回傳空字串
 export const hintFromUrlPath = (raw) => {
   try {
     const seg = new URL(raw).pathname.split('/').filter(Boolean)[0]?.toLowerCase() ?? ''
@@ -145,6 +147,8 @@ export const hintFromUrlPath = (raw) => {
     if (seg === 'politics') return 'politics'
     if (seg === 'finance') return 'finance'
     if (seg === 'gadget' || seg === 'aitech' || seg === 'tech') return 'tech'
+    if (seg === 'sports' || seg === 'sport') return 'sports'
+    if (seg === 'gaming' || seg === 'game') return 'gaming'
     if (seg === 'local' || seg === 'life' || seg === 'lifestyle' || seg === 'property' || seg === 'eattravel') return 'life'
     return ''
   } catch {

@@ -69,8 +69,10 @@ test('每個分類最多留 N 則，並去掉過舊的', () => {
   assert.equal(selectByCategory(fresh, 1).length, 2)
 })
 
-test('RSS 分類提示含政治', () => {
+test('RSS 分類提示含政治、體育與遊戲', () => {
   assert.equal(hintFromRssCategory('政治'), 'politics')
+  assert.equal(hintFromRssCategory('運動'), 'sports')
+  assert.equal(hintFromRssCategory('電競'), 'gaming')
   assert.equal(hintFromRssCategory('生活'), 'life')
 })
 
@@ -110,7 +112,7 @@ test('RSS 圖片依序取 enclosure、thumbnail，太小或標誌就改看下一
   assert.equal(item.imageHeight, 360)
 })
 
-test('解析 Google News Sitemap 並依網址路徑分五類，略過娛樂與體育', () => {
+test('解析 Google News Sitemap 並依網址路徑分七類，略過娛樂與醫美', () => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
           xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
@@ -134,6 +136,13 @@ test('解析 Google News Sitemap 並依網址路徑分五類，略過娛樂與�
       </news:news>
     </url>
     <url>
+      <loc>https://news.nextapple.com/sports/20261127/DDD444</loc>
+      <news:news>
+        <news:publication_date>2026-11-27T09:42:00+08:00</news:publication_date>
+        <news:title><![CDATA[中職季後賽]]></news:title>
+      </news:news>
+    </url>
+    <url>
       <loc>https://news.nextapple.com/aitech/20261127/CCC333</loc>
       <news:news>
         <news:publication_date>2026-11-27T09:40:00+08:00</news:publication_date>
@@ -143,13 +152,15 @@ test('解析 Google News Sitemap 並依網址路徑分五類，略過娛樂與�
   </urlset>`
   const nextapple = { id: 'nextapple', name: '壹蘋新聞網', category: 'life', splitByUrlCategory: true }
   const items = parseFeed(xml, nextapple)
-  assert.equal(items.length, 2)
+  assert.equal(items.length, 3)
   assert.equal(items[0].category, 'politics')
   assert.equal(items[0].feedId, 'nextapple:politics')
   assert.equal(items[0].image, 'https://static-cdn.nextapple.tw/prod/2026-11/AAA111/photo_1280.webp')
-  assert.equal(items[1].category, 'tech')
-  assert.equal(items[1].feedId, 'nextapple:tech')
-  assert.equal(hintFromUrlPath('https://news.nextapple.com/sports/20261127/DDD444'), '')
+  assert.equal(items[1].category, 'sports')
+  assert.equal(items[1].feedId, 'nextapple:sports')
+  assert.equal(items[2].category, 'tech')
+  assert.equal(items[2].feedId, 'nextapple:tech')
+  assert.equal(hintFromUrlPath('https://news.nextapple.com/aesthetic/20261127/EEE555'), '')
 })
 
 test('從文章頁 HTML 取出 description 或 og:description', () => {

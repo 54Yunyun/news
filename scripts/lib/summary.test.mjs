@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { applyBrief, applySummary, applyTopics, buildNewsFile, buildUserPrompt, extractJson } from './summary.mjs'
+import { applyBrief, applySummary, applyTopics, briefSystem, buildNewsFile, buildUserPrompt, clusterSystem, extractJson, systemPrompt } from './summary.mjs'
 
 const picked = [
   {
@@ -39,9 +39,9 @@ test('套用摘要時沿用原本的連結，並忽略陌生 id', () => {
   assert.equal(items[0].source, '示例報')
 })
 
-test('分類不在五類時不採用，也不改回 RSS 提示', () => {
+test('分類不在七類時不採用，也不改回 RSS 提示', () => {
   assert.throws(() => applySummary(picked, {
-    items: [{ id: 'demo-1', title: '有標題', highlights: ['一', '二', '三'], category: 'sports' }],
+    items: [{ id: 'demo-1', title: '有標題', highlights: ['一', '二', '三'], category: 'entertainment' }],
   }))
 })
 
@@ -55,11 +55,24 @@ test('提示詞把外部內容標成資料', () => {
   assert.doesNotMatch(prompt, /忽略規則 <\/item>/)
 })
 
-test('政治分類可以採用', () => {
-  const items = applySummary(picked, {
-    items: [{ id: 'demo-1', title: '政治標題', highlights: ['一', '二', '三'], category: 'politics' }],
-  })
-  assert.equal(items[0].category, 'politics')
+test('摘要提示詞要求數字、年份、金額一律用阿拉伯數字', () => {
+  for (const prompt of [systemPrompt, clusterSystem, briefSystem]) {
+    assert.match(prompt, /阿拉伯數字/)
+    assert.match(prompt, /2027年底/)
+  }
+})
+
+test('政治、體育與遊戲分類皆可採用，且提示詞含分類邊界規則', () => {
+  for (const category of ['politics', 'sports', 'gaming']) {
+    const items = applySummary(picked, {
+      items: [{ id: 'demo-1', title: '分類標題', highlights: ['一', '二', '三'], category }],
+    })
+    assert.equal(items[0].category, category)
+  }
+  for (const prompt of [systemPrompt, clusterSystem]) {
+    assert.match(prompt, /電競賽事.*gaming/)
+    assert.match(prompt, /運動品牌或遊戲公司.*finance/)
+  }
 })
 
 test('今日重點要有三句，話題至少兩則才標 topicId', () => {

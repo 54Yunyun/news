@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises'
 import { prepareItems } from './lib/attribute.mjs'
+import { briefCategories } from './lib/categories.mjs'
 import { attachEventImages } from './lib/image.mjs'
 import { loadEnv, redact, readEnv } from './lib/env.mjs'
 import {
@@ -348,7 +349,7 @@ const run = async () => {
   console.log(`[news] 素材 ${picked.length} 則，分組每批 ${groupBatchSize} 則`)
 
   const byId = new Map(picked.map((item) => [item.id, item]))
-  const reserve = Math.ceil((perCategory * 5) / batchSize) + 3
+  const reserve = Math.ceil((perCategory * briefCategories.size) / batchSize) + 3
   const grouped = unionGroups(await groupInBatches(picked, groupBatchSize, Math.min(groupOverlap, groupBatchSize - 1), reserve))
   const prelim = grouped.map((memberIds, index) => ({ id: `g${index + 1}`, memberIds }))
   const merged = await mergeGroups(prelim, byId, maxSources)
@@ -437,7 +438,7 @@ const run = async () => {
   const draftsByUrl = new Map(picked.map((item) => [item.url, item]))
   const membersByEvent = new Map(chosen.map((cluster) => [cluster.id, cluster.members]))
   const images = await attachEventImages(written, { draftsByUrl, membersByEvent })
-  console.log(`[news] 封面 ${images.withImage} 則，文章頁 ${images.fetched} 次`)
+  console.log(`[news] 封面 ${images.withImage} 則，文章頁 ${images.fetched} 次${images.skippedDarkBars ? `，略過黑邊 ${images.skippedDarkBars} 張` : ''}`)
   await writeJson(newsFile, buildNewsFile(written, new Date(), { previousGeneratedAt, todayBrief }))
   const multiCount = written.filter((item) => item.sourceCount >= 2).length
   const returned = merged.rejected + clustered.fallbackCount

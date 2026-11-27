@@ -54,7 +54,7 @@ test('多了一家來源就重新摘要', () => {
 
 test('摘要不完整或分類不合就不沿用', () => {
   const thin = { ...previousItem, highlights: ['只有一點'] }
-  const wrong = { ...previousItem, category: 'sports' }
+  const wrong = { ...previousItem, category: 'entertainment' }
   const indexed = indexPrevious([thin])
   assert.equal(reusedEvent(cluster, indexed, '2026-11-24T07:10:00+08:00'), null)
   assert.equal(reusedEvent(cluster, indexPrevious([wrong]), '2026-11-24T07:10:00+08:00'), null)
@@ -74,31 +74,53 @@ test('呼叫次數達到上限後不再增加', () => {
   assert.throws(() => reserveLlmCall(), (err) => err?.code === 'llm-limit' && llmCallCount() === 2)
 })
 
-test('重新摘要的事件若與上一份共用來源或發布早於前版，不應當成新事件', () => {
+test('重新摘要的事件若與上一份共用來源、標題重疊或含前版前的舊報導，不應當成新事件', () => {
   const prevAt = '2026-11-26T09:50:37+08:00'
   const previous = [{
+    id: 'evt-old',
+    title: '沈伯洋取消選前之夜引發爭議，蔣萬安願讓路權',
     firstSeenAt: '2026-11-26T07:00:00+08:00',
-    sources: [{ url: 'https://a.example/1' }],
+    sources: [{ url: 'https://a.example/1', title: '沈伯洋取消選前之夜引發爭議' }],
   }]
   const events = [
     {
       id: 'expanded',
+      title: '不同寫法標題',
       publishedAt: '2026-11-26T11:20:00+08:00',
-      sources: [{ url: 'https://a.example/1' }, { url: 'https://b.example/2' }],
+      sources: [{ url: 'https://a.example/1?utm_source=rss' }, { url: 'https://b.example/2' }],
     },
     {
       id: 'older-pub',
+      title: '昨天早上的新聞',
       publishedAt: '2026-11-26T08:00:00+08:00',
-      sources: [{ url: 'https://c.example/3' }],
+      sources: [{ url: 'https://c.example/3', publishedAt: '2026-11-26T08:00:00+08:00' }],
+    },
+    {
+      id: 'older-earliest-src',
+      title: '有昨天舊來源的新組合',
+      publishedAt: '2026-11-26T11:10:00+08:00',
+      sources: [
+        { url: 'https://e.example/5', publishedAt: '2026-11-26T08:44:00+08:00' },
+        { url: 'https://f.example/6', publishedAt: '2026-11-26T11:10:00+08:00' },
+      ],
+    },
+    {
+      id: 'same-story-new-links',
+      title: '沈伯洋取消選前之夜引發路權爭議，各界熱議',
+      publishedAt: '2026-11-26T11:25:00+08:00',
+      sources: [{ url: 'https://g.example/7', publishedAt: '2026-11-26T11:25:00+08:00' }],
     },
     {
       id: 'brand-new',
+      title: '完全嶄新的突發新聞事件',
       publishedAt: '2026-11-26T11:30:00+08:00',
-      sources: [{ url: 'https://d.example/4' }],
+      sources: [{ url: 'https://d.example/4', publishedAt: '2026-11-26T11:30:00+08:00' }],
     },
   ]
   const next = inheritFirstSeen(events, previous, prevAt)
   assert.equal(next[0].firstSeenAt, '2026-11-26T07:00:00+08:00')
   assert.equal(next[1].firstSeenAt, prevAt)
-  assert.equal(next[2].firstSeenAt, undefined)
+  assert.equal(next[2].firstSeenAt, prevAt)
+  assert.equal(next[3].firstSeenAt, '2026-11-26T07:00:00+08:00')
+  assert.equal(next[4].firstSeenAt, undefined)
 })

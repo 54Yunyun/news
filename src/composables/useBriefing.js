@@ -1,7 +1,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { readSavedCity, resolveCityId, saveCity } from '../utils/city.js'
 import { isFreshItem } from '../utils/format.js'
-import { groupBlocks, splitLead, takePage } from '../utils/layout.js'
+import { capByCategory, groupBlocks, splitLead, takePage } from '../utils/layout.js'
 
 // 組成 public 資料的網址，並帶上站台子路徑
 // name: 檔名
@@ -187,10 +187,10 @@ export const useBriefing = () => {
     })
   })
 
-  // 依目前分類取出要顯示的新聞
+  // 依目前分類取出要顯示的新聞。「全部」分頁每類最多 6 則，各分類頁顯示完整內容
   // 回傳: 新聞陣列
   const filteredNews = computed(() => {
-    if (category.value === 'all') return orderedNews.value
+    if (category.value === 'all') return capByCategory(orderedNews.value, 6)
     return orderedNews.value.filter((item) => item.category === category.value)
   })
 
@@ -211,7 +211,7 @@ export const useBriefing = () => {
   // 頭條、次要，以及其餘的單行
   // 回傳: { lead, sides, blocks }
   const presented = computed(() => {
-    const { lead, sides, rest } = splitLead(visibleNews.value)
+    const { lead, sides, rest } = splitLead(visibleNews.value, sortMode.value)
     return { lead, sides, blocks: groupBlocks(rest) }
   })
 

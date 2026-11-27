@@ -169,6 +169,7 @@ const emptyNewsLabel = computed(() => {
           >
             <template v-if="presented.lead">
               <NewsCard
+                :key="presented.lead.id"
                 :item="presented.lead"
                 :topic-items="topicSiblings(presented.lead)"
                 variant="lead"

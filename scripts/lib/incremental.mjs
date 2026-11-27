@@ -1,5 +1,6 @@
 import { briefCategories } from './categories.mjs'
 import { sourceLinkKey } from './group.mjs'
+import { canonicalUrl, normalizeTitle, titleScore } from './rss.mjs'
 
 const CATEGORIES = briefCategories
 
@@ -77,43 +78,85 @@ const toMs = (iso) => {
   return Number.isNaN(ms) ? null : ms
 }
 
-// 替重新摘要的事件補回原本的 firstSeenAt，避免舊事件因來源增減又全部被標成新
+// 兩個時間字串取較早的那一個
+// a: 第一個時間字串
+// b: 第二個時間字串
+// 回傳: 較早的時間字串
+const earlierIso = (a, b) => {
+  if (!a) return b || ''
+  if (!b) return a
+  const aMs = toMs(a)
+  const bMs = toMs(b)
+  if (aMs == null) return b
+  if (bMs == null) return a
+  return aMs <= bMs ? a : b
+}
+
+// 取出事件裡最早的一篇發布時間（含事件本身與各來源）
+// event: 事件物件
+// 回傳: 最早時間的毫秒數，無法解析時回傳 null
+const earliestPublishedMs = (event) => {
+  let min = toMs(event?.publishedAt)
+  for (const source of event?.sources ?? []) {
+    const ms = toMs(source?.publishedAt)
+    if (ms != null && (min == null || ms < min)) min = ms
+  }
+  return min
+}
+
+// 正規化來源連結，無法解析時沿用原字串
+// raw: 來源連結
+// 回傳: 正規化後的連結
+const urlKey = (raw) => canonicalUrl(raw) || String(raw ?? '').trim()
+
+// 替重新摘要的事件補回原本的 firstSeenAt，避免昨天或上版已出現過的事件又被標成新
 // events: 本次要寫入的事件
 // previousItems: 上一份 news.json 的 items
 // previousGeneratedAt: 上一份的產生時間
 // 回傳: 補好 firstSeenAt 的新事件陣列
 export const inheritFirstSeen = (events, previousItems, previousGeneratedAt = '') => {
+  const seenById = new Map()
   const seenByUrl = new Map()
+  const oldEntries = []
   for (const old of previousItems ?? []) {
     const seen = old?.firstSeenAt || previousGeneratedAt || ''
     if (!seen) continue
+    if (old?.id) seenById.set(old.id, earlierIso(seenById.get(old.id), seen))
     for (const source of old?.sources ?? []) {
-      if (!source?.url) continue
-      const current = seenByUrl.get(source.url)
-      const seenMs = toMs(seen)
-      const currentMs = toMs(current)
-      if (!current || (seenMs != null && currentMs != null && seenMs < currentMs)) {
-        seenByUrl.set(source.url, seen)
-      }
+      const key = urlKey(source?.url)
+      if (!key) continue
+      seenByUrl.set(key, earlierIso(seenByUrl.get(key), seen))
     }
+    oldEntries.push({
+      seen,
+      titleKey: normalizeTitle(old?.title || ''),
+      sourceTitleKeys: (old?.sources ?? []).map((source) => normalizeTitle(source?.title || '')).filter(Boolean),
+    })
   }
   const prevMs = toMs(previousGeneratedAt)
   return (events ?? []).map((event) => {
     if (event?.firstSeenAt) return event
-    let inherited = ''
-    let inheritedMs = null
+    let inherited = event?.id ? (seenById.get(event.id) || '') : ''
     for (const source of event?.sources ?? []) {
-      const seen = source?.url ? seenByUrl.get(source.url) : ''
-      if (!seen) continue
-      const seenMs = toMs(seen)
-      if (!inherited || (seenMs != null && inheritedMs != null && seenMs < inheritedMs)) {
-        inherited = seen
-        inheritedMs = seenMs
+      const key = urlKey(source?.url)
+      if (!key) continue
+      const seen = seenByUrl.get(key)
+      if (seen) inherited = earlierIso(inherited, seen)
+    }
+    if (!inherited && oldEntries.length) {
+      const eventTitleKey = normalizeTitle(event?.title || '')
+      const sourceTitleKeys = (event?.sources ?? []).map((source) => normalizeTitle(source?.title || '')).filter(Boolean)
+      for (const old of oldEntries) {
+        const eventMatched = eventTitleKey && old.titleKey && titleScore(eventTitleKey, old.titleKey) >= 0.45
+        const sourceMatched = !eventMatched && sourceTitleKeys.some((key) =>
+          old.sourceTitleKeys.some((oldKey) => titleScore(key, oldKey) >= 0.7),
+        )
+        if (eventMatched || sourceMatched) inherited = earlierIso(inherited, old.seen)
       }
     }
     if (inherited) return { ...event, firstSeenAt: inherited }
-    const pubMs = toMs(event?.publishedAt)
-    if (prevMs != null && pubMs != null && pubMs <= prevMs) {
+    const earliestMs = earliestPublishedMs(event)
+    if (prevMs != null && earliestMs != null && earliestMs <= prevMs) {
       return { ...event, firstSeenAt: previousGeneratedAt }
     }
     return event

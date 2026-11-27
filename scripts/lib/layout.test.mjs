@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { briefCards, groupBlocks, splitLead, takePage } from '../../src/utils/layout.js'
+import { briefCards, capByCategory, groupBlocks, splitLead, takePage } from '../../src/utils/layout.js'
 
 const item = (id, sourceCount, topicId = '') => ({
   id,
@@ -48,6 +48,20 @@ test('同一話題在頭條只佔一格，子事件不進其餘列表', () => {
   assert.deepEqual(rest, [])
 })
 
+test('依時間排序時，頭條與次要改依發布時間由新到舊挑選', () => {
+  const items = [
+    item('1', 6),
+    item('5', 1),
+    item('3', 4),
+    item('4', 2),
+    item('2', 5),
+  ]
+  const { lead, sides, rest } = splitLead(items, 'time')
+  assert.equal(lead.id, '5')
+  assert.deepEqual(sides.map((entry) => entry.id), ['4', '3', '2', '1'])
+  assert.deepEqual(rest, [])
+})
+
 test('其餘每則都是單行', () => {
   const blocks = groupBlocks([
     item('1', 1, 'topic-a'),
@@ -63,6 +77,19 @@ test('每個分頁預設 15 則，展開後才是全部', () => {
   const items = Array.from({ length: 16 }, (_, index) => item(String(index + 1), 1))
   assert.equal(takePage(items, false).length, 15)
   assert.equal(takePage(items, true).length, 16)
+})
+
+test('全部頁每個分類最多保留指定則數，避免單一分類佔滿版面', () => {
+  const items = [
+    ...Array.from({ length: 8 }, (_, index) => ({ ...item(`s${index}`, 3), category: 'sports' })),
+    ...Array.from({ length: 8 }, (_, index) => ({ ...item(`g${index}`, 2), category: 'gaming' })),
+    ...Array.from({ length: 4 }, (_, index) => ({ ...item(`i${index}`, 5), category: 'international' })),
+  ]
+  const capped = capByCategory(items, 6)
+  assert.equal(capped.filter((entry) => entry.category === 'sports').length, 6)
+  assert.equal(capped.filter((entry) => entry.category === 'gaming').length, 6)
+  assert.equal(capped.filter((entry) => entry.category === 'international').length, 4)
+  assert.equal(capped.length, 16)
 })
 
 test('今日重點用最接近的事件標題配分類', () => {

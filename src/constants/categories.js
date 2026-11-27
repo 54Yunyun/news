@@ -5,6 +5,8 @@ export const categories = [
   { id: 'politics', label: '政治' },
   { id: 'finance', label: '財經' },
   { id: 'tech', label: '科技' },
+  { id: 'sports', label: '體育' },
+  { id: 'gaming', label: '遊戲' },
   { id: 'life', label: '生活' },
 ]
 

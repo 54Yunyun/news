@@ -46,7 +46,7 @@ npm run dev
 | `previousGeneratedAt` | 上一份檔案的 `generatedAt`。沒有上一份時省略。畫面用它判斷「新」 |
 | `todayBrief` | 三句今日重點。由模型依事件標題整理。沒有就不顯示 |
 | `items[].id` | 事件 id。各來源連結排序後取雜湊，同一組連結跨次更新不變 |
-| `items[].category` | `international`、`politics`、`finance`、`tech`、`life`。由模型依內容判斷 |
+| `items[].category` | `international`、`politics`、`finance`、`tech`、`sports`、`gaming`、`life`。由模型依內容判斷 |
 | `items[].publishedAt` | 這則事件最晚一篇的時間 |
 | `items[].firstSeenAt` | 這個事件第一次出現的時間。來源連結組合沒變時沿用上一份；舊檔沒有這個欄位時，改用上一份的 `generatedAt` |
 | `items[].topicId` | 同一個大話題的事件共用。沒有串到其他事件時省略 |
@@ -132,11 +132,11 @@ Settings → Pages → Build and deployment → Source 選 **GitHub Actions**。
 { "id": "bbc-world", "name": "BBC News", "category": "international", "url": "https://feeds.bbci.co.uk/news/world/rss.xml" }
 ```
 
-`category` 只能是 `international`、`politics`、`finance`、`tech`、`life`，它只是提示。寫進 `news.json` 的分類由模型依內容決定。`perCategory` 是每個分類最多幾個事件，預設 8。`perSource` 是每個訂閱源最多幾則，預設 12。`batchSize` 是摘要每批幾個事件，預設 4。`groupBatchSize` 是分組每批幾則標題，預設 40，相鄰批次重疊 `groupOverlap` 則（預設 8）。`maxSources` 預設 8，合併後超過這個家數就退回不合併。`maxAgeHours` 預設 36。`maxLlmCalls` 是單次執行的模型呼叫上限，預設 60。重試與格式退回各算一次。分組會留下額度給摘要、今日重點與話題。達到上限後不再呼叫。已經摘要完的事件用新結果；還沒處理的沿用上一份摘要，上一份還沒被取代的事件也留在檔案裡。日誌會逐則寫出「因呼叫上限沿用舊摘要」，並印出這次的呼叫次數。
+`category` 只能是 `international`、`politics`、`finance`、`tech`、`sports`、`gaming`、`life`，它只是提示。寫進 `news.json` 的分類由模型依內容決定。`perCategory` 是每個分類最多幾個事件，預設 8。`perSource` 是每個訂閱源最多幾則，預設 12。`batchSize` 是摘要每批幾個事件，預設 6。`groupBatchSize` 是分組每批幾則標題，預設 50，相鄰批次重疊 `groupOverlap` 則（預設 8）。`maxSources` 預設 8，合併後超過這個家數就退回不合併。`maxAgeHours` 預設 36。`maxLlmCalls` 是單次執行的模型呼叫上限，預設 60。重試與格式退回各算一次。分組會留下額度給摘要、今日重點與話題。達到上限後不再呼叫。已經摘要完的事件用新結果；還沒處理的沿用上一份摘要，上一份還沒被取代的事件也留在檔案裡。日誌會逐則寫出「因呼叫上限沿用舊摘要」，並印出這次的呼叫次數。
 
-聯合報總覽含多種題材。該筆加上 `"splitByRssCategory": true` 後，會依 RSS 的分類先分成五類提示，每一類各自套用 `perSource`。壹蘋新聞網沒有官方 RSS，改讀官方新聞 sitemap（`https://news.nextapple.com/api/xml/site-map/news`），加上 `"splitByUrlCategory": true` 依網址路徑分成五類提示並略過娛樂、體育等非日常範圍。這些提示仍不是最終分類。
+聯合報總覽含多種題材。該筆加上 `"splitByRssCategory": true` 後，會依 RSS 的分類先分成七類提示，每一類各自套用 `perSource`。壹蘋新聞網沒有官方 RSS，改讀官方新聞 sitemap（`https://news.nextapple.com/api/xml/site-map/news`），加上 `"splitByUrlCategory": true` 依網址路徑分成七類提示並略過娛樂、醫美等非日常範圍。這些提示仍不是最終分類。
 
-目前會抓的來源：BBC、NHK、TechCrunch、中央社、ETtoday、自由時報、聯合報總覽、Yahoo 奇摩（政治、社會、財經、科技、綜合）、公視、壹蘋新聞網。NHK World 英文 RSS 目前回 404，所以用 [NHK 目前的新聞 RSS](https://news.web.nhk/n-data/conf/na/rss/cat0.xml)。
+目前會抓的來源：BBC、NHK、TechCrunch、中央社（國際、財經、科技、生活、政治、社會、運動）、ETtoday（要聞、財經、國際、社會、生活、健康、科技、體育）、自由時報（國際、財經、生活、社會、政治、體育）、聯合報（總覽、運動）、Yahoo 奇摩（政治、社會、財經、科技、綜合）、公視、壹蘋新聞網、巴哈姆特 GNN、4Gamers、遊戲角落。NHK World 英文 RSS 目前回 404，所以用 [NHK 目前的新聞 RSS](https://news.web.nhk/n-data/conf/na/rss/cat0.xml)。
 
 實測後沒放進清單的網址：
 

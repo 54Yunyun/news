@@ -1,8 +1,9 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { attachEventImages, imageFromNode, ogImageFromHtml, usableImage } from './image.mjs'
+import { attachEventImages, hasDarkSideBars, imageFromNode, ogImageFromHtml, usableImage } from './image.mjs'
 
 const page = 'https://example.com/story'
+const noBlackBars = async () => false
 
 test('圖片順序是 enclosure、thumbnail、content，再來才是描述裡的 img', () => {
   const picked = imageFromNode({
@@ -84,6 +85,7 @@ test('封面優先採用篇數較多的來源，其次才看媒體權重', async
   const stats = await attachEventImages([event], {
     draftsByUrl,
     membersByEvent,
+    checkBlackBars: noBlackBars,
     fetchPage: async () => { throw new Error('不該抓文章頁') },
   })
   assert.equal(event.image.url, 'https://img.example/ett.jpg')
@@ -102,7 +104,7 @@ test('篇數相同時，權重較高的來源當封面', async () => {
     ['https://cna.example/1', { image: 'https://img.example/cna.jpg', imageWidth: 640 }],
     ['https://ett.example/1', { image: 'https://img.example/ett.jpg', imageWidth: 640 }],
   ])
-  await attachEventImages([event], { draftsByUrl, membersByEvent: new Map() })
+  await attachEventImages([event], { draftsByUrl, membersByEvent: new Map(), checkBlackBars: noBlackBars })
   assert.equal(event.image.sourceName, '中央社')
 })
 
@@ -121,6 +123,7 @@ test('沒有 RSS 圖時，先抓各事件的第一候選，失敗才換下一家
   await attachEventImages([second, first], {
     draftsByUrl: new Map(),
     membersByEvent: new Map(),
+    checkBlackBars: noBlackBars,
     limit: 2,
     fetchPage: async (url) => {
       calls.push(url)
@@ -140,6 +143,7 @@ test('文章頁抓到圖就寫進該來源與事件，沒抓到的來源維持 n
     sources: [source('公視', 'https://pts.example/1')],
   }
   const stats = await attachEventImages([event], {
+    checkBlackBars: noBlackBars,
     fetchPage: async () => ({ url: 'https://img.example/og.jpg', width: 1200, height: 675 }),
   })
   assert.equal(event.sources[0].image, 'https://img.example/og.jpg')
@@ -165,6 +169,7 @@ test('台灣媒體優先於國外媒體；僅國外有 RSS 圖時仍先抓台灣
   const calls = []
   await attachEventImages([event], {
     draftsByUrl,
+    checkBlackBars: noBlackBars,
     fetchPage: async (url) => {
       calls.push(url)
       return { url: 'https://img.example/udn.jpg', width: 1000, height: 660 }
@@ -184,6 +189,7 @@ test('台灣媒體優先於國外媒體；僅國外有 RSS 圖時仍先抓台灣
   ])
   await attachEventImages([fallbackEvent], {
     draftsByUrl: fallbackDrafts,
+    checkBlackBars: noBlackBars,
     fetchPage: async () => ({ url: 'https://img.example/default-thumb.jpg', width: 1200, height: 675 }),
   })
   assert.equal(fallbackEvent.image.sourceName, 'NHK')
@@ -197,6 +203,7 @@ test('所有來源的圖都不合格時，事件 image 設為 null', async () =>
     sources: [source('中央社', 'https://cna.example/1'), source('BBC News', 'https://bbc.example/1')],
   }
   await attachEventImages([event], {
+    checkBlackBars: noBlackBars,
     fetchPage: async (url) => (
       url.includes('cna')
         ? { url: 'https://img.example/hqdefault.jpg', width: 800, height: 600 }
@@ -221,7 +228,50 @@ test('Google News Sitemap 的 image:image 可作為封面且壹蘋視為台灣�
     ['https://bbc.example/7', { image: 'https://img.example/bbc.jpg', imageWidth: 1200, imageHeight: 675 }],
     ['https://news.nextapple.com/international/20261127/7', { image: picked.url }],
   ])
-  await attachEventImages([event], { draftsByUrl })
+  await attachEventImages([event], { draftsByUrl, checkBlackBars: noBlackBars })
   assert.equal(event.image.sourceName, '壹蘋新聞網')
   assert.equal(event.image.url, picked.url)
+})
+
+// 產生測試用的 RGB 像素陣列，可指定左右邊緣與中間亮度
+// options: width、height、side（左右亮度）、center（中央亮度）
+// 回傳: Uint8Array
+const makeRgb = ({ width = 100, height = 60, side = 0, center = 180 }) => {
+  const buf = new Uint8Array(width * height * 3)
+  const bar = Math.floor(width * 0.15)
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      const value = x < bar || x >= width - bar ? side : center
+      const idx = (y * width + x) * 3
+      buf[idx] = value
+      buf[idx + 1] = value
+      buf[idx + 2] = value
+    }
+  }
+  return buf
+}
+
+test('左右明顯黑邊會被偵測出來，正常照片與全暗夜景不會誤判', () => {
+  assert.equal(hasDarkSideBars(makeRgb({ side: 4, center: 160 }), 100, 60, 3), true)
+  assert.equal(hasDarkSideBars(makeRgb({ side: 120, center: 160 }), 100, 60, 3), false)
+  assert.equal(hasDarkSideBars(makeRgb({ side: 10, center: 14 }), 100, 60, 3), false)
+})
+
+test('偵測到首選來源有左右黑邊時，自動改用下一家來源的封面圖', async () => {
+  const event = {
+    id: 'e8',
+    sourceCount: 2,
+    sources: [source('中央社', 'https://cna.example/8'), source('聯合報', 'https://udn.example/8')],
+  }
+  const draftsByUrl = new Map([
+    ['https://cna.example/8', { image: 'https://img.example/blackbars.jpg', imageWidth: 1200, imageHeight: 675 }],
+    ['https://udn.example/8', { image: 'https://img.example/clean.jpg', imageWidth: 1200, imageHeight: 675 }],
+  ])
+  const stats = await attachEventImages([event], {
+    draftsByUrl,
+    checkBlackBars: async (url) => url.includes('blackbars'),
+  })
+  assert.equal(event.image.sourceName, '聯合報')
+  assert.equal(event.image.url, 'https://img.example/clean.jpg')
+  assert.equal(stats.skippedDarkBars, 1)
 })

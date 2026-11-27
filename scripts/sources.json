@@ -1,8 +1,8 @@
 {
   "perCategory": 8,
   "perSource": 12,
-  "batchSize": 4,
-  "groupBatchSize": 40,
+  "batchSize": 6,
+  "groupBatchSize": 50,
   "groupOverlap": 8,
   "maxSources": 8,
   "maxAgeHours": 36,
@@ -189,6 +189,48 @@
       "category": "life",
       "splitByUrlCategory": true,
       "url": "https://news.nextapple.com/api/xml/site-map/news"
+    },
+    {
+      "id": "cna-sports",
+      "name": "中央社",
+      "category": "sports",
+      "url": "https://feeds.feedburner.com/rsscna/sport"
+    },
+    {
+      "id": "ltn-sports",
+      "name": "自由時報",
+      "category": "sports",
+      "url": "https://news.ltn.com.tw/rss/sports.xml"
+    },
+    {
+      "id": "ettoday-sports",
+      "name": "ETtoday",
+      "category": "sports",
+      "url": "https://feeds.feedburner.com/ettoday/sport"
+    },
+    {
+      "id": "udn-sports",
+      "name": "聯合報",
+      "category": "sports",
+      "url": "https://udn.com/news/rssfeed/7227"
+    },
+    {
+      "id": "gnn",
+      "name": "巴哈姆特GNN",
+      "category": "gaming",
+      "url": "https://gnn.gamer.com.tw/rss.xml"
+    },
+    {
+      "id": "4gamers",
+      "name": "4Gamers",
+      "category": "gaming",
+      "url": "https://www.4gamers.com.tw/rss/latest-news"
+    },
+    {
+      "id": "udn-game",
+      "name": "遊戲角落",
+      "category": "gaming",
+      "url": "https://game.udn.com/game/rssfeed"
     }
   ]
 }

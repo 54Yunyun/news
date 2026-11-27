@@ -245,7 +245,7 @@ const toggleTopic = () => {
           />
           <figcaption
             v-if="photo.sourceName"
-            class="photo-credit absolute bottom-2 left-2 rounded-md bg-black/60 px-1.5 py-0.5 text-[11px] leading-tight text-white"
+            class="photo-credit absolute top-2 left-2 rounded-md bg-black/60 px-1.5 py-0.5 text-[11px] leading-tight text-white"
           >
             圖：{{ photo.sourceName }}
           </figcaption>
