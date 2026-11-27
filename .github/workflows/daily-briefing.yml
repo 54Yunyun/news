@@ -1,11 +1,9 @@
 name: 每日簡報
 
 on:
-  # 只在這個檔案變更時跑，讓 GitHub 登記工作流程並完成第一次部署
+  # 推送到 main、排程或手動執行時，跑完整抓取與部署流程（GITHUB_TOKEN 寫回資料不會遞迴觸發）
   push:
     branches: [main]
-    paths:
-      - .github/workflows/daily-briefing.yml
   schedule:
     # 23:17、04:17、10:17 UTC = 臺灣時間 07:17、12:17、18:17（UTC+8，沒有日光節約，避開整點與 :10 高峰）
     - cron: '17 23,4,10 * * *'
